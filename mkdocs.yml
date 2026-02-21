@@ -1,0 +1,31 @@
+site_name: Akshay Data Notes
+site_description: Personal Notes on Data Science, Analytics & Data Engineering
+site_author: Akshay MP
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+
+  - Data Science:
+      - Python: DataScience/python.md
+
+  - Analytics:
+      - SQL: Analytics/sql.md
+
+  - Data Engineering:
+      - DE Cycle: DataEngineering/de-cycle.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
