@@ -25,7 +25,7 @@ nav:
       - DE Cycle: DataEngineering/de-cycle.md
 
   - DataBricks: 
-      - Defenition: DataBricks/introduction.md
+      - Table of Contents: DataBricks/introduction.md
 
 markdown_extensions:
   - admonition
