@@ -16,12 +16,16 @@ nav:
 
   - Data Science:
       - Python: DataScience/python.md
+      - Machine Learning: DataScience/machine-learning.md
 
   - Analytics:
       - SQL: Analytics/sql.md
 
   - Data Engineering:
       - DE Cycle: DataEngineering/de-cycle.md
+
+  - DataBricks: 
+      - Defenition: DataBricks/introduction.md
 
 markdown_extensions:
   - admonition
