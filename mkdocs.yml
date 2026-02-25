@@ -1,4 +1,4 @@
-site_name: Akshay Data Notes
+site_name: AnalyticswithAkshay
 site_description: Personal Notes on Data Science, Analytics & Data Engineering
 site_author: Akshay MP
 
@@ -26,6 +26,8 @@ nav:
 
   - DataBricks: 
       - Table of Contents: DataBricks/introduction.md
+  - AWS:
+      - Amazon Web Service: AWS/aws_notes.md
 
 markdown_extensions:
   - admonition

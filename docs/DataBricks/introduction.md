@@ -29,8 +29,11 @@ Security integrations
 **This allows**:
 
 Data Engineers → to focus on pipelines
+
 Analysts → to focus on insights
+
 Data Scientists → to focus on models
+
 Instead of spending time on DevOps or infrastructure setup.
 
 1️⃣ Cluster Management
@@ -87,6 +90,13 @@ Delta Lake – Storage layer providing ACID transactions
 
 Unity Catalog – Centralized governance layer
 
+> Competetors of Delta lake are : 
+    
+    Apache Iceberg, 
+    Apache Hudi, 
+    Snowflake, 
+    Microsoft Fabric (OneLake)
+
 ### 🔎 Data Lake vs Data Warehouse vs Lakehouse
 
 | Feature              | Data Lake        | Data Warehouse     | Lakehouse (Databricks) |
@@ -108,16 +118,27 @@ It provides information that describes, explains, or gives context to other data
 Examples of Metadata:
 
 Table name
+
 Column names
+
 Data types
+
 File location
+
 Owner
+
 Created date
+
 Permissions
+
 Metadata helps in:
+
 Data discovery
+
 Governance
+
 Access control
+
 Query optimization
 
 4️⃣ **Managed Tables vs External Tables**
@@ -131,12 +152,17 @@ In managed tables, Databricks manages both metadata and physical data storage.
 **Characteristics:**
 
 Storage location controlled by Databricks
+
 Dropping table deletes both metadata and data
+
 Strong governance using Unity Catalog
+
 Suitable for fully controlled environments
 
 Multi-tool Access: Difficult
+
 Data Governance: Fully governed
+
 Use Case: Quick analytics, internal BI systems, tightly controlled environments
 
 🔹 **External Tables**
@@ -146,12 +172,17 @@ In external tables, Databricks manages only metadata, while data remains in exte
 **Characteristics:**
 
 Data stored outside Databricks-managed location
+
 Dropping table removes only metadata
+
 Flexible integration with other tools
+
 Requires governance discipline
 
 Multi-tool Access: Easy
+
 Data Governance: Flexible but requires discipline
+
 Use Case: Shared datasets, existing data lakes, multi-tool ecosystems
 
 ### 🔎 Managed vs External Tables
@@ -171,15 +202,21 @@ Use Case: Shared datasets, existing data lakes, multi-tool ecosystems
 Databricks implements the Lakehouse Architecture, which combines:
 
 Data Lake	Data Warehouse
+
 Cheap storage	High performance
+
 Flexible schema	Structured governance
+
 Raw data storage	BI-ready data
 
 Lakehouse provides:
 
 ACID transactions
+
 Schema enforcement
+
 Time travel
+
 Batch + Streaming support
 
 ### 📊 Lakehouse Architecture Overview
@@ -235,16 +272,26 @@ Source → Bronze → Silver → Gold → BI / ML
 
 Delta Lake is the storage layer of Databricks that adds reliability to data lakes.
 
+Delta Lake is a open-source storage layer that brings ACID transactions, schema enforcement and time travel capabilities to data lakes.
+
 **It provides:**
 
 ACID transactions
+
 Schema enforcement
+
 Schema evolution
+
 Time travel (versioning)
+
 Scalable metadata handling
+
 Delta Lake solves common data lake problems such as:
+
 Dirty reads
+
 Data corruption
+
 Concurrent write issues
 
 8️⃣ Unity Catalog
@@ -254,18 +301,27 @@ Unity Catalog is Databricks’ unified governance solution for data and AI asset
 **It manages:**
 
 Tables
+
 Views
+
 Files
+
 ML models
+
 Permissions
+
 Lineage tracking
 
 **Benefits:**
 
 Centralized access control
+
 Fine-grained permissions (row/column level)
+
 Data lineage tracking
+
 Cross-workspace governance
+
 It ensures secure and compliant data usage across the organization.
 
 9️⃣ ACID Principles
@@ -294,6 +350,216 @@ ACID ensures reliability in large-scale data systems.
 | Consistency | Data remains valid | Constraints enforced |
 | Isolation | Transactions do not interfere | Concurrent writes handled safely |
 | Durability | Data remains after commit | Data persists after crash |
+
+
+🔹 OLTP vs OLAP (Very Important for Data Engineers)
+
+OLTP is for running daily business transactions, while OLAP is for analyzing data and generating insights.
+
+Since you're moving towards Data Engineering / Analytics, understanding this clearly is very important.
+
+🟢 What is OLTP?
+
+OLTP = Online Transaction Processing
+
+👉 Used for day-to-day operations
+👉 Handles many small transactions
+
+🏦 Example Systems
+
+Amazon (placing an order)
+
+Paytm (making payment)
+
+Bank ATM withdrawal
+
+📌 What Happens in OLTP?
+
+When you:
+
+Add an item to cart
+
+Make payment
+
+Transfer money
+
+Book a ticket
+
+The database:
+
+Inserts data
+
+Updates records
+
+Deletes records
+
+Ensures data consistency
+
+🖼 OLTP Database Structure
+
+![alt text](image-3.png)
+
+✔ Highly normalized tables
+✔ Fast inserts & updates
+✔ Supports thousands of concurrent users
+
+🔹 Example OLTP Query:
+
+UPDATE orders
+SET status = 'Shipped'
+WHERE order_id = 101;
+
+Small, fast transaction.
+
+🔵 What is OLAP?
+
+OLAP = Online Analytical Processing
+
+👉 Used for analysis & reporting
+👉 Works on large historical data
+
+Used by:
+
+Data Analysts
+
+Data Scientists
+
+Business Intelligence teams
+
+📊 Example Systems
+
+Tableau
+
+Power BI
+
+Snowflake
+
+Databricks
+
+🖼 OLAP Structure (Data Warehouse)
+
+![alt text](image-4.png)      ![alt text](image-5.png)
+
+✔ Star schema
+
+✔ Fact table + Dimension tables
+
+✔ Aggregations
+
+✔ Historical data
+
+🔹 Example OLAP Query
+
+SELECT region, SUM(sales)
+FROM sales_data
+GROUP BY region;
+
+This scans millions of rows.
+
+## ⚖ OLTP vs OLAP (Comparison Table)
+
+
+| Feature        | OLTP (Online Transaction Processing) | OLAP (Online Analytical Processing) |
+|---------------|---------------------------------------|--------------------------------------|
+| Purpose       | Run business operations               | Analyze business data                |
+| Users         | Customers, application users          | Analysts, data scientists            |
+| Data          | Current / real-time data              | Historical data                      |
+| Queries       | Simple (INSERT, UPDATE, DELETE)       | Complex (aggregations, joins)        |
+| Speed         | Milliseconds                          | Seconds / Minutes                    |
+| Schema        | Normalized                            | Star / Snowflake schema              |
+| Example DB    | MySQL, PostgreSQL                     | Snowflake, BigQuery, Redshift        |
+
+
+🧠 Simple Real-Life Example
+
+Think of a supermarket:
+
+🛒 Billing counter → OLTP
+
+📊 Monthly sales analysis → OLAP
+
+
+Since you:
+
+Work in analytics
+
+Want Data Engineer / BI roles
+
+👉 You will mainly work with OLAP systems
+👉 But you must understand OLTP to design pipelines
+
+OLTP vs OLAP
+Overview
+
+OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) are two different types of database systems designed for different purposes.
+
+Key Difference:
+OLTP is used to run daily business operations.
+OLAP is used to analyze data and generate insights.
+
+OLTP (Online Transaction Processing)
+Definition
+
+OLTP systems are designed to manage real-time business transactions.
+They handle a large number of small, fast operations such as insert, update, and delete.
+
+
+Characteristics
+
+Highly normalized tables (3NF)
+
+Fast insert/update/delete
+
+Ensures ACID properties
+
+Handles thousands of transactions per second
+
+Small queries
+
+OLTP Architecture (Conceptual View)
+
+OLAP (Online Analytical Processing)
+Definition
+
+OLAP systems are designed for complex queries and data analysis.
+They work on large volumes of historical data.
+
+
+Characteristics :
+
+Star or Snowflake schema
+
+Fact and dimension tables
+
+Handles large datasets
+
+Complex aggregations
+
+Read-heavy workload
+
+
+**Simple Analogy**
+
+Supermarket example:
+
+🛒 Billing counter → OLTP
+
+📊 Monthly sales dashboard → OLAP
+
+Important for Data Engineers
+
+OLTP → Source systems
+
+ETL/ELT → Moves data
+
+OLAP → Data warehouse / Analytics system
+
+Understanding both is critical for designing data pipelines.
+
+>   Hirarchy in Databricks.
+
+Workspace > Catalog > Schema > Tables
+
 
 🔟 Summary
 
