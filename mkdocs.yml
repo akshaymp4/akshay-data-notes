@@ -23,6 +23,8 @@ nav:
 
   - Data Engineering:
       - DE Cycle: DataEngineering/de-cycle.md
+      - Application Programming Interface: DataEngineering/api.md
+      - Networking Basics: DataEngineering/networking.md
 
   - DataBricks: 
       - Table of Contents: DataBricks/introduction.md

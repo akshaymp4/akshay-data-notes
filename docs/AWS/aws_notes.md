@@ -5,6 +5,7 @@
 
 
 1️⃣ What is AWS?
+
 Definition
 
 Amazon Web Services (AWS) is a cloud computing platform by Amazon that provides scalable infrastructure and services over the internet.
@@ -30,7 +31,7 @@ Scale manually
 
 High upfront cost
 
-AWS Solution
+**AWS Solution**
 
 No hardware
 Instant server creation
@@ -43,7 +44,7 @@ Managed ML services
 
 3️⃣ Core AWS Concepts
 
-☁️ 3.1 Cloud Computing
+## ☁️ 3.1 Cloud Computing
 Definition:
 
 Delivering computing services over the internet.
@@ -51,12 +52,15 @@ Delivering computing services over the internet.
 Types:
 
 IaaS – Infrastructure as a Service (EC2)
+
 PaaS – Platform as a Service (Elastic Beanstalk)
+
 SaaS – Software as a Service (Gmail, Zoom)
 
 🌍 3.2 Regions & Availability Zones
 
 A Region is a geographic area where AWS has data centers.
+
 Example: Mumbai (ap-south-1), US-East (Virginia).
 
 Each Region contains multiple Availability Zones (AZs).
@@ -81,28 +85,40 @@ Definition:
 
 Object storage service used to store files.
 
-Key Concepts:
+**Key Concepts:**
+
 Bucket → Folder
+
 Object → File
+
 Unlimited storage
+
 Highly durable (99.999999999%)
 
 Use Cases:
 
 Store CSV datasets
+
 Store ML models
+
 Store backups
+
 Host static websites
 
 💾 4.2 EBS (Elastic Block Store)
+
 Definition:
 
 Block storage attached to EC2.
+
 Works like Hard Disk
+
 Used for OS, database storage
+
 Persistent storage
 
 🧊 4.3 Glacier
+
 Definition:
 
 Low-cost storage for archives.
@@ -111,7 +127,8 @@ Slow retrieval
 Used for backups
 
 5️⃣ AWS Compute Services
-🖥 5.1 EC2 (Elastic Compute Cloud)
+
+**🖥 5.1 EC2 (Elastic Compute Cloud)**
 
 ![alt text](image-4.png)
 ![alt text](image-5.png)
@@ -141,39 +158,52 @@ Budget
 You can:
 
 Install Python
+
 Install MySQL
+
 Run ML models
+
 Host applications
 
 Key Components:
 
 AMI (Amazon Machine Image) → OS template
+
 Instance Type → CPU/RAM configuration
+
 Key Pair → SSH access
+
 Security Group → Firewall
 
-EC2 for Data Science:
+**EC2 for Data Science:**
 
 Create Ubuntu server
+
 Install Anaconda
+
 Connect via SSH
+
 Run Jupyter Notebook
 
-⚡ 5.2 AWS Lambda
+**⚡ 5.2 AWS Lambda**
+
 Definition:
 
 Serverless compute service.
 
 No server management
+
 Event-driven
+
 Pay per execution
 
 Used for:
 
 Triggering pipeline jobs
+
 Automating workflows
 
-6️⃣ Networking Basics
+## 6️⃣ Networking Basics
 
 🌐 6.1 VPC (Virtual Private Cloud)
 
@@ -212,19 +242,25 @@ Firewall for EC2
 Controls:
 
 Inbound traffic
+
 Outbound traffic
 
 Example:
+
 Allow port 22 for SSH
+
 Allow port 8888 for Jupyter
 
 7️⃣ AWS CLI
+
 Definition:
 
 Command Line Interface to control AWS from terminal.
 
 Example:
+
 aws s3 ls
+
 aws ec2 describe-instances
 
 Used for:
@@ -236,25 +272,30 @@ DevOps
 CI/CD
 
 8️⃣ Application Deployment in AWS
+
 Deployment Methods:
+
 1️⃣ Manual EC2 Deployment
 
 Launch EC2
 
 Install software
+
 Upload code
+
 Run app
 
 2️⃣ Elastic Beanstalk
 
 Upload code
+
 AWS manages infrastructure
 
 3️⃣ Docker + EC2
 
 Container-based deployment
 
-9️⃣ AWS SageMaker (For Machine Learning)
+## 9️⃣ AWS SageMaker (For Machine Learning)
 
 ![alt text](image-6.png)
 ![alt text](image-7.png)
@@ -287,15 +328,21 @@ Model monitoring
 You can:
 
 Build models
+
 Train models
+
 Deploy models
+
 Monitor models
 
 SageMaker Workflow
 
 Upload data to S3
+
 Create Notebook instance
+
 Train model
+
 Deploy endpoint
 
 Use API for predictions
@@ -310,7 +357,8 @@ Built-in algorithms
 
 Production ready
 
-🔟 IAM (Identity and Access Management)
+## 🔟 IAM (Identity and Access Management)
+
 Definition:
 
 IAM controls access inside AWS.
@@ -331,17 +379,18 @@ Restrict intern from deleting resources
 
 You can:
 
-Create users
-Assign roles
-Attach policies
+Create users, Assign roles, Attach policies
 
 Important for:
 
 Security
+
 Controlled access
 
-1️⃣1️⃣ Databases in AWS
+## 1️⃣1️⃣ Databases in AWS
+
 RDS (Relational Database Service)
+
 Definition:
 
 Managed SQL database.
@@ -349,23 +398,31 @@ Managed SQL database.
 Supports:
 
 MySQL
+
 PostgreSQL
+
 MariaDB
 
 No need to manage:
 
 Backups
+
 Scaling
+
 Patching
 
-1️⃣2️⃣ Data Science Architecture (Beginner Level)
+## 1️⃣2️⃣ Data Science Architecture (Beginner Level)
 
 Example Workflow:
 
 Store raw data → S3
+
 Launch EC2
+
 Connect to S3
+
 Train model
+
 Save model in S3
 
 Deploy via EC2 or SageMaker
@@ -375,68 +432,66 @@ Deploy via EC2 or SageMaker
 AWS charges based on:
 
 Compute hours
+
 Storage used
+
 Data transfer
+
 API calls
 
 No upfront cost.
 
 1️⃣4️⃣ When to Use What?
+
 Requirement	Service
+
 Store datasets	S3
+
 Run Python code	EC2
+
 Serverless automation	Lambda
+
+
 Train ML models easily	SageMaker
+
 SQL database	RDS
+
 Archive data	Glacier
 
-1️⃣5️⃣ Advantages of AWS
+## 1️⃣5️⃣ Advantages of AWS
 
 Scalable
+
 Reliable
+
 Secure
+
 Global infrastructure
+
 Large ecosystem
+
 Free Tier available
 
-1️⃣6️⃣ AWS for Freelancers (Your Use Case)
 
-Since you:
-
-Work with small data
-Do freelance analytics
-Use MySQL + Python
-
-Best setup:
-
-Store data → S3
-Compute → Small EC2 (t2.micro / t3.micro)
-Database → RDS MySQL
-Deployment → EC2 or Elastic Beanstalk
-
-Cost can be very low if optimized.
-
-🚀 Final Summary
+## 🚀 Final Summary
 
 AWS provides:
 
 Storage (S3)
+
 Compute (EC2, Lambda)
+
 ML Platform (SageMaker)
+
 Databases (RDS)
+
 Networking (VPC)
+
 Security (IAM)
 
 It allows data scientists to:
 
-Build
-Train
-Deploy
-Scale
-
-Without managing physical infrastructure.
-
-✅ PART 2 — AWS Products with Normal Equivalent
+## ✅ AWS Products with Normal Equivalent
 
 This is what you asked clearly 👍
 
