@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../../DataEngineering/networking/">
+        <link rel="prev" href="../../DataEngineering/pyspark/">
       
       
         <link rel="next" href="../../AWS/aws_notes/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Table of Contents - AnalyticswithAkshay</title>
+        <title>Table of Contents - AnalyticsWithAkshay</title>
       
     
     
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AnalyticswithAkshay" class="md-header__button md-logo" aria-label="AnalyticswithAkshay" data-md-component="logo">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-header__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AnalyticswithAkshay
+            AnalyticsWithAkshay
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -312,13 +312,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AnalyticswithAkshay" class="md-nav__button md-logo" aria-label="AnalyticswithAkshay" data-md-component="logo">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-nav__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AnalyticswithAkshay
+    AnalyticsWithAkshay
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
   <span class="md-ellipsis">
     
   
-    Machine Learning
+    Machine Learning (ML)
   
 
     
@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/pyspark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PySaprk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -823,6 +851,28 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HIGH LEVEL ARCHITECTURE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-in-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles in Databricks
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#lakehouse-architecture-workflow-diagram" class="md-nav__link">
@@ -1050,6 +1100,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HIGH LEVEL ARCHITECTURE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-in-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles in Databricks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lakehouse-architecture-workflow-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1167,6 +1239,124 @@
 <p>Data Lake capabilities → Low-cost storage, flexibility, support for structured and unstructured data</p>
 <p>Data Warehouse capabilities → High performance, ACID transactions, governance, and BI optimization</p>
 <p>This means Databricks gives you the flexibility of a data lake and the reliability of a data warehouse in a single platform.</p>
+<pre><code>                ┌──────────────────────────────┐
+                │        User Personas         │
+                │──────────────────────────────│
+                │  • Data Engineer (DE)       │
+                │    - Jobs &amp; Workflows       │
+                │    - ETL Pipelines          │
+                │                              │
+                │  • Data Analyst (DA)        │
+                │    - SQL Queries            │
+                │    - Dashboards             │
+                │                              │
+                │  • Data Scientist (DS)      │
+                │    - AI / ML Models         │
+                │    - Notebooks              │
+                └──────────────────────────────┘
+                            ▲
+                            │
+                ┌──────────────────────────────┐
+                │   Data Intelligence Engine   │
+                │──────────────────────────────│
+                │  Lakehouse + GenAI           │
+                │  - Query Optimization        │
+                │  - AI-powered Insights       │
+                │  - Natural Language to SQL   │
+                └──────────────────────────────┘
+                            ▲
+                            │
+                ┌──────────────────────────────┐
+                │        Unity Catalog         │
+                │──────────────────────────────│
+                │  Governance Layer            │
+                │  - Access Control            │
+                │  - Data Lineage              │
+                │  - Audit Logs                │
+                └──────────────────────────────┘
+                            ▲
+                            │
+                ┌──────────────────────────────┐
+                │         Delta Lake           │
+                │──────────────────────────────│
+                │  Lakehouse Storage Engine    │
+                │  - ACID Transactions         │
+                │  - Schema Enforcement        │
+                │  - Time Travel               │
+                │  - Batch + Streaming         │
+                └──────────────────────────────┘
+                            ▲
+                            │
+                ┌──────────────────────────────┐
+                │           CLOUD           │
+                │──────────────────────────────│
+                │  AWS  |  Azure  |  GCP      │
+                │  (Compute + Storage)         │
+                └──────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>Integration woth azure gives more features bacuse it is the primary owner and others are third party.</p>
+</blockquote>
+<h2 id="high-level-architecture">HIGH LEVEL ARCHITECTURE<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>CONTROL PLANE</th>
+<th>DATA PLANE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managed by Databricks</td>
+<td>Managed by Customer</td>
+</tr>
+<tr>
+<td>Databricks Cloud Account</td>
+<td>Customer Cloud Account</td>
+</tr>
+<tr>
+<td>Manages Backend Servers</td>
+<td>Data is Processed Here</td>
+</tr>
+<tr>
+<td>Hosts Web Application (UI)</td>
+<td>Contains Cluster</td>
+</tr>
+<tr>
+<td>Cluster Configuration</td>
+<td>Cluster Runs Here</td>
+</tr>
+<tr>
+<td>Jobs are Created &amp; Managed</td>
+<td>Jobs are Executed Here</td>
+</tr>
+<tr>
+<td>Stores Metadata</td>
+<td>Stores Client Data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="roles-in-databricks">Roles in Databricks<a class="headerlink" href="#roles-in-databricks" title="Permanent link">&para;</a></h2>
+<p><strong>1) Account Administrator</strong></p>
+<p>Creates and manages workspaces</p>
+<p>Manages users at the account level</p>
+<p>Controls global permissions</p>
+<p>Has the highest level of administrative control</p>
+<p><strong>2) Metastore Administrator</strong></p>
+<p>Creates and manages catalogs</p>
+<p>Manages schemas and tables</p>
+<p>Controls data-level permissions</p>
+<p>Governs data objects in Unity Catalog</p>
+<p><strong>3) Workspace Administrator</strong></p>
+<p>Admin of a specific workspace</p>
+<p>Manages users at the workspace level</p>
+<p>Assigns roles within the workspace</p>
+<p>Controls clusters and workspace settings</p>
+<p><strong>4) Owner</strong></p>
+<p>User who creates an object (table, schema, view, etc.)</p>
+<p>Has full control over that object</p>
+<p>Can grant or revoke access to other users</p>
+<p>Responsible for managing that specific object</p>
 <p>🚀 <strong>Why Databricks is Called a Managed Service</strong></p>
 <p>Databricks is a managed service, meaning you do not need to manually set up or maintain infrastructure.</p>
 <p>Instead of configuring servers, installing Spark, handling failures, and tuning performance — Databricks manages these for you automatically.</p>
