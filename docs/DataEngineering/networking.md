@@ -336,7 +336,7 @@ IP Range:
 
 240.0.0.0 – 255.255.255.255
 
-📌 Quick Summary
+## 📌  Summary
 
 Concept	Meaning
 

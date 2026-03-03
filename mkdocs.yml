@@ -1,4 +1,4 @@
-site_name: AnalyticswithAkshay
+site_name: AnalyticsWithAkshay
 site_description: Personal Notes on Data Science, Analytics & Data Engineering
 site_author: Akshay MP
 
@@ -10,13 +10,16 @@ theme:
     - navigation.expand
     - search.highlight
     - content.code.copy
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
 
 nav:
   - Home: index.md
 
   - Data Science:
       - Python: DataScience/python.md
-      - Machine Learning: DataScience/machine-learning.md
+      - Machine Learning (ML): DataScience/machine-learning.md
 
   - Analytics:
       - SQL: Analytics/sql.md
@@ -25,6 +28,7 @@ nav:
       - DE Cycle: DataEngineering/de-cycle.md
       - Application Programming Interface: DataEngineering/api.md
       - Networking Basics: DataEngineering/networking.md
+      - PySaprk: DataEngineering/pyspark.md
 
   - DataBricks: 
       - Table of Contents: DataBricks/introduction.md

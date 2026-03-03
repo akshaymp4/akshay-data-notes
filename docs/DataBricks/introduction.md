@@ -12,6 +12,121 @@ Data Warehouse capabilities → High performance, ACID transactions, governance,
 
 This means Databricks gives you the flexibility of a data lake and the reliability of a data warehouse in a single platform.
 
+
+                    ┌──────────────────────────────┐
+                    │        User Personas         │
+                    │──────────────────────────────│
+                    │  • Data Engineer (DE)       │
+                    │    - Jobs & Workflows       │
+                    │    - ETL Pipelines          │
+                    │                              │
+                    │  • Data Analyst (DA)        │
+                    │    - SQL Queries            │
+                    │    - Dashboards             │
+                    │                              │
+                    │  • Data Scientist (DS)      │
+                    │    - AI / ML Models         │
+                    │    - Notebooks              │
+                    └──────────────────────────────┘
+                                ▲
+                                │
+                    ┌──────────────────────────────┐
+                    │   Data Intelligence Engine   │
+                    │──────────────────────────────│
+                    │  Lakehouse + GenAI           │
+                    │  - Query Optimization        │
+                    │  - AI-powered Insights       │
+                    │  - Natural Language to SQL   │
+                    └──────────────────────────────┘
+                                ▲
+                                │
+                    ┌──────────────────────────────┐
+                    │        Unity Catalog         │
+                    │──────────────────────────────│
+                    │  Governance Layer            │
+                    │  - Access Control            │
+                    │  - Data Lineage              │
+                    │  - Audit Logs                │
+                    └──────────────────────────────┘
+                                ▲
+                                │
+                    ┌──────────────────────────────┐
+                    │         Delta Lake           │
+                    │──────────────────────────────│
+                    │  Lakehouse Storage Engine    │
+                    │  - ACID Transactions         │
+                    │  - Schema Enforcement        │
+                    │  - Time Travel               │
+                    │  - Batch + Streaming         │
+                    └──────────────────────────────┘
+                                ▲
+                                │
+                    ┌──────────────────────────────┐
+                    │           CLOUD           │
+                    │──────────────────────────────│
+                    │  AWS  |  Azure  |  GCP      │
+                    │  (Compute + Storage)         │
+                    └──────────────────────────────┘
+
+
+> Integration woth azure gives more features bacuse it is the primary owner and others are third party.
+
+## HIGH LEVEL ARCHITECTURE
+
+
+| CONTROL PLANE | DATA PLANE |
+|---------------|------------|
+| Managed by Databricks | Managed by Customer |
+| Databricks Cloud Account | Customer Cloud Account |
+| Manages Backend Servers | Data is Processed Here |
+| Hosts Web Application (UI) | Contains Cluster |
+| Cluster Configuration | Cluster Runs Here |
+| Jobs are Created & Managed | Jobs are Executed Here |
+| Stores Metadata | Stores Client Data |
+
+## Roles in Databricks
+
+**1) Account Administrator**
+
+Creates and manages workspaces
+
+Manages users at the account level
+
+Controls global permissions
+
+Has the highest level of administrative control
+
+**2) Metastore Administrator**
+
+Creates and manages catalogs
+
+Manages schemas and tables
+
+Controls data-level permissions
+
+Governs data objects in Unity Catalog
+
+**3) Workspace Administrator**
+
+Admin of a specific workspace
+
+Manages users at the workspace level
+
+Assigns roles within the workspace
+
+Controls clusters and workspace settings
+
+**4) Owner**
+
+User who creates an object (table, schema, view, etc.)
+
+Has full control over that object
+
+Can grant or revoke access to other users
+
+Responsible for managing that specific object
+
+
 🚀 **Why Databricks is Called a Managed Service**
 
 Databricks is a managed service, meaning you do not need to manually set up or maintain infrastructure.
