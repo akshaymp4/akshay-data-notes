@@ -256,6 +256,10 @@ Access control
 
 Query optimization
 
+4️⃣ **Databricks Account Set up**
+
+    1. Create Azure account
+
 4️⃣ **Managed Tables vs External Tables**
 
 Databricks supports two main types of tables:
