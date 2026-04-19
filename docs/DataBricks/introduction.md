@@ -1,697 +1,549 @@
-# 1️⃣ Introduction
+<div class="databricks-hero">
+  <div class="databricks-chip">Lakehouse | Spark | Data Platforms</div>
+  <h1>Databricks Introduction</h1>
+  <p>
+    Databricks is a modern unified data and AI platform built around the lakehouse architecture.
+    These notes cover the platform from basics to core architecture, governance, storage, and analytics concepts.
+  </p>
+</div>
 
-📘 **What is Databricks?**
+## 1.1 What Is Databricks? { .databricks-h2 }
 
 Databricks is a cloud-based unified data and AI platform built on top of Apache Spark that enables organizations to process, analyze, and build machine learning solutions on large-scale data.
 
 It is designed around the Lakehouse architecture, which combines:
 
-Data Lake capabilities → Low-cost storage, flexibility, support for structured and unstructured data
-
-Data Warehouse capabilities → High performance, ACID transactions, governance, and BI optimization
+- Data Lake capabilities: low-cost storage, flexibility, and support for structured and unstructured data
+- Data Warehouse capabilities: high performance, ACID transactions, governance, and BI optimization
 
 This means Databricks gives you the flexibility of a data lake and the reliability of a data warehouse in a single platform.
 
+```text
+                    +------------------------------+
+                    |        User Personas         |
+                    |------------------------------|
+                    |  - Data Engineer (DE)        |
+                    |    - Jobs and Workflows      |
+                    |    - ETL Pipelines           |
+                    |                              |
+                    |  - Data Analyst (DA)         |
+                    |    - SQL Queries             |
+                    |    - Dashboards              |
+                    |                              |
+                    |  - Data Scientist (DS)       |
+                    |    - AI and ML Models        |
+                    |    - Notebooks               |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |   Data Intelligence Engine   |
+                    |------------------------------|
+                    |  Lakehouse + GenAI           |
+                    |  - Query Optimization        |
+                    |  - AI-powered Insights       |
+                    |  - Natural Language to SQL   |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |        Unity Catalog         |
+                    |------------------------------|
+                    |  Governance Layer            |
+                    |  - Access Control            |
+                    |  - Data Lineage              |
+                    |  - Audit Logs                |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |         Delta Lake           |
+                    |------------------------------|
+                    |  Lakehouse Storage Engine    |
+                    |  - ACID Transactions         |
+                    |  - Schema Enforcement        |
+                    |  - Time Travel               |
+                    |  - Batch + Streaming         |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |            Cloud             |
+                    |------------------------------|
+                    |  AWS | Azure | GCP           |
+                    |  (Compute + Storage)         |
+                    +------------------------------+
+```
 
-                    ┌──────────────────────────────┐
-                    │        User Personas         │
-                    │──────────────────────────────│
-                    │  • Data Engineer (DE)       │
-                    │    - Jobs & Workflows       │
-                    │    - ETL Pipelines          │
-                    │                              │
-                    │  • Data Analyst (DA)        │
-                    │    - SQL Queries            │
-                    │    - Dashboards             │
-                    │                              │
-                    │  • Data Scientist (DS)      │
-                    │    - AI / ML Models         │
-                    │    - Notebooks              │
-                    └──────────────────────────────┘
-                                ▲
-                                │
-                    ┌──────────────────────────────┐
-                    │   Data Intelligence Engine   │
-                    │──────────────────────────────│
-                    │  Lakehouse + GenAI           │
-                    │  - Query Optimization        │
-                    │  - AI-powered Insights       │
-                    │  - Natural Language to SQL   │
-                    └──────────────────────────────┘
-                                ▲
-                                │
-                    ┌──────────────────────────────┐
-                    │        Unity Catalog         │
-                    │──────────────────────────────│
-                    │  Governance Layer            │
-                    │  - Access Control            │
-                    │  - Data Lineage              │
-                    │  - Audit Logs                │
-                    └──────────────────────────────┘
-                                ▲
-                                │
-                    ┌──────────────────────────────┐
-                    │         Delta Lake           │
-                    │──────────────────────────────│
-                    │  Lakehouse Storage Engine    │
-                    │  - ACID Transactions         │
-                    │  - Schema Enforcement        │
-                    │  - Time Travel               │
-                    │  - Batch + Streaming         │
-                    └──────────────────────────────┘
-                                ▲
-                                │
-                    ┌──────────────────────────────┐
-                    │           CLOUD           │
-                    │──────────────────────────────│
-                    │  AWS  |  Azure  |  GCP      │
-                    │  (Compute + Storage)         │
-                    └──────────────────────────────┘
+> Integration with Azure gives more features because it is the primary owner, while others are third-party integrations.
 
+## 1.2 High-Level Architecture { .databricks-h2 }
 
-> Integration woth azure gives more features bacuse it is the primary owner and others are third party.
-
-## HIGH LEVEL ARCHITECTURE
-
-
-| CONTROL PLANE | DATA PLANE |
+| Control Plane | Data Plane |
 |---------------|------------|
-| Managed by Databricks | Managed by Customer |
-| Databricks Cloud Account | Customer Cloud Account |
-| Manages Backend Servers | Data is Processed Here |
-| Hosts Web Application (UI) | Contains Cluster |
-| Cluster Configuration | Cluster Runs Here |
-| Jobs are Created & Managed | Jobs are Executed Here |
-| Stores Metadata | Stores Client Data |
+| Managed by Databricks | Managed by customer |
+| Databricks cloud account | Customer cloud account |
+| Manages backend servers | Data is processed here |
+| Hosts web application (UI) | Contains cluster |
+| Cluster configuration | Cluster runs here |
+| Jobs are created and managed | Jobs are executed here |
+| Stores metadata | Stores client data |
 
-## Roles in Databricks
+## 1.3 Roles in Databricks { .databricks-h2 }
 
-**1) Account Administrator**
+### 1.3.1 Account Administrator { .databricks-h3 }
 
-Creates and manages workspaces
+- Creates and manages workspaces
+- Manages users at the account level
+- Controls global permissions
+- Has the highest level of administrative control
 
-Manages users at the account level
+### 1.3.2 Metastore Administrator { .databricks-h3 }
 
-Controls global permissions
+- Creates and manages catalogs
+- Manages schemas and tables
+- Controls data-level permissions
+- Governs data objects in Unity Catalog
 
-Has the highest level of administrative control
+### 1.3.3 Workspace Administrator { .databricks-h3 }
 
-**2) Metastore Administrator**
+- Admin of a specific workspace
+- Manages users at the workspace level
+- Assigns roles within the workspace
+- Controls clusters and workspace settings
 
-Creates and manages catalogs
+### 1.3.4 Owner { .databricks-h3 }
 
-Manages schemas and tables
+- User who creates an object such as a table, schema, or view
+- Has full control over that object
+- Can grant or revoke access to other users
+- Responsible for managing that specific object
 
-Controls data-level permissions
-
-Governs data objects in Unity Catalog
-
-**3) Workspace Administrator**
-
-Admin of a specific workspace
-
-Manages users at the workspace level
-
-Assigns roles within the workspace
-
-Controls clusters and workspace settings
-
-**4) Owner**
-
-User who creates an object (table, schema, view, etc.)
-
-Has full control over that object
-
-Can grant or revoke access to other users
-
-Responsible for managing that specific object
-
-
-🚀 **Why Databricks is Called a Managed Service**
+## 1.4 Why Databricks Is Called a Managed Service { .databricks-h2 }
 
 Databricks is a managed service, meaning you do not need to manually set up or maintain infrastructure.
 
-Instead of configuring servers, installing Spark, handling failures, and tuning performance — Databricks manages these for you automatically.
+Instead of configuring servers, installing Spark, handling failures, and tuning performance, Databricks manages these automatically.
 
-**It takes care of:**
+### 1.4.1 What Databricks Manages { .databricks-h3 }
 
-Cluster management
-Infrastructure provisioning
-Scaling
-Performance optimization
-Security integrations
+- Cluster management
+- Infrastructure provisioning
+- Scaling
+- Performance optimization
+- Security integrations
 
-**This allows**:
+### 1.4.2 What This Allows Users to Focus On { .databricks-h3 }
 
-Data Engineers → to focus on pipelines
-
-Analysts → to focus on insights
-
-Data Scientists → to focus on models
+- Data engineers focus on pipelines
+- Analysts focus on insights
+- Data scientists focus on models
 
 Instead of spending time on DevOps or infrastructure setup.
 
-1️⃣ Cluster Management
+### 1.4.3 Cluster Management { .databricks-h3 }
 
 Cluster management refers to the automatic creation, configuration, monitoring, and termination of compute clusters used to process data.
 
-👉 Databricks automatically manages Spark clusters so users don’t need to manually configure servers.
+Databricks automatically manages Spark clusters so users do not need to manually configure servers.
 
-2️⃣ Infrastructure Provisioning
+### 1.4.4 Infrastructure Provisioning { .databricks-h3 }
 
 Infrastructure provisioning is the process of setting up cloud resources such as virtual machines, storage, and networking.
 
-👉 Databricks automatically provisions the required cloud infrastructure (AWS, Azure, GCP) when you start a cluster.
+Databricks automatically provisions the required cloud infrastructure on AWS, Azure, or GCP when you start a cluster.
 
-3️⃣ Scaling
+### 1.4.5 Scaling { .databricks-h3 }
 
 Scaling is the ability to increase or decrease computing resources based on workload demand.
 
-👉 Databricks supports auto-scaling, meaning it can add or remove worker nodes automatically depending on workload size.
+Databricks supports auto-scaling, meaning it can add or remove worker nodes automatically depending on workload size.
 
-4️⃣ Performance Optimization
+### 1.4.6 Performance Optimization { .databricks-h3 }
 
 Performance optimization involves tuning system resources and execution strategies to run workloads faster and more efficiently.
 
-👉 Databricks optimizes Spark jobs automatically using features like query optimization, caching, and optimized execution engines.
+Databricks optimizes Spark jobs automatically using features like query optimization, caching, and optimized execution engines.
 
-5️⃣ Security Integrations
+### 1.4.7 Security Integrations { .databricks-h3 }
 
 Security integrations ensure that data access and system usage are secure and compliant with organizational policies.
 
-👉 Databricks integrates with cloud IAM systems, role-based access control, encryption, and Unity Catalog for governance.
+Databricks integrates with cloud IAM systems, role-based access control, encryption, and Unity Catalog for governance.
 
-💡 In Simple Words 
+### 1.4.8 Simple Explanation { .databricks-h3 }
 
-Without Databricks → You manage servers, install Spark, scale manually, secure everything yourself.
+Without Databricks, you manage servers, install Spark, scale manually, and secure everything yourself.
 
-With Databricks → You just write code. The platform manages everything else
+With Databricks, you write code and the platform manages the infrastructure around it.
 
 This allows data engineers, analysts, and data scientists to focus on building data solutions instead of managing infrastructure.
 
-## Lakehouse architecture workflow diagram
+## 1.5 Lakehouse Architecture Workflow Diagram { .databricks-h2 }
 
-![alt text](image-1.png)
+![Lakehouse architecture workflow](image-1.png)
 
-2️⃣ Key Components of Databricks
+## 1.6 Key Components of Databricks { .databricks-h2 }
 
-Workspaces – Collaborative environment for notebooks, jobs, and dashboards
+- Workspaces: collaborative environment for notebooks, jobs, and dashboards
+- Clusters: compute resources to run Spark workloads
+- DBFS (Databricks File System): distributed file system abstraction
+- Delta Lake: storage layer providing ACID transactions
+- Unity Catalog: centralized governance layer
 
-Clusters – Compute resources to run Spark workloads
+> Competitors of Delta Lake include Apache Iceberg, Apache Hudi, Snowflake, and Microsoft Fabric (OneLake).
 
-DBFS (Databricks File System) – Distributed file system abstraction
+## 1.7 Data Lake vs Data Warehouse vs Lakehouse { .databricks-h2 }
 
-Delta Lake – Storage layer providing ACID transactions
+| Feature | Data Lake | Data Warehouse | Lakehouse (Databricks) |
+|---------|-----------|----------------|-------------------------|
+| Storage Cost | Low | High | Low |
+| Schema | Flexible | Structured | Structured + Flexible |
+| Performance | Medium | High | High |
+| ACID Support | No | Yes | Yes (Delta Lake) |
+| Governance | Limited | Strong | Strong (Unity Catalog) |
+| Supports ML | Yes | Limited | Yes |
 
-Unity Catalog – Centralized governance layer
+## 1.8 What Is Metadata? { .databricks-h2 }
 
-> Competetors of Delta lake are : 
-    
-    Apache Iceberg, 
-    Apache Hudi, 
-    Snowflake, 
-    Microsoft Fabric (OneLake)
-
-### 🔎 Data Lake vs Data Warehouse vs Lakehouse
-
-| Feature              | Data Lake        | Data Warehouse     | Lakehouse (Databricks) |
-|----------------------|------------------|--------------------|-------------------------|
-| Storage Cost         | Low              | High               | Low                     |
-| Schema               | Flexible         | Structured         | Structured + Flexible   |
-| Performance          | Medium           | High               | High                    |
-| ACID Support         | ❌ No            | ✅ Yes             | ✅ Yes (Delta Lake)     |
-| Governance           | Limited          | Strong             | Strong (Unity Catalog)  |
-| Supports ML          | ✅ Yes           | Limited            | ✅ Yes                  |
-
-
-3️⃣ What is Metadata?
-
-Metadata is “data about data.”
+Metadata is "data about data."
 
 It provides information that describes, explains, or gives context to other data.
 
-Examples of Metadata:
+### 1.8.1 Examples of Metadata { .databricks-h3 }
 
-Table name
+- Table name
+- Column names
+- Data types
+- File location
+- Owner
+- Created date
+- Permissions
 
-Column names
+### 1.8.2 Why Metadata Helps { .databricks-h3 }
 
-Data types
+- Data discovery
+- Governance
+- Access control
+- Query optimization
 
-File location
+## 1.9 Databricks Account Setup { .databricks-h2 }
 
-Owner
+1. Create an Azure account.
 
-Created date
+## 1.10 Managed Tables vs External Tables { .databricks-h2 }
 
-Permissions
+Databricks supports two main types of tables.
 
-Metadata helps in:
-
-Data discovery
-
-Governance
-
-Access control
-
-Query optimization
-
-4️⃣ **Databricks Account Set up**
-
-    1. Create Azure account
-
-4️⃣ **Managed Tables vs External Tables**
-
-Databricks supports two main types of tables:
-
-🔹 **Managed Tables**
+### 1.10.1 Managed Tables { .databricks-h3 }
 
 In managed tables, Databricks manages both metadata and physical data storage.
 
-**Characteristics:**
+Characteristics:
 
-Storage location controlled by Databricks
+- Storage location controlled by Databricks
+- Dropping the table deletes both metadata and data
+- Strong governance using Unity Catalog
+- Suitable for fully controlled environments
+- Multi-tool access: difficult
+- Data governance: fully governed
+- Use case: quick analytics, internal BI systems, tightly controlled environments
 
-Dropping table deletes both metadata and data
+### 1.10.2 External Tables { .databricks-h3 }
 
-Strong governance using Unity Catalog
+In external tables, Databricks manages only metadata, while data remains in external storage such as S3, ADLS, or GCS.
 
-Suitable for fully controlled environments
+Characteristics:
 
-Multi-tool Access: Difficult
+- Data stored outside Databricks-managed location
+- Dropping the table removes only metadata
+- Flexible integration with other tools
+- Requires governance discipline
+- Multi-tool access: easy
+- Data governance: flexible but requires discipline
+- Use case: shared datasets, existing data lakes, multi-tool ecosystems
 
-Data Governance: Fully governed
-
-Use Case: Quick analytics, internal BI systems, tightly controlled environments
-
-🔹 **External Tables**
-
-In external tables, Databricks manages only metadata, while data remains in external storage (like S3, ADLS, GCS).
-
-**Characteristics:**
-
-Data stored outside Databricks-managed location
-
-Dropping table removes only metadata
-
-Flexible integration with other tools
-
-Requires governance discipline
-
-Multi-tool Access: Easy
-
-Data Governance: Flexible but requires discipline
-
-Use Case: Shared datasets, existing data lakes, multi-tool ecosystems
-
-### 🔎 Managed vs External Tables
+### 1.10.3 Managed vs External Tables { .databricks-h3 }
 
 | Feature | Managed Table | External Table |
-|----------|----------------|----------------|
+|---------|----------------|----------------|
 | Metadata Management | Databricks | Databricks |
 | Data Storage | Managed by Databricks | Stored externally (S3/ADLS/GCS) |
-| Data Deletion | Metadata + Data deleted | Only metadata deleted |
+| Data Deletion | Metadata + data deleted | Only metadata deleted |
 | Multi-tool Access | Limited | Easy |
 | Governance | Fully controlled | Flexible |
-| Best For | Internal analytics | Shared datasets / Existing data lakes |
+| Best For | Internal analytics | Shared datasets or existing data lakes |
 
+## 1.11 Lakehouse Architecture { .databricks-h2 }
 
-5️⃣ Lakehouse Architecture
+Databricks implements the Lakehouse architecture, which combines:
 
-Databricks implements the Lakehouse Architecture, which combines:
-
-Data Lake	Data Warehouse
-
-Cheap storage	High performance
-
-Flexible schema	Structured governance
-
-Raw data storage	BI-ready data
+| Data Lake | Data Warehouse |
+|-----------|----------------|
+| Cheap storage | High performance |
+| Flexible schema | Structured governance |
+| Raw data storage | BI-ready data |
 
 Lakehouse provides:
 
-ACID transactions
+- ACID transactions
+- Schema enforcement
+- Time travel
+- Batch and streaming support
 
-Schema enforcement
+## 1.12 Medallion Architecture { .databricks-h2 }
 
-Time travel
+The Medallion architecture is a data design pattern used in Databricks to organize data into three layers.
 
-Batch + Streaming support
+### 1.12.1 Medallion Architecture and Unity Catalog Overview { .databricks-h3 }
 
-### 📊 Lakehouse Architecture Overview
+![Medallion architecture and Unity Catalog overview](image-2.png)
 
+### 1.12.2 Bronze Layer { .databricks-h3 }
 
-6️⃣ 🏗️ Medallion Architecture (Lakehouse Design Pattern)
+Bronze is the raw data layer.
 
-The Medallion Architecture is a data design pattern used in Databricks to organize data into three layers:
+- Ingested data from source systems
+- Minimal transformation
+- Used for auditing and traceability
 
-### 🏗️ Medallion architecture and unity catalog overview
+### 1.12.3 Silver Layer { .databricks-h3 }
 
-![alt text](image-2.png)
+Silver is the cleaned and transformed data layer.
 
-🥉 **Bronze Layer – Raw Data**
+- Data cleaning
+- Deduplication
+- Standardization
+- Schema enforcement
 
-Ingested data from source systems
-Minimal transformation
-Used for auditing and traceability
+### 1.12.4 Gold Layer { .databricks-h3 }
 
-🥈 **Silver Layer – Cleaned & Transformed Data**
+Gold is the business-level data layer.
 
-Data cleaning
-Deduplication
-Standardization
-Schema enforcement
+- Aggregated and curated datasets
+- Business KPIs
+- Optimized for reporting and analytics
 
-🥇 **Gold Layer – Business-Level Data**
+### 1.12.5 Benefits of This Layered Approach { .databricks-h3 }
 
-Aggregated and curated datasets
-Business KPIs
-Optimized for reporting and analytics
+- Data quality
+- Maintainability
+- Performance
+- Governance
 
-**This layered approach improves:**
+### 1.12.6 Bronze vs Silver vs Gold { .databricks-h3 }
 
-Data quality
-Maintainability
-Performance
-Governance
+| Layer | Purpose | Data Quality | Transformation Level | Used By |
+|-------|---------|--------------|----------------------|---------|
+| Bronze | Raw ingestion | Low | Minimal | Data Engineers |
+| Silver | Cleaned and standardized | Medium | Moderate | Data Engineers and Analysts |
+| Gold | Business-ready data | High | Aggregated and curated | BI and business users |
 
+Source -> Bronze -> Silver -> Gold -> BI / ML
 
-### 📊 Bronze vs Silver vs Gold
-
-| Layer   | Purpose | Data Quality | Transformation Level | Used By |
-|----------|----------|--------------|----------------------|----------|
-| Bronze   | Raw ingestion | Low | Minimal | Data Engineers |
-| Silver   | Cleaned & standardized | Medium | Moderate | Data Engineers / Analysts |
-| Gold     | Business-ready data | High | Aggregated & Curated | BI / Business Users |
-
-
-Source → Bronze → Silver → Gold → BI / ML
-
-7️⃣ Delta Lake
+## 1.13 Delta Lake { .databricks-h2 }
 
 Delta Lake is the storage layer of Databricks that adds reliability to data lakes.
 
-Delta Lake is a open-source storage layer that brings ACID transactions, schema enforcement and time travel capabilities to data lakes.
+It is an open-source storage layer that brings ACID transactions, schema enforcement, and time travel capabilities to data lakes.
 
-**It provides:**
+### 1.13.1 Delta Lake Provides { .databricks-h3 }
 
-ACID transactions
+- ACID transactions
+- Schema enforcement
+- Schema evolution
+- Time travel (versioning)
+- Scalable metadata handling
 
-Schema enforcement
+### 1.13.2 Problems Delta Lake Solves { .databricks-h3 }
 
-Schema evolution
+- Dirty reads
+- Data corruption
+- Concurrent write issues
 
-Time travel (versioning)
+## 1.14 Unity Catalog { .databricks-h2 }
 
-Scalable metadata handling
+Unity Catalog is Databricks' unified governance solution for data and AI assets.
 
-Delta Lake solves common data lake problems such as:
+### 1.14.1 Unity Catalog Manages { .databricks-h3 }
 
-Dirty reads
+- Tables
+- Views
+- Files
+- ML models
+- Permissions
+- Lineage tracking
 
-Data corruption
+### 1.14.2 Benefits of Unity Catalog { .databricks-h3 }
 
-Concurrent write issues
-
-8️⃣ Unity Catalog
-
-Unity Catalog is Databricks’ unified governance solution for data and AI assets.
-
-**It manages:**
-
-Tables
-
-Views
-
-Files
-
-ML models
-
-Permissions
-
-Lineage tracking
-
-**Benefits:**
-
-Centralized access control
-
-Fine-grained permissions (row/column level)
-
-Data lineage tracking
-
-Cross-workspace governance
+- Centralized access control
+- Fine-grained permissions at row and column level
+- Data lineage tracking
+- Cross-workspace governance
 
 It ensures secure and compliant data usage across the organization.
 
-9️⃣ ACID Principles
+## 1.15 ACID Principles { .databricks-h2 }
 
-Databricks (via Delta Lake) supports ACID properties:
+Databricks, through Delta Lake, supports ACID properties.
 
-A – Atomicity
+### 1.15.1 Atomicity { .databricks-h3 }
+
 A transaction either fully completes or fully fails.
 
-C – Consistency
+### 1.15.2 Consistency { .databricks-h3 }
+
 Data remains valid before and after a transaction.
 
-I – Isolation
+### 1.15.3 Isolation { .databricks-h3 }
+
 Concurrent transactions do not interfere with each other.
 
-D – Durability
+### 1.15.4 Durability { .databricks-h3 }
+
 Once committed, data remains stored even if failures occur.
 
 ACID ensures reliability in large-scale data systems.
 
-### 🔒 ACID Properties in Delta Lake
+### 1.15.5 ACID Properties in Delta Lake { .databricks-h3 }
 
 | Property | Meaning | Example |
-|----------|----------|----------|
-| Atomicity | All or nothing execution | Failed transaction rolls back |
+|---------|---------|---------|
+| Atomicity | All-or-nothing execution | Failed transaction rolls back |
 | Consistency | Data remains valid | Constraints enforced |
 | Isolation | Transactions do not interfere | Concurrent writes handled safely |
 | Durability | Data remains after commit | Data persists after crash |
 
-
-🔹 OLTP vs OLAP (Very Important for Data Engineers)
+## 1.16 OLTP vs OLAP { .databricks-h2 }
 
 OLTP is for running daily business transactions, while OLAP is for analyzing data and generating insights.
 
-Since you're moving towards Data Engineering / Analytics, understanding this clearly is very important.
+Since you are moving toward data engineering and analytics, understanding this clearly is very important.
 
-🟢 What is OLTP?
+### 1.16.1 What Is OLTP? { .databricks-h3 }
 
-OLTP = Online Transaction Processing
+OLTP stands for Online Transaction Processing.
 
-👉 Used for day-to-day operations
-👉 Handles many small transactions
+- Used for day-to-day operations
+- Handles many small transactions
 
-🏦 Example Systems
+Examples:
 
-Amazon (placing an order)
+- Amazon placing an order
+- Paytm making a payment
+- Bank ATM withdrawal
 
-Paytm (making payment)
+When you add an item to a cart, make a payment, transfer money, or book a ticket, the database:
 
-Bank ATM withdrawal
+- Inserts data
+- Updates records
+- Deletes records
+- Ensures data consistency
 
-📌 What Happens in OLTP?
+#### 1.16.1.1 OLTP Database Structure { .databricks-h4 }
 
-When you:
+![OLTP database structure](image-3.png)
 
-Add an item to cart
+- Highly normalized tables
+- Fast inserts and updates
+- Supports thousands of concurrent users
 
-Make payment
+Example OLTP query:
 
-Transfer money
-
-Book a ticket
-
-The database:
-
-Inserts data
-
-Updates records
-
-Deletes records
-
-Ensures data consistency
-
-🖼 OLTP Database Structure
-
-![alt text](image-3.png)
-
-✔ Highly normalized tables
-✔ Fast inserts & updates
-✔ Supports thousands of concurrent users
-
-🔹 Example OLTP Query:
-
+```sql
 UPDATE orders
 SET status = 'Shipped'
 WHERE order_id = 101;
+```
 
-Small, fast transaction.
+This is a small, fast transaction.
 
-🔵 What is OLAP?
+### 1.16.2 What Is OLAP? { .databricks-h3 }
 
-OLAP = Online Analytical Processing
+OLAP stands for Online Analytical Processing.
 
-👉 Used for analysis & reporting
-👉 Works on large historical data
+- Used for analysis and reporting
+- Works on large historical data
 
 Used by:
 
-Data Analysts
+- Data analysts
+- Data scientists
+- Business intelligence teams
 
-Data Scientists
+Examples:
 
-Business Intelligence teams
+- Tableau
+- Power BI
+- Snowflake
+- Databricks
 
-📊 Example Systems
+#### 1.16.2.1 OLAP Structure { .databricks-h4 }
 
-Tableau
+![OLAP structure](image-4.png)
+![OLAP schema example](image-5.png)
 
-Power BI
+- Star schema
+- Fact table plus dimension tables
+- Aggregations
+- Historical data
 
-Snowflake
+Example OLAP query:
 
-Databricks
-
-🖼 OLAP Structure (Data Warehouse)
-
-![alt text](image-4.png)      ![alt text](image-5.png)
-
-✔ Star schema
-
-✔ Fact table + Dimension tables
-
-✔ Aggregations
-
-✔ Historical data
-
-🔹 Example OLAP Query
-
+```sql
 SELECT region, SUM(sales)
 FROM sales_data
 GROUP BY region;
+```
 
 This scans millions of rows.
 
-## ⚖ OLTP vs OLAP (Comparison Table)
+### 1.16.3 OLTP vs OLAP Comparison Table { .databricks-h3 }
 
+| Feature | OLTP (Online Transaction Processing) | OLAP (Online Analytical Processing) |
+|---------|---------------------------------------|--------------------------------------|
+| Purpose | Run business operations | Analyze business data |
+| Users | Customers, application users | Analysts, data scientists |
+| Data | Current or real-time data | Historical data |
+| Queries | Simple (INSERT, UPDATE, DELETE) | Complex (aggregations, joins) |
+| Speed | Milliseconds | Seconds or minutes |
+| Schema | Normalized | Star or Snowflake schema |
+| Example DB | MySQL, PostgreSQL | Snowflake, BigQuery, Redshift |
 
-| Feature        | OLTP (Online Transaction Processing) | OLAP (Online Analytical Processing) |
-|---------------|---------------------------------------|--------------------------------------|
-| Purpose       | Run business operations               | Analyze business data                |
-| Users         | Customers, application users          | Analysts, data scientists            |
-| Data          | Current / real-time data              | Historical data                      |
-| Queries       | Simple (INSERT, UPDATE, DELETE)       | Complex (aggregations, joins)        |
-| Speed         | Milliseconds                          | Seconds / Minutes                    |
-| Schema        | Normalized                            | Star / Snowflake schema              |
-| Example DB    | MySQL, PostgreSQL                     | Snowflake, BigQuery, Redshift        |
-
-
-🧠 Simple Real-Life Example
+### 1.16.4 Simple Real-Life Example { .databricks-h3 }
 
 Think of a supermarket:
 
-🛒 Billing counter → OLTP
-
-📊 Monthly sales analysis → OLAP
-
+- Billing counter -> OLTP
+- Monthly sales analysis -> OLAP
 
 Since you:
 
-Work in analytics
+- Work in analytics
+- Want data engineer or BI roles
 
-Want Data Engineer / BI roles
+You will mainly work with OLAP systems, but you must understand OLTP to design pipelines.
 
-👉 You will mainly work with OLAP systems
-👉 But you must understand OLTP to design pipelines
+### 1.16.5 Why It Matters for Data Engineers { .databricks-h3 }
 
-OLTP vs OLAP
-Overview
-
-OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) are two different types of database systems designed for different purposes.
-
-Key Difference:
-OLTP is used to run daily business operations.
-OLAP is used to analyze data and generate insights.
-
-OLTP (Online Transaction Processing)
-Definition
-
-OLTP systems are designed to manage real-time business transactions.
-They handle a large number of small, fast operations such as insert, update, and delete.
-
-
-Characteristics
-
-Highly normalized tables (3NF)
-
-Fast insert/update/delete
-
-Ensures ACID properties
-
-Handles thousands of transactions per second
-
-Small queries
-
-OLTP Architecture (Conceptual View)
-
-OLAP (Online Analytical Processing)
-Definition
-
-OLAP systems are designed for complex queries and data analysis.
-They work on large volumes of historical data.
-
-
-Characteristics :
-
-Star or Snowflake schema
-
-Fact and dimension tables
-
-Handles large datasets
-
-Complex aggregations
-
-Read-heavy workload
-
-
-**Simple Analogy**
-
-Supermarket example:
-
-🛒 Billing counter → OLTP
-
-📊 Monthly sales dashboard → OLAP
-
-Important for Data Engineers
-
-OLTP → Source systems
-
-ETL/ELT → Moves data
-
-OLAP → Data warehouse / Analytics system
+- OLTP -> source systems
+- ETL/ELT -> moves data
+- OLAP -> data warehouse or analytics system
 
 Understanding both is critical for designing data pipelines.
 
->   Hirarchy in Databricks.
+## 1.17 Databricks Hierarchy { .databricks-h2 }
 
-Workspace > Catalog > Schema > Tables
+Workspace -> Catalog -> Schema -> Tables
 
+## 1.18 Summary { .databricks-h2 }
 
-🔟 Summary
+Databricks is a modern data platform that:
 
-**Databricks is a modern data platform that:**
-
-Implements Lakehouse architecture
-
-Uses Delta Lake for reliability
-
-Supports Medallion architecture for structured data processing
-
-Provides centralized governance via Unity Catalog
-
-Enables scalable data engineering, analytics, and AI workloads
+- Implements Lakehouse architecture
+- Uses Delta Lake for reliability
+- Supports Medallion architecture for structured data processing
+- Provides centralized governance via Unity Catalog
+- Enables scalable data engineering, analytics, and AI workloads
 
 It simplifies big data processing while maintaining enterprise-grade governance and reliability.

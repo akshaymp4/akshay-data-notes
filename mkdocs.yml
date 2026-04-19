@@ -4,15 +4,21 @@ site_author: Akshay MP
 
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - search.highlight
     - content.code.copy
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
+    - content.action.edit
+    - content.action.view
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -23,6 +29,7 @@ nav:
 
   - Analytics:
       - SQL: Analytics/sql.md
+      - Microsoft Power BI: Analytics/power-bi.md
 
   - Data Engineering:
       - DE Cycle: DataEngineering/de-cycle.md
@@ -37,7 +44,11 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
