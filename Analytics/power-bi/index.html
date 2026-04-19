@@ -1,0 +1,3790 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal Notes on Data Science, Analytics & Data Engineering">
+      
+      
+        <meta name="author" content="Akshay MP">
+      
+      
+      
+        <link rel="prev" href="../sql/">
+      
+      
+        <link rel="next" href="../../DataEngineering/de-cycle/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Microsoft Power BI - AnalyticsWithAkshay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-power-bi-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-header__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AnalyticsWithAkshay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Microsoft Power BI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataScience/python/" class="md-tabs__link">
+          
+  
+  
+  Data Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../sql/" class="md-tabs__link">
+          
+  
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataEngineering/de-cycle/" class="md-tabs__link">
+          
+  
+  
+  Data Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataBricks/introduction/" class="md-tabs__link">
+          
+  
+  
+  DataBricks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AWS/aws_notes/" class="md-tabs__link">
+          
+  
+  
+  AWS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-nav__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AnalyticsWithAkshay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Science
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Science
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataScience/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataScience/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (ML)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analytics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Power BI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Power BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-power-bi-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Power BI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Power BI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-is-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is Power BI?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-why-power-bi-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why Power BI Is Important
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-file-types-and-interface-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 File Types and Interface Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-pages-vs-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Pages vs Sheets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-architecture-of-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Core Architecture of Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core Architecture of Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-three-main-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Three Main Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Power Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-power-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Power Pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-power-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Power View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-time-split-in-real-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Time Split in Real Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-connections-and-import-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Connections and Import Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Connections and Import Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-excel-best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Excel Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-import-vs-transform-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Import vs Transform Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-power-query-and-m-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Power Query and M Language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Power Query and M Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-power-query-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What Power Query Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-m-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 M Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-append-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Append vs Merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-example-data-consolidation-using-append" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Example: Data Consolidation Using Append
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Modeling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-is-data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What Is Data Modeling?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Model View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-auto-detected-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Auto-Detected Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Relationship Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-fact-table-vs-dimension-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Fact Table vs Dimension Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Star Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-snowflake-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Snowflake Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-views-in-power-bi-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Views in Power BI Desktop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Views in Power BI Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-report-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Report View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-table-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Table View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Model View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-visuals-and-report-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Visuals and Report Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Visuals and Report Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-common-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Common Visuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-choose-the-right-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Choose the Right Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-drill-down-and-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Drill Down and Grouping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-ai-features-in-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 AI Features in Power BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-working-with-images-from-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Working with Images from Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dax-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. DAX Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. DAX Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-dax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What Is DAX?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-why-dax-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Why DAX Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-new-column-vs-new-measure-vs-new-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 New Column vs New Measure vs New Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-implicit-vs-explicit-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Implicit vs Explicit Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-naming-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Naming Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-basic-dax-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Basic DAX Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-common-dax-function-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Common DAX Function Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Common DAX Function Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-aggregation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Aggregation Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-filter-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Filter Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-logical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Logical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-time-intelligence-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Time Intelligence Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-ranking-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Ranking Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-text-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 Text Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-mathematical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7 Mathematical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-filter-context-and-row-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Filter Context and Row Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Filter Context and Row Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-row-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Row Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-filter-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Filter Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-practical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Practical Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Power BI Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Power BI Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-what-is-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 What Is Power BI Service?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-typical-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Typical Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-power-bi-vs-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Power BI vs Tableau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Power BI vs Tableau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-functional-equivalents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Functional Equivalents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-tableau-reference-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Tableau Reference Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-strength-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Strength Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-important-developer-and-analyst-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Important Developer and Analyst Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Important Developer and Analyst Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-modeling-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Modeling Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-report-design-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Report Design Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-performance-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Performance Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-refresh-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Refresh Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-interview-focused-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Interview-Focused Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Interview-Focused Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-most-important-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Most Important Topics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-common-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Common Interview Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-end-to-end-example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. End-to-End Example Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. End-to-End Example Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-sales-dashboard-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Sales Dashboard Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-quick-revision-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Quick Revision Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/de-cycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DE Cycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Programming Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/pyspark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PySaprk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataBricks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DataBricks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataBricks/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/aws_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Web Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-power-bi-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Power BI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Power BI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-is-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is Power BI?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-why-power-bi-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why Power BI Is Important
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-file-types-and-interface-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 File Types and Interface Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-pages-vs-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Pages vs Sheets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-architecture-of-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Core Architecture of Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core Architecture of Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-three-main-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Three Main Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-power-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Power Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-power-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Power Pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-power-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Power View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-time-split-in-real-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Time Split in Real Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-connections-and-import-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Connections and Import Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Connections and Import Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-excel-best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Excel Best Practice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-import-vs-transform-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Import vs Transform Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-power-query-and-m-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Power Query and M Language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Power Query and M Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-power-query-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What Power Query Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-m-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 M Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-append-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Append vs Merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-example-data-consolidation-using-append" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Example: Data Consolidation Using Append
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Modeling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-is-data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What Is Data Modeling?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Model View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-auto-detected-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Auto-Detected Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Relationship Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-fact-table-vs-dimension-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Fact Table vs Dimension Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-star-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Star Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-snowflake-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Snowflake Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-views-in-power-bi-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Views in Power BI Desktop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Views in Power BI Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-report-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Report View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-table-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Table View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Model View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-visuals-and-report-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Visuals and Report Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Visuals and Report Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-common-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Common Visuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-choose-the-right-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Choose the Right Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-drill-down-and-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Drill Down and Grouping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-ai-features-in-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 AI Features in Power BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-working-with-images-from-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Working with Images from Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dax-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. DAX Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. DAX Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-dax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What Is DAX?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-why-dax-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Why DAX Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-new-column-vs-new-measure-vs-new-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 New Column vs New Measure vs New Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-implicit-vs-explicit-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Implicit vs Explicit Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-naming-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Naming Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-basic-dax-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Basic DAX Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-common-dax-function-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Common DAX Function Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Common DAX Function Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-aggregation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Aggregation Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-filter-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Filter Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-logical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Logical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-time-intelligence-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Time Intelligence Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-ranking-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Ranking Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-text-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6 Text Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-mathematical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7 Mathematical Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-filter-context-and-row-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Filter Context and Row Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Filter Context and Row Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-row-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Row Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-filter-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Filter Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-practical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Practical Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Power BI Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Power BI Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-what-is-power-bi-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 What Is Power BI Service?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-typical-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Typical Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-power-bi-vs-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Power BI vs Tableau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Power BI vs Tableau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-functional-equivalents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Functional Equivalents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-tableau-reference-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Tableau Reference Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-strength-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Strength Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-important-developer-and-analyst-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Important Developer and Analyst Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Important Developer and Analyst Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-modeling-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Modeling Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-report-design-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Report Design Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-performance-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Performance Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-refresh-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Refresh Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-interview-focused-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Interview-Focused Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Interview-Focused Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-most-important-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Most Important Topics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-common-interview-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Common Interview Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-end-to-end-example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. End-to-End Example Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. End-to-End Example Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-sales-dashboard-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Sales Dashboard Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-quick-revision-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Quick Revision Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="powerbi-hero">
+  <div class="powerbi-chip">Analytics | BI Development | Reporting</div>
+  <h1>Microsoft Power BI</h1>
+  <p>
+    Power BI is a business intelligence platform used to connect data, clean and transform it,
+    model relationships, build interactive dashboards, and publish reports for decision-making.
+    These notes are structured from basic to advanced level for analytics, BI, and developer-oriented work.
+  </p>
+</div>
+
+<h2 class="powerbi-h2" id="1-power-bi-overview">1. Power BI Overview<a class="headerlink" href="#1-power-bi-overview" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="11-what-is-power-bi">1.1 What Is Power BI?<a class="headerlink" href="#11-what-is-power-bi" title="Permanent link">&para;</a></h3>
+<p>Microsoft Power BI is a BI and data visualization platform used to:</p>
+<ul>
+<li>connect data from many sources</li>
+<li>transform and clean data</li>
+<li>model tables and relationships</li>
+<li>create reports and dashboards</li>
+<li>publish and share insights</li>
+</ul>
+<p>It is widely used by:</p>
+<ul>
+<li>data analysts</li>
+<li>business analysts</li>
+<li>analytics engineers</li>
+<li>reporting developers</li>
+<li>data teams working with Microsoft ecosystems</li>
+</ul>
+<h3 class="powerbi-h3" id="12-why-power-bi-is-important">1.2 Why Power BI Is Important<a class="headerlink" href="#12-why-power-bi-is-important" title="Permanent link">&para;</a></h3>
+<p>Power BI is popular because it combines data preparation, modeling, DAX calculations, visualization, and cloud sharing in one ecosystem.</p>
+<p>For analytics roles, it helps you:</p>
+<ul>
+<li>build business reports quickly</li>
+<li>combine data from multiple systems</li>
+<li>create reusable metrics</li>
+<li>support decision-making with dashboards</li>
+<li>publish reports through Power BI Service</li>
+</ul>
+<h3 class="powerbi-h3" id="13-file-types-and-interface-basics">1.3 File Types and Interface Basics<a class="headerlink" href="#13-file-types-and-interface-basics" title="Permanent link">&para;</a></h3>
+<p>Common file extensions:</p>
+<ul>
+<li><code>.pbix</code>: Power BI Desktop report file</li>
+<li><code>.pbit</code>: Power BI template file</li>
+<li><code>.twbx</code>: Tableau packaged workbook, not a Power BI file, but useful to remember when comparing tools</li>
+</ul>
+<p>Main tabs in Power BI Desktop:</p>
+<ul>
+<li>File</li>
+<li>Home</li>
+<li>Insert</li>
+<li>Modeling</li>
+<li>View</li>
+<li>Help</li>
+</ul>
+<p>Features inside these tabs are called ribbons, similar to Microsoft Excel.</p>
+<p>Useful note:</p>
+<ul>
+<li>Power BI is updated frequently</li>
+<li>you can check the current installed version through <code>Help &gt; About</code></li>
+</ul>
+<h3 class="powerbi-h3" id="14-pages-vs-sheets">1.4 Pages vs Sheets<a class="headerlink" href="#14-pages-vs-sheets" title="Permanent link">&para;</a></h3>
+<p>In Excel, you work with sheets.</p>
+<p>In Power BI, you work with report pages such as:</p>
+<ul>
+<li>Page 1</li>
+<li>Page 2</li>
+<li>Summary</li>
+<li>Sales Dashboard</li>
+</ul>
+<h2 class="powerbi-h2" id="2-core-architecture-of-power-bi">2. Core Architecture of Power BI<a class="headerlink" href="#2-core-architecture-of-power-bi" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="21-three-main-components">2.1 Three Main Components<a class="headerlink" href="#21-three-main-components" title="Permanent link">&para;</a></h3>
+<p>Power BI is commonly understood through three core working areas:</p>
+<ol>
+<li>Power Query</li>
+<li>Power Pivot</li>
+<li>Power View</li>
+</ol>
+<h3 class="powerbi-h3" id="22-power-query">2.2 Power Query<a class="headerlink" href="#22-power-query" title="Permanent link">&para;</a></h3>
+<p>Power Query is used for:</p>
+<ul>
+<li>data extraction</li>
+<li>transforming data</li>
+<li>cleaning data</li>
+<li>reshaping columns and rows</li>
+<li>combining multiple sources</li>
+</ul>
+<p>Analysts often spend a large portion of their project time here.</p>
+<h3 class="powerbi-h3" id="23-power-pivot">2.3 Power Pivot<a class="headerlink" href="#23-power-pivot" title="Permanent link">&para;</a></h3>
+<p>Power Pivot is used for:</p>
+<ul>
+<li>data modeling</li>
+<li>organizing tables</li>
+<li>creating relationships</li>
+<li>writing DAX</li>
+<li>building measures and calculated columns</li>
+</ul>
+<h3 class="powerbi-h3" id="24-power-view">2.4 Power View<a class="headerlink" href="#24-power-view" title="Permanent link">&para;</a></h3>
+<p>Power View is the reporting and presentation layer where you:</p>
+<ul>
+<li>analyze data</li>
+<li>build visuals</li>
+<li>create dashboard pages</li>
+<li>present insights to users</li>
+</ul>
+<h3 class="powerbi-h3" id="25-time-split-in-real-projects">2.5 Time Split in Real Projects<a class="headerlink" href="#25-time-split-in-real-projects" title="Permanent link">&para;</a></h3>
+<p>A practical rule often seen in analytics work:</p>
+<ul>
+<li>around 80% of the time goes into Power Query and Power Pivot</li>
+<li>around 20% goes into Power View</li>
+</ul>
+<p>This is because data cleaning, modeling, and business logic usually take more effort than drawing visuals.</p>
+<h2 class="powerbi-h2" id="3-data-connections-and-import-best-practices">3. Data Connections and Import Best Practices<a class="headerlink" href="#3-data-connections-and-import-best-practices" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="31-data-sources">3.1 Data Sources<a class="headerlink" href="#31-data-sources" title="Permanent link">&para;</a></h3>
+<p>Power BI can import data from many sources, including:</p>
+<ul>
+<li>Excel</li>
+<li>SQL Server</li>
+<li>Azure sources</li>
+<li>CSV files</li>
+<li>web APIs</li>
+<li>SharePoint</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+</ul>
+<h3 class="powerbi-h3" id="32-excel-best-practice">3.2 Excel Best Practice<a class="headerlink" href="#32-excel-best-practice" title="Permanent link">&para;</a></h3>
+<p>When importing from Excel, always convert the source range into a proper Excel table first.</p>
+<p>Why this helps:</p>
+<ul>
+<li>refresh becomes easier</li>
+<li>new rows are included automatically</li>
+<li>structure is more reliable</li>
+<li>data range issues are reduced</li>
+</ul>
+<p>This should become a regular habit.</p>
+<h3 class="powerbi-h3" id="33-import-vs-transform-data">3.3 Import vs Transform Data<a class="headerlink" href="#33-import-vs-transform-data" title="Permanent link">&para;</a></h3>
+<p>When loading data into Power BI, you will usually choose one of these options:</p>
+<ul>
+<li>Load: bring the data directly into the model</li>
+<li>Transform Data: open Power Query to clean and reshape before loading</li>
+</ul>
+<p>For most serious projects, <code>Transform Data</code> is the better option.</p>
+<h2 class="powerbi-h2" id="4-power-query-and-m-language">4. Power Query and M Language<a class="headerlink" href="#4-power-query-and-m-language" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="41-what-power-query-does">4.1 What Power Query Does<a class="headerlink" href="#41-what-power-query-does" title="Permanent link">&para;</a></h3>
+<p>Power Query is the ETL layer inside Power BI.</p>
+<p>Typical tasks:</p>
+<ul>
+<li>remove nulls</li>
+<li>rename columns</li>
+<li>change data types</li>
+<li>split columns</li>
+<li>merge tables</li>
+<li>append tables</li>
+<li>filter records</li>
+<li>pivot and unpivot data</li>
+</ul>
+<h3 class="powerbi-h3" id="42-m-language">4.2 M Language<a class="headerlink" href="#42-m-language" title="Permanent link">&para;</a></h3>
+<p>M Language, also called Power Query M Formula Language, is the language used behind Power Query steps.</p>
+<p>It is mainly used to:</p>
+<ul>
+<li>transform source data</li>
+<li>define repeatable cleaning steps</li>
+<li>manipulate tables before loading to the model</li>
+</ul>
+<p>You do not need to write M manually at the beginning, but it becomes useful as you move to advanced work.</p>
+<h3 class="powerbi-h3" id="43-append-vs-merge">4.3 Append vs Merge<a class="headerlink" href="#43-append-vs-merge" title="Permanent link">&para;</a></h3>
+<p>These are two very important concepts.</p>
+<p>Append:</p>
+<ul>
+<li>stacks one table below another</li>
+<li>used when tables have similar columns</li>
+<li>similar to <code>UNION ALL</code> in SQL</li>
+</ul>
+<p>Merge:</p>
+<ul>
+<li>joins two tables side by side</li>
+<li>used when tables have related keys</li>
+<li>similar to <code>JOIN</code> in SQL</li>
+</ul>
+<h3 class="powerbi-h3" id="44-example-data-consolidation-using-append">4.4 Example: Data Consolidation Using Append<a class="headerlink" href="#44-example-data-consolidation-using-append" title="Permanent link">&para;</a></h3>
+<p>If you have two sales tables from two sheets:</p>
+<ol>
+<li>import both tables</li>
+<li>open <code>Transform Data</code></li>
+<li>select one query from the left panel</li>
+<li>go to <code>Home &gt; Append Queries</code></li>
+<li>choose the other table to append</li>
+<li>rename the final combined query</li>
+<li>disable load for intermediate queries if they are no longer needed</li>
+</ol>
+<p>This helps keep the model clean.</p>
+<h2 class="powerbi-h2" id="5-data-modeling">5. Data Modeling<a class="headerlink" href="#5-data-modeling" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="51-what-is-data-modeling">5.1 What Is Data Modeling?<a class="headerlink" href="#51-what-is-data-modeling" title="Permanent link">&para;</a></h3>
+<p>The process of linking multiple tables to generate insight through analysis and visualizations is called data modeling.</p>
+<p>Power BI data modeling helps you:</p>
+<ul>
+<li>connect fact and dimension tables</li>
+<li>reduce duplicate logic</li>
+<li>improve report performance</li>
+<li>create reusable business calculations</li>
+</ul>
+<h3 class="powerbi-h3" id="52-model-view">5.2 Model View<a class="headerlink" href="#52-model-view" title="Permanent link">&para;</a></h3>
+<p>Model View shows the relationships between tables like an ER diagram.</p>
+<p>This is where you can:</p>
+<ul>
+<li>see connected tables</li>
+<li>manage relationships</li>
+<li>understand cardinality</li>
+<li>inspect schema structure</li>
+</ul>
+<h3 class="powerbi-h3" id="53-auto-detected-relationships">5.3 Auto-Detected Relationships<a class="headerlink" href="#53-auto-detected-relationships" title="Permanent link">&para;</a></h3>
+<p>By default, Power BI may automatically create relationships.</p>
+<p>Important note:</p>
+<ul>
+<li>do not rely on this blindly</li>
+<li>it may be correct or incorrect</li>
+<li>always validate relationship columns, cardinality, and filter direction</li>
+</ul>
+<p>You can also create relationships manually using drag and drop.</p>
+<h3 class="powerbi-h3" id="54-relationship-types">5.4 Relationship Types<a class="headerlink" href="#54-relationship-types" title="Permanent link">&para;</a></h3>
+<p>Power BI commonly uses:</p>
+<ul>
+<li>one-to-many</li>
+<li>many-to-one</li>
+<li>one-to-one</li>
+<li>many-to-many</li>
+</ul>
+<p>The symbols <code>1</code> and <code>*</code> indicate a one-to-many relationship.</p>
+<p>Example:</p>
+<ul>
+<li><code>Customers[CustomerID]</code> -&gt; <code>Sales[CustomerID]</code></li>
+<li>one customer can have many sales records</li>
+</ul>
+<h3 class="powerbi-h3" id="55-fact-table-vs-dimension-table">5.5 Fact Table vs Dimension Table<a class="headerlink" href="#55-fact-table-vs-dimension-table" title="Permanent link">&para;</a></h3>
+<p>Fact table:</p>
+<ul>
+<li>contains measurable and transactional data</li>
+<li>usually includes sales amount, quantity, cost, profit, order count</li>
+</ul>
+<p>Dimension table:</p>
+<ul>
+<li>contains descriptive attributes</li>
+<li>usually includes customer, product, region, date, category</li>
+</ul>
+<p>Example:</p>
+<p>Fact table:</p>
+<table>
+<thead>
+<tr>
+<th>OrderID</th>
+<th>ProductID</th>
+<th>CustomerID</th>
+<th>SalesAmount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>P1</td>
+<td>C7</td>
+<td>500</td>
+</tr>
+<tr>
+<td>102</td>
+<td>P2</td>
+<td>C3</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<p>Dimension table:</p>
+<table>
+<thead>
+<tr>
+<th>ProductID</th>
+<th>ProductName</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>Laptop</td>
+<td>Electronics</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Phone</td>
+<td>Electronics</td>
+</tr>
+</tbody>
+</table>
+<h3 class="powerbi-h3" id="56-star-schema">5.6 Star Schema<a class="headerlink" href="#56-star-schema" title="Permanent link">&para;</a></h3>
+<p>Star schema is the preferred model design in many Power BI solutions.</p>
+<p>It has:</p>
+<ul>
+<li>one fact table in the center</li>
+<li>multiple dimension tables around it</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>easier to understand</li>
+<li>better performance</li>
+<li>simpler DAX</li>
+<li>cleaner report design</li>
+</ul>
+<h3 class="powerbi-h3" id="57-snowflake-schema">5.7 Snowflake Schema<a class="headerlink" href="#57-snowflake-schema" title="Permanent link">&para;</a></h3>
+<p>Snowflake schema is an extension of star schema where dimensions are further normalized into sub-dimensions.</p>
+<p>Example:</p>
+<ul>
+<li><code>Sales</code> connected to <code>Product</code></li>
+<li><code>Product</code> connected to <code>Category</code></li>
+</ul>
+<p>This can be useful, but in Power BI, star schema is often preferred for simplicity.</p>
+<h2 class="powerbi-h2" id="6-views-in-power-bi-desktop">6. Views in Power BI Desktop<a class="headerlink" href="#6-views-in-power-bi-desktop" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="61-report-view">6.1 Report View<a class="headerlink" href="#61-report-view" title="Permanent link">&para;</a></h3>
+<p>This is where you build visuals such as:</p>
+<ul>
+<li>cards</li>
+<li>slicers</li>
+<li>tables</li>
+<li>pie charts</li>
+<li>maps</li>
+<li>line charts</li>
+<li>bar charts</li>
+</ul>
+<h3 class="powerbi-h3" id="62-table-view">6.2 Table View<a class="headerlink" href="#62-table-view" title="Permanent link">&para;</a></h3>
+<p>This is where you inspect table data and create calculations such as:</p>
+<ul>
+<li>new column</li>
+<li>new measure</li>
+<li>quick measure</li>
+<li>new table</li>
+</ul>
+<p>These options are found under <code>Table Tools</code> or <code>Modeling</code>, depending on context.</p>
+<h3 class="powerbi-h3" id="63-model-view">6.3 Model View<a class="headerlink" href="#63-model-view" title="Permanent link">&para;</a></h3>
+<p>This is the relationship and schema design area.</p>
+<h2 class="powerbi-h2" id="7-visuals-and-report-design">7. Visuals and Report Design<a class="headerlink" href="#7-visuals-and-report-design" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="71-common-visuals">7.1 Common Visuals<a class="headerlink" href="#71-common-visuals" title="Permanent link">&para;</a></h3>
+<p>Frequently used visuals:</p>
+<ul>
+<li>Card</li>
+<li>Slicer</li>
+<li>Table</li>
+<li>Pie chart</li>
+<li>Map</li>
+<li>Line graph</li>
+<li>Bar chart</li>
+<li>Matrix</li>
+<li>KPI</li>
+<li>Gauge</li>
+<li>Decomposition Tree</li>
+</ul>
+<h3 class="powerbi-h3" id="72-choose-the-right-chart">7.2 Choose the Right Chart<a class="headerlink" href="#72-choose-the-right-chart" title="Permanent link">&para;</a></h3>
+<p>Use chart types intentionally:</p>
+<ul>
+<li>bar chart for comparisons</li>
+<li>line chart for trends over time</li>
+<li>card for a single KPI</li>
+<li>table or matrix for detailed reporting</li>
+<li>map for geographic analysis</li>
+<li>slicer for interactive filtering</li>
+</ul>
+<h3 class="powerbi-h3" id="73-drill-down-and-grouping">7.3 Drill Down and Grouping<a class="headerlink" href="#73-drill-down-and-grouping" title="Permanent link">&para;</a></h3>
+<p>For additional drill-down in a line graph:</p>
+<ol>
+<li>right-click on a date field</li>
+<li>choose <code>New group</code></li>
+<li>create bins or number groups as needed</li>
+</ol>
+<p>This is useful when you want to group values into ranges.</p>
+<h3 class="powerbi-h3" id="74-ai-features-in-power-bi">7.4 AI Features in Power BI<a class="headerlink" href="#74-ai-features-in-power-bi" title="Permanent link">&para;</a></h3>
+<p>Power BI includes built-in AI-assisted explanations.</p>
+<p>Example:</p>
+<p>If there is a dip in sales in a line chart:</p>
+<ol>
+<li>right-click on the data point</li>
+<li>choose <code>Analyze</code></li>
+<li>use <code>Explain the decrease</code> or <code>Explain the increase</code></li>
+</ol>
+<p>This helps discover possible drivers behind the change.</p>
+<h3 class="powerbi-h3" id="75-working-with-images-from-links">7.5 Working with Images from Links<a class="headerlink" href="#75-working-with-images-from-links" title="Permanent link">&para;</a></h3>
+<p>To convert a URL column into images:</p>
+<ol>
+<li>go to table view</li>
+<li>select the column with links</li>
+<li>open <code>Column tools</code></li>
+<li>set <code>Data category</code> to <code>Image URL</code></li>
+</ol>
+<p>This is useful for product catalogs and profile-based reports.</p>
+<h2 class="powerbi-h2" id="8-dax-fundamentals">8. DAX Fundamentals<a class="headerlink" href="#8-dax-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="81-what-is-dax">8.1 What Is DAX?<a class="headerlink" href="#81-what-is-dax" title="Permanent link">&para;</a></h3>
+<p>DAX stands for Data Analysis Expressions.</p>
+<p>It is the formula language used in Power BI for:</p>
+<ul>
+<li>aggregations</li>
+<li>filtering</li>
+<li>business logic</li>
+<li>time intelligence</li>
+<li>ranking</li>
+<li>calculated columns</li>
+<li>measures</li>
+</ul>
+<p>It is one of the most important interview topics in Power BI.</p>
+<h3 class="powerbi-h3" id="82-why-dax-matters">8.2 Why DAX Matters<a class="headerlink" href="#82-why-dax-matters" title="Permanent link">&para;</a></h3>
+<p>A large number of Power BI interview questions come from:</p>
+<ul>
+<li>DAX</li>
+<li>data modeling</li>
+</ul>
+<p>Power BI contains more than 200 DAX functions.</p>
+<h3 class="powerbi-h3" id="83-new-column-vs-new-measure-vs-new-table">8.3 New Column vs New Measure vs New Table<a class="headerlink" href="#83-new-column-vs-new-measure-vs-new-table" title="Permanent link">&para;</a></h3>
+<p>New Column:</p>
+<ul>
+<li>creates a new calculated column</li>
+<li>evaluates row by row</li>
+<li>stored in the model</li>
+<li>increases memory usage</li>
+</ul>
+<p>New Measure:</p>
+<ul>
+<li>does not create a physical column</li>
+<li>calculates results dynamically</li>
+<li>appears in the fields list</li>
+<li>is usually better for aggregations</li>
+<li>generally requires less memory than a calculated column</li>
+</ul>
+<p>New Table:</p>
+<ul>
+<li>creates a new table using DAX</li>
+<li>can be used for helper tables, manual entry, or calculations</li>
+</ul>
+<p>Quick Measure:</p>
+<ul>
+<li>helps create measures through a guided interface</li>
+<li>useful for beginners and standard patterns</li>
+</ul>
+<h3 class="powerbi-h3" id="84-implicit-vs-explicit-measures">8.4 Implicit vs Explicit Measures<a class="headerlink" href="#84-implicit-vs-explicit-measures" title="Permanent link">&para;</a></h3>
+<p>Implicit measure:</p>
+<ul>
+<li>created automatically when you drag a numeric field into a visual and Power BI applies <code>Sum</code>, <code>Count</code>, or similar aggregation</li>
+</ul>
+<p>Explicit measure:</p>
+<ul>
+<li>created manually using <code>New Measure</code></li>
+<li>recommended for reusable business logic</li>
+</ul>
+<h3 class="powerbi-h3" id="85-naming-rules">8.5 Naming Rules<a class="headerlink" href="#85-naming-rules" title="Permanent link">&para;</a></h3>
+<p>Important naming behavior:</p>
+<ul>
+<li>a new measure name must be unique across the entire model</li>
+<li>you cannot use the same measure name as a column in another table</li>
+<li>a new column name must be unique only within the same table</li>
+<li>the same column name can exist in a different table</li>
+</ul>
+<h3 class="powerbi-h3" id="86-basic-dax-examples">8.6 Basic DAX Examples<a class="headerlink" href="#86-basic-dax-examples" title="Permanent link">&para;</a></h3>
+<p>New column example:</p>
+<div class="highlight"><pre><span></span><code>Full Name = Customers[FirstName] &amp; &quot; &quot; &amp; Customers[LastName]
+</code></pre></div>
+<p>New measure example:</p>
+<div class="highlight"><pre><span></span><code>Total Sales = SUM(Sales[SalesAmount])
+</code></pre></div>
+<p>Conditional measure:</p>
+<div class="highlight"><pre><span></span><code>High Sales Flag =
+<span class="nf">IF</span><span class="p">(</span><span class="na">[Total Sales]</span><span class="w"> </span>&gt; 100000, &quot;High&quot;, &quot;Normal&quot;)
+</code></pre></div>
+<p>Safe division:</p>
+<div class="highlight"><pre><span></span><code>Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)
+</code></pre></div>
+<h2 class="powerbi-h2" id="9-common-dax-function-categories">9. Common DAX Function Categories<a class="headerlink" href="#9-common-dax-function-categories" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="91-aggregation-functions">9.1 Aggregation Functions<a class="headerlink" href="#91-aggregation-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>SUM()</code>: adds values in a column</li>
+<li><code>AVERAGE()</code>: returns the mean</li>
+<li><code>MIN()</code>: returns the smallest value</li>
+<li><code>MAX()</code>: returns the largest value</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">Average</span><span class="w"> </span>Sales = AVERAGE(Sales[SalesAmount])
+</code></pre></div>
+<h3 class="powerbi-h3" id="92-filter-functions">9.2 Filter Functions<a class="headerlink" href="#92-filter-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>FILTER()</code>: returns a filtered table</li>
+<li><code>ALL()</code>: removes filters</li>
+<li><code>CALCULATE()</code>: changes filter context and evaluates an expression</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>West Region Sales =
+<span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">SUM</span><span class="p">(</span><span class="na">Sales[SalesAmount]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">Sales[Region]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;West&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 class="powerbi-h3" id="93-logical-functions">9.3 Logical Functions<a class="headerlink" href="#93-logical-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>IF()</code>: conditional logic</li>
+<li><code>SWITCH()</code>: cleaner multi-condition logic</li>
+<li><code>AND()</code>: multiple conditions</li>
+<li><code>OR()</code>: multiple conditions</li>
+<li><code>||</code>: OR operator</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>Sales Category =
+<span class="nf">SWITCH</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">TRUE</span><span class="p">(),</span>
+<span class="w">    </span><span class="na">[Total Sales]</span><span class="w"> </span>&gt;= 100000, &quot;Excellent&quot;,
+<span class="w">    </span><span class="na">[Total Sales]</span><span class="w"> </span>&gt;= 50000, &quot;Good&quot;,
+<span class="w">    </span><span class="s">&quot;Needs Attention&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 class="powerbi-h3" id="94-time-intelligence-functions">9.4 Time Intelligence Functions<a class="headerlink" href="#94-time-intelligence-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>TODAY()</code></li>
+<li><code>NOW()</code></li>
+<li><code>DATESYTD()</code></li>
+<li><code>PREVIOUSMONTH()</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>YTD Sales =
+<span class="nf">CALCULATE</span><span class="p">(</span>
+<span class="w">    </span><span class="na">[Total Sales]</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">DATESYTD</span><span class="p">(</span><span class="na">&#39;Date&#39;[Date]</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Important:</p>
+<ul>
+<li>time intelligence works best with a proper date table</li>
+</ul>
+<h3 class="powerbi-h3" id="95-ranking-functions">9.5 Ranking Functions<a class="headerlink" href="#95-ranking-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>RANKX()</code></li>
+<li><code>TOPN()</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">Product</span><span class="w"> </span>Rank =
+<span class="nf">RANKX</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">ALL</span><span class="p">(</span><span class="na">Products[ProductName]</span><span class="p">),</span>
+<span class="w">    </span><span class="na">[Total Sales]</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 class="powerbi-h3" id="96-text-functions">9.6 Text Functions<a class="headerlink" href="#96-text-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>CONCATENATE()</code></li>
+<li><code>LEFT()</code></li>
+<li><code>RIGHT()</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>State Code = LEFT(Customers[StateName], 2)
+</code></pre></div>
+<h3 class="powerbi-h3" id="97-mathematical-functions">9.7 Mathematical Functions<a class="headerlink" href="#97-mathematical-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>ROUND()</code></li>
+<li><code>DIVIDE()</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>Rounded Sales = ROUND([Total Sales], 2)
+</code></pre></div>
+<h2 class="powerbi-h2" id="10-filter-context-and-row-context">10. Filter Context and Row Context<a class="headerlink" href="#10-filter-context-and-row-context" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="101-row-context">10.1 Row Context<a class="headerlink" href="#101-row-context" title="Permanent link">&para;</a></h3>
+<p>Row context means a calculation is evaluated one row at a time.</p>
+<p>Common in:</p>
+<ul>
+<li>calculated columns</li>
+<li>iterators like <code>SUMX()</code></li>
+</ul>
+<h3 class="powerbi-h3" id="102-filter-context">10.2 Filter Context<a class="headerlink" href="#102-filter-context" title="Permanent link">&para;</a></h3>
+<p>Filter context means the calculation result changes based on active filters from:</p>
+<ul>
+<li>slicers</li>
+<li>visuals</li>
+<li>page filters</li>
+<li>report filters</li>
+<li><code>CALCULATE()</code></li>
+</ul>
+<p>This is one of the most important DAX concepts to understand deeply.</p>
+<h3 class="powerbi-h3" id="103-practical-example">10.3 Practical Example<a class="headerlink" href="#103-practical-example" title="Permanent link">&para;</a></h3>
+<p>If a card shows <code>Total Sales</code>, the result can change based on:</p>
+<ul>
+<li>selected year</li>
+<li>selected region</li>
+<li>selected product category</li>
+</ul>
+<p>That happens because of filter context.</p>
+<h2 class="powerbi-h2" id="11-power-bi-service">11. Power BI Service<a class="headerlink" href="#11-power-bi-service" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="111-what-is-power-bi-service">11.1 What Is Power BI Service?<a class="headerlink" href="#111-what-is-power-bi-service" title="Permanent link">&para;</a></h3>
+<p>Power BI Service is the cloud platform used for:</p>
+<ul>
+<li>publishing reports</li>
+<li>sharing dashboards</li>
+<li>collaboration</li>
+<li>scheduling refresh</li>
+<li>workspace-based access</li>
+</ul>
+<p>You usually build reports in Power BI Desktop and publish them to Power BI Service.</p>
+<h3 class="powerbi-h3" id="112-why-it-matters">11.2 Why It Matters<a class="headerlink" href="#112-why-it-matters" title="Permanent link">&para;</a></h3>
+<p>Power BI Service is important because reports are rarely useful if they stay only on a local laptop.</p>
+<p>This is where teams:</p>
+<ul>
+<li>consume reports</li>
+<li>collaborate on dashboards</li>
+<li>control access</li>
+<li>distribute content to business users</li>
+</ul>
+<h3 class="powerbi-h3" id="113-typical-flow">11.3 Typical Flow<a class="headerlink" href="#113-typical-flow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>build report in Power BI Desktop</li>
+<li>validate data and visuals</li>
+<li>publish to Power BI Service</li>
+<li>share with workspace users or app users</li>
+<li>manage refresh and permissions</li>
+</ol>
+<h2 class="powerbi-h2" id="12-power-bi-vs-tableau">12. Power BI vs Tableau<a class="headerlink" href="#12-power-bi-vs-tableau" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="121-functional-equivalents">12.1 Functional Equivalents<a class="headerlink" href="#121-functional-equivalents" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Power BI</th>
+<th>Tableau Equivalent</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Measure</td>
+<td>Aggregated Calculated Field</td>
+<td>dynamic aggregated calculations</td>
+</tr>
+<tr>
+<td>New Column</td>
+<td>Row-Level Calculated Field</td>
+<td>row-level computation</td>
+</tr>
+<tr>
+<td>New Table</td>
+<td>LOD or Joins based approach</td>
+<td>no exact direct equivalent</td>
+</tr>
+<tr>
+<td>Quick Measure</td>
+<td>Pre-built table calculations</td>
+<td>standard calculation patterns</td>
+</tr>
+<tr>
+<td>Slicer</td>
+<td>Quick Filter</td>
+<td>interactive filtering</td>
+</tr>
+<tr>
+<td>Bookmark</td>
+<td>Story or saved states concept</td>
+<td>guided report views</td>
+</tr>
+<tr>
+<td>Power BI Service</td>
+<td>Tableau Server / Tableau Public</td>
+<td>sharing and publishing</td>
+</tr>
+</tbody>
+</table>
+<h3 class="powerbi-h3" id="122-tableau-reference-notes">12.2 Tableau Reference Notes<a class="headerlink" href="#122-tableau-reference-notes" title="Permanent link">&para;</a></h3>
+<p>Useful Tableau comparisons:</p>
+<ul>
+<li>Tableau Desktop: for creating visualizations</li>
+<li>Tableau Server: for sharing and collaborating</li>
+<li>Tableau Prep: for data preparation and cleaning</li>
+</ul>
+<p>In Tableau:</p>
+<ul>
+<li>Dimensions are categorical columns</li>
+<li>Measures are numerical columns</li>
+</ul>
+<h3 class="powerbi-h3" id="123-strength-comparison">12.3 Strength Comparison<a class="headerlink" href="#123-strength-comparison" title="Permanent link">&para;</a></h3>
+<p>Tableau is often seen as stronger in advanced and statistical charts such as:</p>
+<ul>
+<li>Gantt chart</li>
+<li>Box plot</li>
+<li>motion-style analysis</li>
+</ul>
+<p>Power BI is often stronger in business-focused visuals such as:</p>
+<ul>
+<li>KPI</li>
+<li>Decomposition Tree</li>
+<li>Gauge chart</li>
+</ul>
+<h2 class="powerbi-h2" id="13-important-developer-and-analyst-best-practices">13. Important Developer and Analyst Best Practices<a class="headerlink" href="#13-important-developer-and-analyst-best-practices" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="131-modeling-best-practices">13.1 Modeling Best Practices<a class="headerlink" href="#131-modeling-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>prefer star schema where possible</li>
+<li>keep dimensions clean and descriptive</li>
+<li>avoid unnecessary many-to-many relationships</li>
+<li>validate relationships manually</li>
+<li>create reusable explicit measures</li>
+</ul>
+<h3 class="powerbi-h3" id="132-report-design-best-practices">13.2 Report Design Best Practices<a class="headerlink" href="#132-report-design-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>choose visuals intentionally</li>
+<li>avoid cluttered dashboards</li>
+<li>maintain consistent colors and labels</li>
+<li>use slicers carefully</li>
+<li>highlight the most important KPIs first</li>
+</ul>
+<h3 class="powerbi-h3" id="133-performance-best-practices">13.3 Performance Best Practices<a class="headerlink" href="#133-performance-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>prefer measures over too many calculated columns</li>
+<li>reduce unnecessary columns in the model</li>
+<li>disable load for staging queries when appropriate</li>
+<li>use proper data types</li>
+<li>keep the model simple</li>
+</ul>
+<h3 class="powerbi-h3" id="134-refresh-best-practices">13.4 Refresh Best Practices<a class="headerlink" href="#134-refresh-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>use clean source tables</li>
+<li>define stable keys</li>
+<li>structure Excel sources as tables</li>
+<li>document business definitions of measures</li>
+<li>test refresh after every important model change</li>
+</ul>
+<h2 class="powerbi-h2" id="14-interview-focused-topics">14. Interview-Focused Topics<a class="headerlink" href="#14-interview-focused-topics" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="141-most-important-topics">14.1 Most Important Topics<a class="headerlink" href="#141-most-important-topics" title="Permanent link">&para;</a></h3>
+<p>If you are preparing for interviews, focus strongly on:</p>
+<ul>
+<li>DAX</li>
+<li>data modeling</li>
+<li>star schema</li>
+<li>fact vs dimension</li>
+<li>implicit vs explicit measures</li>
+<li>Power Query transformations</li>
+<li>Power BI Service</li>
+<li>report performance basics</li>
+</ul>
+<h3 class="powerbi-h3" id="142-common-interview-questions">14.2 Common Interview Questions<a class="headerlink" href="#142-common-interview-questions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>What is the difference between a calculated column and a measure?</li>
+<li>What is star schema and why is it preferred?</li>
+<li>What is the difference between fact and dimension tables?</li>
+<li>What is <code>CALCULATE()</code> used for?</li>
+<li>What is filter context?</li>
+<li>When would you use append vs merge?</li>
+<li>What is the purpose of Power BI Service?</li>
+<li>Why are measures preferred over too many calculated columns?</li>
+</ul>
+<h2 class="powerbi-h2" id="15-end-to-end-example-workflow">15. End-to-End Example Workflow<a class="headerlink" href="#15-end-to-end-example-workflow" title="Permanent link">&para;</a></h2>
+<h3 class="powerbi-h3" id="151-sales-dashboard-example">15.1 Sales Dashboard Example<a class="headerlink" href="#151-sales-dashboard-example" title="Permanent link">&para;</a></h3>
+<p>Suppose you are building a sales dashboard for a company.</p>
+<p>Step 1: Import data</p>
+<ul>
+<li>sales data from Excel</li>
+<li>product data from SQL</li>
+<li>target data from CSV</li>
+</ul>
+<p>Step 2: Clean data in Power Query</p>
+<ul>
+<li>fix data types</li>
+<li>remove null rows</li>
+<li>standardize column names</li>
+<li>append monthly files if needed</li>
+</ul>
+<p>Step 3: Build data model</p>
+<ul>
+<li><code>Sales</code> as fact table</li>
+<li><code>Products</code>, <code>Customers</code>, <code>Date</code>, <code>Region</code> as dimension tables</li>
+<li>create one-to-many relationships</li>
+</ul>
+<p>Step 4: Create DAX measures</p>
+<ul>
+<li><code>Total Sales</code></li>
+<li><code>Total Profit</code></li>
+<li><code>Profit Margin</code></li>
+<li><code>YTD Sales</code></li>
+</ul>
+<p>Step 5: Build report pages</p>
+<ul>
+<li>executive summary page</li>
+<li>product analysis page</li>
+<li>regional performance page</li>
+</ul>
+<p>Step 6: Publish to Power BI Service</p>
+<ul>
+<li>schedule refresh</li>
+<li>share with business users</li>
+<li>manage access</li>
+</ul>
+<h2 class="powerbi-h2" id="16-quick-revision-notes">16. Quick Revision Notes<a class="headerlink" href="#16-quick-revision-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Power Query is for extraction, cleaning, and transformation</li>
+<li>Power Pivot is for modeling and DAX</li>
+<li>Power View is for reporting and visualization</li>
+<li>DAX and data modeling are the most important interview areas</li>
+<li>always validate relationships manually</li>
+<li>measures are generally better than calculated columns for reusable aggregations</li>
+<li>Power BI Service is used for publishing and collaboration</li>
+<li>star schema is usually the preferred model pattern</li>
+<li>append stacks tables, merge joins tables</li>
+<li>choose visuals based on the business question</li>
+</ul>
+<h2 class="powerbi-h2" id="17-final-summary">17. Final Summary<a class="headerlink" href="#17-final-summary" title="Permanent link">&para;</a></h2>
+<p>Power BI is not just a charting tool. It is a complete BI development platform that covers:</p>
+<ul>
+<li>data connection</li>
+<li>ETL through Power Query</li>
+<li>modeling through relationships and schema design</li>
+<li>business logic with DAX</li>
+<li>dashboarding through report visuals</li>
+<li>sharing through Power BI Service</li>
+</ul>
+<p>For developer and analyst roles, strong Power BI skills usually come from mastering three things:</p>
+<ol>
+<li>clean data preparation</li>
+<li>solid data modeling</li>
+<li>reusable DAX measures</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

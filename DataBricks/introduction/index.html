@@ -33,6 +33,9 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
 
@@ -50,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -59,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -68,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-introduction" class="md-skip">
+        <a href="#11-what-is-databricks" class="md-skip">
           Skip to content
         </a>
       
@@ -108,6 +120,18 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -549,6 +573,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytics/power-bi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Power BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -799,8 +851,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -843,8 +893,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -853,10 +901,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#high-level-architecture" class="md-nav__link">
+  <a href="#11-what-is-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HIGH LEVEL ARCHITECTURE
+        1.1 What Is Databricks?
       
     </span>
   </a>
@@ -864,10 +912,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roles-in-databricks" class="md-nav__link">
+  <a href="#12-high-level-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roles in Databricks
+        1.2 High-Level Architecture
       
     </span>
   </a>
@@ -875,22 +923,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lakehouse-architecture-workflow-diagram" class="md-nav__link">
+  <a href="#13-roles-in-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lakehouse architecture workflow diagram
+        1.3 Roles in Databricks
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lakehouse architecture workflow diagram">
+    <nav class="md-nav" aria-label="1.3 Roles in Databricks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-lake-vs-data-warehouse-vs-lakehouse" class="md-nav__link">
+  <a href="#131-account-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔎 Data Lake vs Data Warehouse vs Lakehouse
+        1.3.1 Account Administrator
       
     </span>
   </a>
@@ -898,10 +946,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#managed-vs-external-tables" class="md-nav__link">
+  <a href="#132-metastore-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔎 Managed vs External Tables
+        1.3.2 Metastore Administrator
       
     </span>
   </a>
@@ -909,10 +957,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lakehouse-architecture-overview" class="md-nav__link">
+  <a href="#133-workspace-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Lakehouse Architecture Overview
+        1.3.3 Workspace Administrator
       
     </span>
   </a>
@@ -920,32 +968,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#medallion-architecture-and-unity-catalog-overview" class="md-nav__link">
+  <a href="#134-owner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Medallion architecture and unity catalog overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bronze-vs-silver-vs-gold" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Bronze vs Silver vs Gold
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-properties-in-delta-lake" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔒 ACID Properties in Delta Lake
+        1.3.4 Owner
       
     </span>
   </a>
@@ -958,10 +984,609 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#oltp-vs-olap-comparison-table" class="md-nav__link">
+  <a href="#14-why-databricks-is-called-a-managed-service" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚖ OLTP vs OLAP (Comparison Table)
+        1.4 Why Databricks Is Called a Managed Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Why Databricks Is Called a Managed Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-what-databricks-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 What Databricks Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-what-this-allows-users-to-focus-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 What This Allows Users to Focus On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-cluster-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Cluster Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-infrastructure-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4 Infrastructure Provisioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.5 Scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#146-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.6 Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#147-security-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.7 Security Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#148-simple-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.8 Simple Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-lakehouse-architecture-workflow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Lakehouse Architecture Workflow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-key-components-of-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Key Components of Databricks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-data-lake-vs-data-warehouse-vs-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Data Lake vs Data Warehouse vs Lakehouse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-what-is-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 What Is Metadata?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 What Is Metadata?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-examples-of-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1 Examples of Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-why-metadata-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2 Why Metadata Helps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-databricks-account-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Databricks Account Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-managed-tables-vs-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Managed Tables vs External Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Managed Tables vs External Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-managed-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 Managed Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-managed-vs-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Managed vs External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-lakehouse-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Lakehouse Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-medallion-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Medallion Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12 Medallion Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-medallion-architecture-and-unity-catalog-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1 Medallion Architecture and Unity Catalog Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-bronze-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2 Bronze Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-silver-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3 Silver Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124-gold-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.4 Gold Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1125-benefits-of-this-layered-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.5 Benefits of This Layered Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1126-bronze-vs-silver-vs-gold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.6 Bronze vs Silver vs Gold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 Delta Lake
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 Delta Lake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-delta-lake-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1 Delta Lake Provides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-problems-delta-lake-solves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2 Problems Delta Lake Solves
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 Unity Catalog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14 Unity Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-unity-catalog-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1 Unity Catalog Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-benefits-of-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2 Benefits of Unity Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-acid-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 ACID Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 ACID Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-atomicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Atomicity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 Durability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1155-acid-properties-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.5 ACID Properties in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-oltp-vs-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 OLTP vs OLAP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 OLTP vs OLAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-what-is-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 What Is OLTP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16.1 What Is OLTP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11611-oltp-database-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1.1 OLTP Database Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-what-is-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 What Is OLAP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16.2 What Is OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11621-olap-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2.1 OLAP Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-oltp-vs-olap-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 OLTP vs OLAP Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-simple-real-life-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 Simple Real-Life Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1165-why-it-matters-for-data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.5 Why It Matters for Data Engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-databricks-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Databricks Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Summary
       
     </span>
   </a>
@@ -1090,8 +1715,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1100,10 +1723,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#high-level-architecture" class="md-nav__link">
+  <a href="#11-what-is-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HIGH LEVEL ARCHITECTURE
+        1.1 What Is Databricks?
       
     </span>
   </a>
@@ -1111,10 +1734,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roles-in-databricks" class="md-nav__link">
+  <a href="#12-high-level-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roles in Databricks
+        1.2 High-Level Architecture
       
     </span>
   </a>
@@ -1122,22 +1745,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lakehouse-architecture-workflow-diagram" class="md-nav__link">
+  <a href="#13-roles-in-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lakehouse architecture workflow diagram
+        1.3 Roles in Databricks
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lakehouse architecture workflow diagram">
+    <nav class="md-nav" aria-label="1.3 Roles in Databricks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-lake-vs-data-warehouse-vs-lakehouse" class="md-nav__link">
+  <a href="#131-account-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔎 Data Lake vs Data Warehouse vs Lakehouse
+        1.3.1 Account Administrator
       
     </span>
   </a>
@@ -1145,10 +1768,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#managed-vs-external-tables" class="md-nav__link">
+  <a href="#132-metastore-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔎 Managed vs External Tables
+        1.3.2 Metastore Administrator
       
     </span>
   </a>
@@ -1156,10 +1779,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lakehouse-architecture-overview" class="md-nav__link">
+  <a href="#133-workspace-administrator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📊 Lakehouse Architecture Overview
+        1.3.3 Workspace Administrator
       
     </span>
   </a>
@@ -1167,32 +1790,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#medallion-architecture-and-unity-catalog-overview" class="md-nav__link">
+  <a href="#134-owner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Medallion architecture and unity catalog overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bronze-vs-silver-vs-gold" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Bronze vs Silver vs Gold
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acid-properties-in-delta-lake" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔒 ACID Properties in Delta Lake
+        1.3.4 Owner
       
     </span>
   </a>
@@ -1205,10 +1806,609 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#oltp-vs-olap-comparison-table" class="md-nav__link">
+  <a href="#14-why-databricks-is-called-a-managed-service" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚖ OLTP vs OLAP (Comparison Table)
+        1.4 Why Databricks Is Called a Managed Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Why Databricks Is Called a Managed Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-what-databricks-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 What Databricks Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-what-this-allows-users-to-focus-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 What This Allows Users to Focus On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-cluster-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Cluster Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-infrastructure-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4 Infrastructure Provisioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.5 Scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#146-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.6 Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#147-security-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.7 Security Integrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#148-simple-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.8 Simple Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-lakehouse-architecture-workflow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Lakehouse Architecture Workflow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-key-components-of-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Key Components of Databricks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-data-lake-vs-data-warehouse-vs-lakehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Data Lake vs Data Warehouse vs Lakehouse
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-what-is-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 What Is Metadata?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 What Is Metadata?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-examples-of-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1 Examples of Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-why-metadata-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2 Why Metadata Helps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-databricks-account-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Databricks Account Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-managed-tables-vs-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Managed Tables vs External Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Managed Tables vs External Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-managed-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 Managed Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-managed-vs-external-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Managed vs External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-lakehouse-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Lakehouse Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-medallion-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Medallion Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12 Medallion Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-medallion-architecture-and-unity-catalog-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1 Medallion Architecture and Unity Catalog Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-bronze-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2 Bronze Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-silver-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3 Silver Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124-gold-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.4 Gold Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1125-benefits-of-this-layered-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.5 Benefits of This Layered Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1126-bronze-vs-silver-vs-gold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.6 Bronze vs Silver vs Gold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 Delta Lake
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 Delta Lake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-delta-lake-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1 Delta Lake Provides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-problems-delta-lake-solves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2 Problems Delta Lake Solves
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 Unity Catalog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14 Unity Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-unity-catalog-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1 Unity Catalog Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-benefits-of-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2 Benefits of Unity Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-acid-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 ACID Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 ACID Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-atomicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Atomicity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 Durability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1155-acid-properties-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.5 ACID Properties in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-oltp-vs-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 OLTP vs OLAP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 OLTP vs OLAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-what-is-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 What Is OLTP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16.1 What Is OLTP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11611-oltp-database-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1.1 OLTP Database Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-what-is-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 What Is OLAP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16.2 What Is OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11621-olap-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2.1 OLAP Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-oltp-vs-olap-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 OLTP vs OLAP Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-simple-real-life-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 Simple Real-Life Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1165-why-it-matters-for-data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.5 Why It Matters for Data Engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-databricks-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Databricks Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Summary
       
     </span>
   </a>
@@ -1232,181 +2432,200 @@
 
 
 
-<h1 id="1-introduction">1️⃣ Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h1>
-<p>📘 <strong>What is Databricks?</strong></p>
+<div class="databricks-hero">
+  <div class="databricks-chip">Lakehouse | Spark | Data Platforms</div>
+  <h1>Databricks Introduction</h1>
+  <p>
+    Databricks is a modern unified data and AI platform built around the lakehouse architecture.
+    These notes cover the platform from basics to core architecture, governance, storage, and analytics concepts.
+  </p>
+</div>
+
+<h2 class="databricks-h2" id="11-what-is-databricks">1.1 What Is Databricks?<a class="headerlink" href="#11-what-is-databricks" title="Permanent link">&para;</a></h2>
 <p>Databricks is a cloud-based unified data and AI platform built on top of Apache Spark that enables organizations to process, analyze, and build machine learning solutions on large-scale data.</p>
 <p>It is designed around the Lakehouse architecture, which combines:</p>
-<p>Data Lake capabilities → Low-cost storage, flexibility, support for structured and unstructured data</p>
-<p>Data Warehouse capabilities → High performance, ACID transactions, governance, and BI optimization</p>
+<ul>
+<li>Data Lake capabilities: low-cost storage, flexibility, and support for structured and unstructured data</li>
+<li>Data Warehouse capabilities: high performance, ACID transactions, governance, and BI optimization</li>
+</ul>
 <p>This means Databricks gives you the flexibility of a data lake and the reliability of a data warehouse in a single platform.</p>
-<pre><code>                ┌──────────────────────────────┐
-                │        User Personas         │
-                │──────────────────────────────│
-                │  • Data Engineer (DE)       │
-                │    - Jobs &amp; Workflows       │
-                │    - ETL Pipelines          │
-                │                              │
-                │  • Data Analyst (DA)        │
-                │    - SQL Queries            │
-                │    - Dashboards             │
-                │                              │
-                │  • Data Scientist (DS)      │
-                │    - AI / ML Models         │
-                │    - Notebooks              │
-                └──────────────────────────────┘
-                            ▲
-                            │
-                ┌──────────────────────────────┐
-                │   Data Intelligence Engine   │
-                │──────────────────────────────│
-                │  Lakehouse + GenAI           │
-                │  - Query Optimization        │
-                │  - AI-powered Insights       │
-                │  - Natural Language to SQL   │
-                └──────────────────────────────┘
-                            ▲
-                            │
-                ┌──────────────────────────────┐
-                │        Unity Catalog         │
-                │──────────────────────────────│
-                │  Governance Layer            │
-                │  - Access Control            │
-                │  - Data Lineage              │
-                │  - Audit Logs                │
-                └──────────────────────────────┘
-                            ▲
-                            │
-                ┌──────────────────────────────┐
-                │         Delta Lake           │
-                │──────────────────────────────│
-                │  Lakehouse Storage Engine    │
-                │  - ACID Transactions         │
-                │  - Schema Enforcement        │
-                │  - Time Travel               │
-                │  - Batch + Streaming         │
-                └──────────────────────────────┘
-                            ▲
-                            │
-                ┌──────────────────────────────┐
-                │           CLOUD           │
-                │──────────────────────────────│
-                │  AWS  |  Azure  |  GCP      │
-                │  (Compute + Storage)         │
-                └──────────────────────────────┘
-</code></pre>
+<div class="highlight"><pre><span></span><code>                    +------------------------------+
+                    |        User Personas         |
+                    |------------------------------|
+                    |  - Data Engineer (DE)        |
+                    |    - Jobs and Workflows      |
+                    |    - ETL Pipelines           |
+                    |                              |
+                    |  - Data Analyst (DA)         |
+                    |    - SQL Queries             |
+                    |    - Dashboards              |
+                    |                              |
+                    |  - Data Scientist (DS)       |
+                    |    - AI and ML Models        |
+                    |    - Notebooks               |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |   Data Intelligence Engine   |
+                    |------------------------------|
+                    |  Lakehouse + GenAI           |
+                    |  - Query Optimization        |
+                    |  - AI-powered Insights       |
+                    |  - Natural Language to SQL   |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |        Unity Catalog         |
+                    |------------------------------|
+                    |  Governance Layer            |
+                    |  - Access Control            |
+                    |  - Data Lineage              |
+                    |  - Audit Logs                |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |         Delta Lake           |
+                    |------------------------------|
+                    |  Lakehouse Storage Engine    |
+                    |  - ACID Transactions         |
+                    |  - Schema Enforcement        |
+                    |  - Time Travel               |
+                    |  - Batch + Streaming         |
+                    +------------------------------+
+                                ^
+                                |
+                    +------------------------------+
+                    |            Cloud             |
+                    |------------------------------|
+                    |  AWS | Azure | GCP           |
+                    |  (Compute + Storage)         |
+                    +------------------------------+
+</code></pre></div>
 <blockquote>
-<p>Integration woth azure gives more features bacuse it is the primary owner and others are third party.</p>
+<p>Integration with Azure gives more features because it is the primary owner, while others are third-party integrations.</p>
 </blockquote>
-<h2 id="high-level-architecture">HIGH LEVEL ARCHITECTURE<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="12-high-level-architecture">1.2 High-Level Architecture<a class="headerlink" href="#12-high-level-architecture" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>CONTROL PLANE</th>
-<th>DATA PLANE</th>
+<th>Control Plane</th>
+<th>Data Plane</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Managed by Databricks</td>
-<td>Managed by Customer</td>
+<td>Managed by customer</td>
 </tr>
 <tr>
-<td>Databricks Cloud Account</td>
-<td>Customer Cloud Account</td>
+<td>Databricks cloud account</td>
+<td>Customer cloud account</td>
 </tr>
 <tr>
-<td>Manages Backend Servers</td>
-<td>Data is Processed Here</td>
+<td>Manages backend servers</td>
+<td>Data is processed here</td>
 </tr>
 <tr>
-<td>Hosts Web Application (UI)</td>
-<td>Contains Cluster</td>
+<td>Hosts web application (UI)</td>
+<td>Contains cluster</td>
 </tr>
 <tr>
-<td>Cluster Configuration</td>
-<td>Cluster Runs Here</td>
+<td>Cluster configuration</td>
+<td>Cluster runs here</td>
 </tr>
 <tr>
-<td>Jobs are Created &amp; Managed</td>
-<td>Jobs are Executed Here</td>
+<td>Jobs are created and managed</td>
+<td>Jobs are executed here</td>
 </tr>
 <tr>
-<td>Stores Metadata</td>
-<td>Stores Client Data</td>
+<td>Stores metadata</td>
+<td>Stores client data</td>
 </tr>
 </tbody>
 </table>
-<h2 id="roles-in-databricks">Roles in Databricks<a class="headerlink" href="#roles-in-databricks" title="Permanent link">&para;</a></h2>
-<p><strong>1) Account Administrator</strong></p>
-<p>Creates and manages workspaces</p>
-<p>Manages users at the account level</p>
-<p>Controls global permissions</p>
-<p>Has the highest level of administrative control</p>
-<p><strong>2) Metastore Administrator</strong></p>
-<p>Creates and manages catalogs</p>
-<p>Manages schemas and tables</p>
-<p>Controls data-level permissions</p>
-<p>Governs data objects in Unity Catalog</p>
-<p><strong>3) Workspace Administrator</strong></p>
-<p>Admin of a specific workspace</p>
-<p>Manages users at the workspace level</p>
-<p>Assigns roles within the workspace</p>
-<p>Controls clusters and workspace settings</p>
-<p><strong>4) Owner</strong></p>
-<p>User who creates an object (table, schema, view, etc.)</p>
-<p>Has full control over that object</p>
-<p>Can grant or revoke access to other users</p>
-<p>Responsible for managing that specific object</p>
-<p>🚀 <strong>Why Databricks is Called a Managed Service</strong></p>
+<h2 class="databricks-h2" id="13-roles-in-databricks">1.3 Roles in Databricks<a class="headerlink" href="#13-roles-in-databricks" title="Permanent link">&para;</a></h2>
+<h3 class="databricks-h3" id="131-account-administrator">1.3.1 Account Administrator<a class="headerlink" href="#131-account-administrator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates and manages workspaces</li>
+<li>Manages users at the account level</li>
+<li>Controls global permissions</li>
+<li>Has the highest level of administrative control</li>
+</ul>
+<h3 class="databricks-h3" id="132-metastore-administrator">1.3.2 Metastore Administrator<a class="headerlink" href="#132-metastore-administrator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates and manages catalogs</li>
+<li>Manages schemas and tables</li>
+<li>Controls data-level permissions</li>
+<li>Governs data objects in Unity Catalog</li>
+</ul>
+<h3 class="databricks-h3" id="133-workspace-administrator">1.3.3 Workspace Administrator<a class="headerlink" href="#133-workspace-administrator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Admin of a specific workspace</li>
+<li>Manages users at the workspace level</li>
+<li>Assigns roles within the workspace</li>
+<li>Controls clusters and workspace settings</li>
+</ul>
+<h3 class="databricks-h3" id="134-owner">1.3.4 Owner<a class="headerlink" href="#134-owner" title="Permanent link">&para;</a></h3>
+<ul>
+<li>User who creates an object such as a table, schema, or view</li>
+<li>Has full control over that object</li>
+<li>Can grant or revoke access to other users</li>
+<li>Responsible for managing that specific object</li>
+</ul>
+<h2 class="databricks-h2" id="14-why-databricks-is-called-a-managed-service">1.4 Why Databricks Is Called a Managed Service<a class="headerlink" href="#14-why-databricks-is-called-a-managed-service" title="Permanent link">&para;</a></h2>
 <p>Databricks is a managed service, meaning you do not need to manually set up or maintain infrastructure.</p>
-<p>Instead of configuring servers, installing Spark, handling failures, and tuning performance — Databricks manages these for you automatically.</p>
-<p><strong>It takes care of:</strong></p>
-<p>Cluster management
-Infrastructure provisioning
-Scaling
-Performance optimization
-Security integrations</p>
-<p><strong>This allows</strong>:</p>
-<p>Data Engineers → to focus on pipelines</p>
-<p>Analysts → to focus on insights</p>
-<p>Data Scientists → to focus on models</p>
+<p>Instead of configuring servers, installing Spark, handling failures, and tuning performance, Databricks manages these automatically.</p>
+<h3 class="databricks-h3" id="141-what-databricks-manages">1.4.1 What Databricks Manages<a class="headerlink" href="#141-what-databricks-manages" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cluster management</li>
+<li>Infrastructure provisioning</li>
+<li>Scaling</li>
+<li>Performance optimization</li>
+<li>Security integrations</li>
+</ul>
+<h3 class="databricks-h3" id="142-what-this-allows-users-to-focus-on">1.4.2 What This Allows Users to Focus On<a class="headerlink" href="#142-what-this-allows-users-to-focus-on" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data engineers focus on pipelines</li>
+<li>Analysts focus on insights</li>
+<li>Data scientists focus on models</li>
+</ul>
 <p>Instead of spending time on DevOps or infrastructure setup.</p>
-<p>1️⃣ Cluster Management</p>
+<h3 class="databricks-h3" id="143-cluster-management">1.4.3 Cluster Management<a class="headerlink" href="#143-cluster-management" title="Permanent link">&para;</a></h3>
 <p>Cluster management refers to the automatic creation, configuration, monitoring, and termination of compute clusters used to process data.</p>
-<p>👉 Databricks automatically manages Spark clusters so users don’t need to manually configure servers.</p>
-<p>2️⃣ Infrastructure Provisioning</p>
+<p>Databricks automatically manages Spark clusters so users do not need to manually configure servers.</p>
+<h3 class="databricks-h3" id="144-infrastructure-provisioning">1.4.4 Infrastructure Provisioning<a class="headerlink" href="#144-infrastructure-provisioning" title="Permanent link">&para;</a></h3>
 <p>Infrastructure provisioning is the process of setting up cloud resources such as virtual machines, storage, and networking.</p>
-<p>👉 Databricks automatically provisions the required cloud infrastructure (AWS, Azure, GCP) when you start a cluster.</p>
-<p>3️⃣ Scaling</p>
+<p>Databricks automatically provisions the required cloud infrastructure on AWS, Azure, or GCP when you start a cluster.</p>
+<h3 class="databricks-h3" id="145-scaling">1.4.5 Scaling<a class="headerlink" href="#145-scaling" title="Permanent link">&para;</a></h3>
 <p>Scaling is the ability to increase or decrease computing resources based on workload demand.</p>
-<p>👉 Databricks supports auto-scaling, meaning it can add or remove worker nodes automatically depending on workload size.</p>
-<p>4️⃣ Performance Optimization</p>
+<p>Databricks supports auto-scaling, meaning it can add or remove worker nodes automatically depending on workload size.</p>
+<h3 class="databricks-h3" id="146-performance-optimization">1.4.6 Performance Optimization<a class="headerlink" href="#146-performance-optimization" title="Permanent link">&para;</a></h3>
 <p>Performance optimization involves tuning system resources and execution strategies to run workloads faster and more efficiently.</p>
-<p>👉 Databricks optimizes Spark jobs automatically using features like query optimization, caching, and optimized execution engines.</p>
-<p>5️⃣ Security Integrations</p>
+<p>Databricks optimizes Spark jobs automatically using features like query optimization, caching, and optimized execution engines.</p>
+<h3 class="databricks-h3" id="147-security-integrations">1.4.7 Security Integrations<a class="headerlink" href="#147-security-integrations" title="Permanent link">&para;</a></h3>
 <p>Security integrations ensure that data access and system usage are secure and compliant with organizational policies.</p>
-<p>👉 Databricks integrates with cloud IAM systems, role-based access control, encryption, and Unity Catalog for governance.</p>
-<p>💡 In Simple Words </p>
-<p>Without Databricks → You manage servers, install Spark, scale manually, secure everything yourself.</p>
-<p>With Databricks → You just write code. The platform manages everything else</p>
+<p>Databricks integrates with cloud IAM systems, role-based access control, encryption, and Unity Catalog for governance.</p>
+<h3 class="databricks-h3" id="148-simple-explanation">1.4.8 Simple Explanation<a class="headerlink" href="#148-simple-explanation" title="Permanent link">&para;</a></h3>
+<p>Without Databricks, you manage servers, install Spark, scale manually, and secure everything yourself.</p>
+<p>With Databricks, you write code and the platform manages the infrastructure around it.</p>
 <p>This allows data engineers, analysts, and data scientists to focus on building data solutions instead of managing infrastructure.</p>
-<h2 id="lakehouse-architecture-workflow-diagram">Lakehouse architecture workflow diagram<a class="headerlink" href="#lakehouse-architecture-workflow-diagram" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../image-1.png" /></p>
-<p>2️⃣ Key Components of Databricks</p>
-<p>Workspaces – Collaborative environment for notebooks, jobs, and dashboards</p>
-<p>Clusters – Compute resources to run Spark workloads</p>
-<p>DBFS (Databricks File System) – Distributed file system abstraction</p>
-<p>Delta Lake – Storage layer providing ACID transactions</p>
-<p>Unity Catalog – Centralized governance layer</p>
+<h2 class="databricks-h2" id="15-lakehouse-architecture-workflow-diagram">1.5 Lakehouse Architecture Workflow Diagram<a class="headerlink" href="#15-lakehouse-architecture-workflow-diagram" title="Permanent link">&para;</a></h2>
+<p><img alt="Lakehouse architecture workflow" src="../image-1.png" /></p>
+<h2 class="databricks-h2" id="16-key-components-of-databricks">1.6 Key Components of Databricks<a class="headerlink" href="#16-key-components-of-databricks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Workspaces: collaborative environment for notebooks, jobs, and dashboards</li>
+<li>Clusters: compute resources to run Spark workloads</li>
+<li>DBFS (Databricks File System): distributed file system abstraction</li>
+<li>Delta Lake: storage layer providing ACID transactions</li>
+<li>Unity Catalog: centralized governance layer</li>
+</ul>
 <blockquote>
-<p>Competetors of Delta lake are : </p>
+<p>Competitors of Delta Lake include Apache Iceberg, Apache Hudi, Snowflake, and Microsoft Fabric (OneLake).</p>
 </blockquote>
-<pre><code>Apache Iceberg, 
-Apache Hudi, 
-Snowflake, 
-Microsoft Fabric (OneLake)
-</code></pre>
-<h3 id="data-lake-vs-data-warehouse-vs-lakehouse">🔎 Data Lake vs Data Warehouse vs Lakehouse<a class="headerlink" href="#data-lake-vs-data-warehouse-vs-lakehouse" title="Permanent link">&para;</a></h3>
+<h2 class="databricks-h2" id="17-data-lake-vs-data-warehouse-vs-lakehouse">1.7 Data Lake vs Data Warehouse vs Lakehouse<a class="headerlink" href="#17-data-lake-vs-data-warehouse-vs-lakehouse" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1437,9 +2656,9 @@ Microsoft Fabric (OneLake)
 </tr>
 <tr>
 <td>ACID Support</td>
-<td>❌ No</td>
-<td>✅ Yes</td>
-<td>✅ Yes (Delta Lake)</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (Delta Lake)</td>
 </tr>
 <tr>
 <td>Governance</td>
@@ -1449,54 +2668,63 @@ Microsoft Fabric (OneLake)
 </tr>
 <tr>
 <td>Supports ML</td>
-<td>✅ Yes</td>
+<td>Yes</td>
 <td>Limited</td>
-<td>✅ Yes</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
-<p>3️⃣ What is Metadata?</p>
-<p>Metadata is “data about data.”</p>
+<h2 class="databricks-h2" id="18-what-is-metadata">1.8 What Is Metadata?<a class="headerlink" href="#18-what-is-metadata" title="Permanent link">&para;</a></h2>
+<p>Metadata is "data about data."</p>
 <p>It provides information that describes, explains, or gives context to other data.</p>
-<p>Examples of Metadata:</p>
-<p>Table name</p>
-<p>Column names</p>
-<p>Data types</p>
-<p>File location</p>
-<p>Owner</p>
-<p>Created date</p>
-<p>Permissions</p>
-<p>Metadata helps in:</p>
-<p>Data discovery</p>
-<p>Governance</p>
-<p>Access control</p>
-<p>Query optimization</p>
-<p>4️⃣ <strong>Databricks Account Set up</strong></p>
-<pre><code>1. Create Azure account
-</code></pre>
-<p>4️⃣ <strong>Managed Tables vs External Tables</strong></p>
-<p>Databricks supports two main types of tables:</p>
-<p>🔹 <strong>Managed Tables</strong></p>
+<h3 class="databricks-h3" id="181-examples-of-metadata">1.8.1 Examples of Metadata<a class="headerlink" href="#181-examples-of-metadata" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Table name</li>
+<li>Column names</li>
+<li>Data types</li>
+<li>File location</li>
+<li>Owner</li>
+<li>Created date</li>
+<li>Permissions</li>
+</ul>
+<h3 class="databricks-h3" id="182-why-metadata-helps">1.8.2 Why Metadata Helps<a class="headerlink" href="#182-why-metadata-helps" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data discovery</li>
+<li>Governance</li>
+<li>Access control</li>
+<li>Query optimization</li>
+</ul>
+<h2 class="databricks-h2" id="19-databricks-account-setup">1.9 Databricks Account Setup<a class="headerlink" href="#19-databricks-account-setup" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Create an Azure account.</li>
+</ol>
+<h2 class="databricks-h2" id="110-managed-tables-vs-external-tables">1.10 Managed Tables vs External Tables<a class="headerlink" href="#110-managed-tables-vs-external-tables" title="Permanent link">&para;</a></h2>
+<p>Databricks supports two main types of tables.</p>
+<h3 class="databricks-h3" id="1101-managed-tables">1.10.1 Managed Tables<a class="headerlink" href="#1101-managed-tables" title="Permanent link">&para;</a></h3>
 <p>In managed tables, Databricks manages both metadata and physical data storage.</p>
-<p><strong>Characteristics:</strong></p>
-<p>Storage location controlled by Databricks</p>
-<p>Dropping table deletes both metadata and data</p>
-<p>Strong governance using Unity Catalog</p>
-<p>Suitable for fully controlled environments</p>
-<p>Multi-tool Access: Difficult</p>
-<p>Data Governance: Fully governed</p>
-<p>Use Case: Quick analytics, internal BI systems, tightly controlled environments</p>
-<p>🔹 <strong>External Tables</strong></p>
-<p>In external tables, Databricks manages only metadata, while data remains in external storage (like S3, ADLS, GCS).</p>
-<p><strong>Characteristics:</strong></p>
-<p>Data stored outside Databricks-managed location</p>
-<p>Dropping table removes only metadata</p>
-<p>Flexible integration with other tools</p>
-<p>Requires governance discipline</p>
-<p>Multi-tool Access: Easy</p>
-<p>Data Governance: Flexible but requires discipline</p>
-<p>Use Case: Shared datasets, existing data lakes, multi-tool ecosystems</p>
-<h3 id="managed-vs-external-tables">🔎 Managed vs External Tables<a class="headerlink" href="#managed-vs-external-tables" title="Permanent link">&para;</a></h3>
+<p>Characteristics:</p>
+<ul>
+<li>Storage location controlled by Databricks</li>
+<li>Dropping the table deletes both metadata and data</li>
+<li>Strong governance using Unity Catalog</li>
+<li>Suitable for fully controlled environments</li>
+<li>Multi-tool access: difficult</li>
+<li>Data governance: fully governed</li>
+<li>Use case: quick analytics, internal BI systems, tightly controlled environments</li>
+</ul>
+<h3 class="databricks-h3" id="1102-external-tables">1.10.2 External Tables<a class="headerlink" href="#1102-external-tables" title="Permanent link">&para;</a></h3>
+<p>In external tables, Databricks manages only metadata, while data remains in external storage such as S3, ADLS, or GCS.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Data stored outside Databricks-managed location</li>
+<li>Dropping the table removes only metadata</li>
+<li>Flexible integration with other tools</li>
+<li>Requires governance discipline</li>
+<li>Multi-tool access: easy</li>
+<li>Data governance: flexible but requires discipline</li>
+<li>Use case: shared datasets, existing data lakes, multi-tool ecosystems</li>
+</ul>
+<h3 class="databricks-h3" id="1103-managed-vs-external-tables">1.10.3 Managed vs External Tables<a class="headerlink" href="#1103-managed-vs-external-tables" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1518,7 +2746,7 @@ Microsoft Fabric (OneLake)
 </tr>
 <tr>
 <td>Data Deletion</td>
-<td>Metadata + Data deleted</td>
+<td>Metadata + data deleted</td>
 <td>Only metadata deleted</td>
 </tr>
 <tr>
@@ -1534,45 +2762,75 @@ Microsoft Fabric (OneLake)
 <tr>
 <td>Best For</td>
 <td>Internal analytics</td>
-<td>Shared datasets / Existing data lakes</td>
+<td>Shared datasets or existing data lakes</td>
 </tr>
 </tbody>
 </table>
-<p>5️⃣ Lakehouse Architecture</p>
-<p>Databricks implements the Lakehouse Architecture, which combines:</p>
-<p>Data Lake   Data Warehouse</p>
-<p>Cheap storage   High performance</p>
-<p>Flexible schema Structured governance</p>
-<p>Raw data storage    BI-ready data</p>
+<h2 class="databricks-h2" id="111-lakehouse-architecture">1.11 Lakehouse Architecture<a class="headerlink" href="#111-lakehouse-architecture" title="Permanent link">&para;</a></h2>
+<p>Databricks implements the Lakehouse architecture, which combines:</p>
+<table>
+<thead>
+<tr>
+<th>Data Lake</th>
+<th>Data Warehouse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cheap storage</td>
+<td>High performance</td>
+</tr>
+<tr>
+<td>Flexible schema</td>
+<td>Structured governance</td>
+</tr>
+<tr>
+<td>Raw data storage</td>
+<td>BI-ready data</td>
+</tr>
+</tbody>
+</table>
 <p>Lakehouse provides:</p>
-<p>ACID transactions</p>
-<p>Schema enforcement</p>
-<p>Time travel</p>
-<p>Batch + Streaming support</p>
-<h3 id="lakehouse-architecture-overview">📊 Lakehouse Architecture Overview<a class="headerlink" href="#lakehouse-architecture-overview" title="Permanent link">&para;</a></h3>
-<p>6️⃣ 🏗️ Medallion Architecture (Lakehouse Design Pattern)</p>
-<p>The Medallion Architecture is a data design pattern used in Databricks to organize data into three layers:</p>
-<h3 id="medallion-architecture-and-unity-catalog-overview">🏗️ Medallion architecture and unity catalog overview<a class="headerlink" href="#medallion-architecture-and-unity-catalog-overview" title="Permanent link">&para;</a></h3>
-<p><img alt="alt text" src="../image-2.png" /></p>
-<p>🥉 <strong>Bronze Layer – Raw Data</strong></p>
-<p>Ingested data from source systems
-Minimal transformation
-Used for auditing and traceability</p>
-<p>🥈 <strong>Silver Layer – Cleaned &amp; Transformed Data</strong></p>
-<p>Data cleaning
-Deduplication
-Standardization
-Schema enforcement</p>
-<p>🥇 <strong>Gold Layer – Business-Level Data</strong></p>
-<p>Aggregated and curated datasets
-Business KPIs
-Optimized for reporting and analytics</p>
-<p><strong>This layered approach improves:</strong></p>
-<p>Data quality
-Maintainability
-Performance
-Governance</p>
-<h3 id="bronze-vs-silver-vs-gold">📊 Bronze vs Silver vs Gold<a class="headerlink" href="#bronze-vs-silver-vs-gold" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ACID transactions</li>
+<li>Schema enforcement</li>
+<li>Time travel</li>
+<li>Batch and streaming support</li>
+</ul>
+<h2 class="databricks-h2" id="112-medallion-architecture">1.12 Medallion Architecture<a class="headerlink" href="#112-medallion-architecture" title="Permanent link">&para;</a></h2>
+<p>The Medallion architecture is a data design pattern used in Databricks to organize data into three layers.</p>
+<h3 class="databricks-h3" id="1121-medallion-architecture-and-unity-catalog-overview">1.12.1 Medallion Architecture and Unity Catalog Overview<a class="headerlink" href="#1121-medallion-architecture-and-unity-catalog-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="Medallion architecture and Unity Catalog overview" src="../image-2.png" /></p>
+<h3 class="databricks-h3" id="1122-bronze-layer">1.12.2 Bronze Layer<a class="headerlink" href="#1122-bronze-layer" title="Permanent link">&para;</a></h3>
+<p>Bronze is the raw data layer.</p>
+<ul>
+<li>Ingested data from source systems</li>
+<li>Minimal transformation</li>
+<li>Used for auditing and traceability</li>
+</ul>
+<h3 class="databricks-h3" id="1123-silver-layer">1.12.3 Silver Layer<a class="headerlink" href="#1123-silver-layer" title="Permanent link">&para;</a></h3>
+<p>Silver is the cleaned and transformed data layer.</p>
+<ul>
+<li>Data cleaning</li>
+<li>Deduplication</li>
+<li>Standardization</li>
+<li>Schema enforcement</li>
+</ul>
+<h3 class="databricks-h3" id="1124-gold-layer">1.12.4 Gold Layer<a class="headerlink" href="#1124-gold-layer" title="Permanent link">&para;</a></h3>
+<p>Gold is the business-level data layer.</p>
+<ul>
+<li>Aggregated and curated datasets</li>
+<li>Business KPIs</li>
+<li>Optimized for reporting and analytics</li>
+</ul>
+<h3 class="databricks-h3" id="1125-benefits-of-this-layered-approach">1.12.5 Benefits of This Layered Approach<a class="headerlink" href="#1125-benefits-of-this-layered-approach" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data quality</li>
+<li>Maintainability</li>
+<li>Performance</li>
+<li>Governance</li>
+</ul>
+<h3 class="databricks-h3" id="1126-bronze-vs-silver-vs-gold">1.12.6 Bronze vs Silver vs Gold<a class="headerlink" href="#1126-bronze-vs-silver-vs-gold" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1593,61 +2851,69 @@ Governance</p>
 </tr>
 <tr>
 <td>Silver</td>
-<td>Cleaned &amp; standardized</td>
+<td>Cleaned and standardized</td>
 <td>Medium</td>
 <td>Moderate</td>
-<td>Data Engineers / Analysts</td>
+<td>Data Engineers and Analysts</td>
 </tr>
 <tr>
 <td>Gold</td>
 <td>Business-ready data</td>
 <td>High</td>
-<td>Aggregated &amp; Curated</td>
-<td>BI / Business Users</td>
+<td>Aggregated and curated</td>
+<td>BI and business users</td>
 </tr>
 </tbody>
 </table>
-<p>Source → Bronze → Silver → Gold → BI / ML</p>
-<p>7️⃣ Delta Lake</p>
+<p>Source -&gt; Bronze -&gt; Silver -&gt; Gold -&gt; BI / ML</p>
+<h2 class="databricks-h2" id="113-delta-lake">1.13 Delta Lake<a class="headerlink" href="#113-delta-lake" title="Permanent link">&para;</a></h2>
 <p>Delta Lake is the storage layer of Databricks that adds reliability to data lakes.</p>
-<p>Delta Lake is a open-source storage layer that brings ACID transactions, schema enforcement and time travel capabilities to data lakes.</p>
-<p><strong>It provides:</strong></p>
-<p>ACID transactions</p>
-<p>Schema enforcement</p>
-<p>Schema evolution</p>
-<p>Time travel (versioning)</p>
-<p>Scalable metadata handling</p>
-<p>Delta Lake solves common data lake problems such as:</p>
-<p>Dirty reads</p>
-<p>Data corruption</p>
-<p>Concurrent write issues</p>
-<p>8️⃣ Unity Catalog</p>
-<p>Unity Catalog is Databricks’ unified governance solution for data and AI assets.</p>
-<p><strong>It manages:</strong></p>
-<p>Tables</p>
-<p>Views</p>
-<p>Files</p>
-<p>ML models</p>
-<p>Permissions</p>
-<p>Lineage tracking</p>
-<p><strong>Benefits:</strong></p>
-<p>Centralized access control</p>
-<p>Fine-grained permissions (row/column level)</p>
-<p>Data lineage tracking</p>
-<p>Cross-workspace governance</p>
+<p>It is an open-source storage layer that brings ACID transactions, schema enforcement, and time travel capabilities to data lakes.</p>
+<h3 class="databricks-h3" id="1131-delta-lake-provides">1.13.1 Delta Lake Provides<a class="headerlink" href="#1131-delta-lake-provides" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ACID transactions</li>
+<li>Schema enforcement</li>
+<li>Schema evolution</li>
+<li>Time travel (versioning)</li>
+<li>Scalable metadata handling</li>
+</ul>
+<h3 class="databricks-h3" id="1132-problems-delta-lake-solves">1.13.2 Problems Delta Lake Solves<a class="headerlink" href="#1132-problems-delta-lake-solves" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dirty reads</li>
+<li>Data corruption</li>
+<li>Concurrent write issues</li>
+</ul>
+<h2 class="databricks-h2" id="114-unity-catalog">1.14 Unity Catalog<a class="headerlink" href="#114-unity-catalog" title="Permanent link">&para;</a></h2>
+<p>Unity Catalog is Databricks' unified governance solution for data and AI assets.</p>
+<h3 class="databricks-h3" id="1141-unity-catalog-manages">1.14.1 Unity Catalog Manages<a class="headerlink" href="#1141-unity-catalog-manages" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tables</li>
+<li>Views</li>
+<li>Files</li>
+<li>ML models</li>
+<li>Permissions</li>
+<li>Lineage tracking</li>
+</ul>
+<h3 class="databricks-h3" id="1142-benefits-of-unity-catalog">1.14.2 Benefits of Unity Catalog<a class="headerlink" href="#1142-benefits-of-unity-catalog" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Centralized access control</li>
+<li>Fine-grained permissions at row and column level</li>
+<li>Data lineage tracking</li>
+<li>Cross-workspace governance</li>
+</ul>
 <p>It ensures secure and compliant data usage across the organization.</p>
-<p>9️⃣ ACID Principles</p>
-<p>Databricks (via Delta Lake) supports ACID properties:</p>
-<p>A – Atomicity
-A transaction either fully completes or fully fails.</p>
-<p>C – Consistency
-Data remains valid before and after a transaction.</p>
-<p>I – Isolation
-Concurrent transactions do not interfere with each other.</p>
-<p>D – Durability
-Once committed, data remains stored even if failures occur.</p>
+<h2 class="databricks-h2" id="115-acid-principles">1.15 ACID Principles<a class="headerlink" href="#115-acid-principles" title="Permanent link">&para;</a></h2>
+<p>Databricks, through Delta Lake, supports ACID properties.</p>
+<h3 class="databricks-h3" id="1151-atomicity">1.15.1 Atomicity<a class="headerlink" href="#1151-atomicity" title="Permanent link">&para;</a></h3>
+<p>A transaction either fully completes or fully fails.</p>
+<h3 class="databricks-h3" id="1152-consistency">1.15.2 Consistency<a class="headerlink" href="#1152-consistency" title="Permanent link">&para;</a></h3>
+<p>Data remains valid before and after a transaction.</p>
+<h3 class="databricks-h3" id="1153-isolation">1.15.3 Isolation<a class="headerlink" href="#1153-isolation" title="Permanent link">&para;</a></h3>
+<p>Concurrent transactions do not interfere with each other.</p>
+<h3 class="databricks-h3" id="1154-durability">1.15.4 Durability<a class="headerlink" href="#1154-durability" title="Permanent link">&para;</a></h3>
+<p>Once committed, data remains stored even if failures occur.</p>
 <p>ACID ensures reliability in large-scale data systems.</p>
-<h3 id="acid-properties-in-delta-lake">🔒 ACID Properties in Delta Lake<a class="headerlink" href="#acid-properties-in-delta-lake" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1155-acid-properties-in-delta-lake">1.15.5 ACID Properties in Delta Lake<a class="headerlink" href="#1155-acid-properties-in-delta-lake" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1659,7 +2925,7 @@ Once committed, data remains stored even if failures occur.</p>
 <tbody>
 <tr>
 <td>Atomicity</td>
-<td>All or nothing execution</td>
+<td>All-or-nothing execution</td>
 <td>Failed transaction rolls back</td>
 </tr>
 <tr>
@@ -1679,63 +2945,76 @@ Once committed, data remains stored even if failures occur.</p>
 </tr>
 </tbody>
 </table>
-<p>🔹 OLTP vs OLAP (Very Important for Data Engineers)</p>
+<h2 class="databricks-h2" id="116-oltp-vs-olap">1.16 OLTP vs OLAP<a class="headerlink" href="#116-oltp-vs-olap" title="Permanent link">&para;</a></h2>
 <p>OLTP is for running daily business transactions, while OLAP is for analyzing data and generating insights.</p>
-<p>Since you're moving towards Data Engineering / Analytics, understanding this clearly is very important.</p>
-<p>🟢 What is OLTP?</p>
-<p>OLTP = Online Transaction Processing</p>
-<p>👉 Used for day-to-day operations
-👉 Handles many small transactions</p>
-<p>🏦 Example Systems</p>
-<p>Amazon (placing an order)</p>
-<p>Paytm (making payment)</p>
-<p>Bank ATM withdrawal</p>
-<p>📌 What Happens in OLTP?</p>
-<p>When you:</p>
-<p>Add an item to cart</p>
-<p>Make payment</p>
-<p>Transfer money</p>
-<p>Book a ticket</p>
-<p>The database:</p>
-<p>Inserts data</p>
-<p>Updates records</p>
-<p>Deletes records</p>
-<p>Ensures data consistency</p>
-<p>🖼 OLTP Database Structure</p>
-<p><img alt="alt text" src="../image-3.png" /></p>
-<p>✔ Highly normalized tables
-✔ Fast inserts &amp; updates
-✔ Supports thousands of concurrent users</p>
-<p>🔹 Example OLTP Query:</p>
-<p>UPDATE orders
-SET status = 'Shipped'
-WHERE order_id = 101;</p>
-<p>Small, fast transaction.</p>
-<p>🔵 What is OLAP?</p>
-<p>OLAP = Online Analytical Processing</p>
-<p>👉 Used for analysis &amp; reporting
-👉 Works on large historical data</p>
+<p>Since you are moving toward data engineering and analytics, understanding this clearly is very important.</p>
+<h3 class="databricks-h3" id="1161-what-is-oltp">1.16.1 What Is OLTP?<a class="headerlink" href="#1161-what-is-oltp" title="Permanent link">&para;</a></h3>
+<p>OLTP stands for Online Transaction Processing.</p>
+<ul>
+<li>Used for day-to-day operations</li>
+<li>Handles many small transactions</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Amazon placing an order</li>
+<li>Paytm making a payment</li>
+<li>Bank ATM withdrawal</li>
+</ul>
+<p>When you add an item to a cart, make a payment, transfer money, or book a ticket, the database:</p>
+<ul>
+<li>Inserts data</li>
+<li>Updates records</li>
+<li>Deletes records</li>
+<li>Ensures data consistency</li>
+</ul>
+<h4 class="databricks-h4" id="11611-oltp-database-structure">1.16.1.1 OLTP Database Structure<a class="headerlink" href="#11611-oltp-database-structure" title="Permanent link">&para;</a></h4>
+<p><img alt="OLTP database structure" src="../image-3.png" /></p>
+<ul>
+<li>Highly normalized tables</li>
+<li>Fast inserts and updates</li>
+<li>Supports thousands of concurrent users</li>
+</ul>
+<p>Example OLTP query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">orders</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Shipped&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span>
+</code></pre></div>
+<p>This is a small, fast transaction.</p>
+<h3 class="databricks-h3" id="1162-what-is-olap">1.16.2 What Is OLAP?<a class="headerlink" href="#1162-what-is-olap" title="Permanent link">&para;</a></h3>
+<p>OLAP stands for Online Analytical Processing.</p>
+<ul>
+<li>Used for analysis and reporting</li>
+<li>Works on large historical data</li>
+</ul>
 <p>Used by:</p>
-<p>Data Analysts</p>
-<p>Data Scientists</p>
-<p>Business Intelligence teams</p>
-<p>📊 Example Systems</p>
-<p>Tableau</p>
-<p>Power BI</p>
-<p>Snowflake</p>
-<p>Databricks</p>
-<p>🖼 OLAP Structure (Data Warehouse)</p>
-<p><img alt="alt text" src="../image-4.png" />      <img alt="alt text" src="../image-5.png" /></p>
-<p>✔ Star schema</p>
-<p>✔ Fact table + Dimension tables</p>
-<p>✔ Aggregations</p>
-<p>✔ Historical data</p>
-<p>🔹 Example OLAP Query</p>
-<p>SELECT region, SUM(sales)
-FROM sales_data
-GROUP BY region;</p>
+<ul>
+<li>Data analysts</li>
+<li>Data scientists</li>
+<li>Business intelligence teams</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Tableau</li>
+<li>Power BI</li>
+<li>Snowflake</li>
+<li>Databricks</li>
+</ul>
+<h4 class="databricks-h4" id="11621-olap-structure">1.16.2.1 OLAP Structure<a class="headerlink" href="#11621-olap-structure" title="Permanent link">&para;</a></h4>
+<p><img alt="OLAP structure" src="../image-4.png" />
+<img alt="OLAP schema example" src="../image-5.png" /></p>
+<ul>
+<li>Star schema</li>
+<li>Fact table plus dimension tables</li>
+<li>Aggregations</li>
+<li>Historical data</li>
+</ul>
+<p>Example OLAP query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">sales</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">sales_data</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">region</span><span class="p">;</span>
+</code></pre></div>
 <p>This scans millions of rows.</p>
-<h2 id="oltp-vs-olap-comparison-table">⚖ OLTP vs OLAP (Comparison Table)<a class="headerlink" href="#oltp-vs-olap-comparison-table" title="Permanent link">&para;</a></h2>
+<h3 class="databricks-h3" id="1163-oltp-vs-olap-comparison-table">1.16.3 OLTP vs OLAP Comparison Table<a class="headerlink" href="#1163-oltp-vs-olap-comparison-table" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1757,7 +3036,7 @@ GROUP BY region;</p>
 </tr>
 <tr>
 <td>Data</td>
-<td>Current / real-time data</td>
+<td>Current or real-time data</td>
 <td>Historical data</td>
 </tr>
 <tr>
@@ -1768,12 +3047,12 @@ GROUP BY region;</p>
 <tr>
 <td>Speed</td>
 <td>Milliseconds</td>
-<td>Seconds / Minutes</td>
+<td>Seconds or minutes</td>
 </tr>
 <tr>
 <td>Schema</td>
 <td>Normalized</td>
-<td>Star / Snowflake schema</td>
+<td>Star or Snowflake schema</td>
 </tr>
 <tr>
 <td>Example DB</td>
@@ -1782,62 +3061,36 @@ GROUP BY region;</p>
 </tr>
 </tbody>
 </table>
-<p>🧠 Simple Real-Life Example</p>
+<h3 class="databricks-h3" id="1164-simple-real-life-example">1.16.4 Simple Real-Life Example<a class="headerlink" href="#1164-simple-real-life-example" title="Permanent link">&para;</a></h3>
 <p>Think of a supermarket:</p>
-<p>🛒 Billing counter → OLTP</p>
-<p>📊 Monthly sales analysis → OLAP</p>
+<ul>
+<li>Billing counter -&gt; OLTP</li>
+<li>Monthly sales analysis -&gt; OLAP</li>
+</ul>
 <p>Since you:</p>
-<p>Work in analytics</p>
-<p>Want Data Engineer / BI roles</p>
-<p>👉 You will mainly work with OLAP systems
-👉 But you must understand OLTP to design pipelines</p>
-<p>OLTP vs OLAP
-Overview</p>
-<p>OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) are two different types of database systems designed for different purposes.</p>
-<p>Key Difference:
-OLTP is used to run daily business operations.
-OLAP is used to analyze data and generate insights.</p>
-<p>OLTP (Online Transaction Processing)
-Definition</p>
-<p>OLTP systems are designed to manage real-time business transactions.
-They handle a large number of small, fast operations such as insert, update, and delete.</p>
-<p>Characteristics</p>
-<p>Highly normalized tables (3NF)</p>
-<p>Fast insert/update/delete</p>
-<p>Ensures ACID properties</p>
-<p>Handles thousands of transactions per second</p>
-<p>Small queries</p>
-<p>OLTP Architecture (Conceptual View)</p>
-<p>OLAP (Online Analytical Processing)
-Definition</p>
-<p>OLAP systems are designed for complex queries and data analysis.
-They work on large volumes of historical data.</p>
-<p>Characteristics :</p>
-<p>Star or Snowflake schema</p>
-<p>Fact and dimension tables</p>
-<p>Handles large datasets</p>
-<p>Complex aggregations</p>
-<p>Read-heavy workload</p>
-<p><strong>Simple Analogy</strong></p>
-<p>Supermarket example:</p>
-<p>🛒 Billing counter → OLTP</p>
-<p>📊 Monthly sales dashboard → OLAP</p>
-<p>Important for Data Engineers</p>
-<p>OLTP → Source systems</p>
-<p>ETL/ELT → Moves data</p>
-<p>OLAP → Data warehouse / Analytics system</p>
+<ul>
+<li>Work in analytics</li>
+<li>Want data engineer or BI roles</li>
+</ul>
+<p>You will mainly work with OLAP systems, but you must understand OLTP to design pipelines.</p>
+<h3 class="databricks-h3" id="1165-why-it-matters-for-data-engineers">1.16.5 Why It Matters for Data Engineers<a class="headerlink" href="#1165-why-it-matters-for-data-engineers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OLTP -&gt; source systems</li>
+<li>ETL/ELT -&gt; moves data</li>
+<li>OLAP -&gt; data warehouse or analytics system</li>
+</ul>
 <p>Understanding both is critical for designing data pipelines.</p>
-<blockquote>
-<p>Hirarchy in Databricks.</p>
-</blockquote>
-<p>Workspace &gt; Catalog &gt; Schema &gt; Tables</p>
-<p>🔟 Summary</p>
-<p><strong>Databricks is a modern data platform that:</strong></p>
-<p>Implements Lakehouse architecture</p>
-<p>Uses Delta Lake for reliability</p>
-<p>Supports Medallion architecture for structured data processing</p>
-<p>Provides centralized governance via Unity Catalog</p>
-<p>Enables scalable data engineering, analytics, and AI workloads</p>
+<h2 class="databricks-h2" id="117-databricks-hierarchy">1.17 Databricks Hierarchy<a class="headerlink" href="#117-databricks-hierarchy" title="Permanent link">&para;</a></h2>
+<p>Workspace -&gt; Catalog -&gt; Schema -&gt; Tables</p>
+<h2 class="databricks-h2" id="118-summary">1.18 Summary<a class="headerlink" href="#118-summary" title="Permanent link">&para;</a></h2>
+<p>Databricks is a modern data platform that:</p>
+<ul>
+<li>Implements Lakehouse architecture</li>
+<li>Uses Delta Lake for reliability</li>
+<li>Supports Medallion architecture for structured data processing</li>
+<li>Provides centralized governance via Unity Catalog</li>
+<li>Enables scalable data engineering, analytics, and AI workloads</li>
+</ul>
 <p>It simplifies big data processing while maintaining enterprise-grade governance and reliability.</p>
 
 
@@ -1888,7 +3141,7 @@ They work on large volumes of historical data.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
