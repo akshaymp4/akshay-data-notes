@@ -1,0 +1,4476 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal Notes on Data Science, Analytics & Data Engineering">
+      
+      
+        <meta name="author" content="Akshay MP">
+      
+      
+      
+        <link rel="prev" href="../python/">
+      
+      
+        <link rel="next" href="../machine-learning/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Statistics - AnalyticsWithAkshay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-what-is-statistics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-header__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AnalyticsWithAkshay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Statistics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/" class="md-tabs__link">
+          
+  
+  
+  Data Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Analytics/sql/" class="md-tabs__link">
+          
+  
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataEngineering/de-cycle/" class="md-tabs__link">
+          
+  
+  
+  Data Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataBricks/introduction/" class="md-tabs__link">
+          
+  
+  
+  DataBricks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AWS/aws_notes/" class="md-tabs__link">
+          
+  
+  
+  AWS
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-nav__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AnalyticsWithAkshay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Science
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Science
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-what-is-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is Statistics?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-main-branches-of-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Main Branches of Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Main Branches of Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 Descriptive Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-inferential-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 Inferential Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-detailed-statistics-hierarchy-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Detailed Statistics Hierarchy Chart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-basic-terms-you-must-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Basic Terms You Must Know
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Basic Terms You Must Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-data-and-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 Data and Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-types-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 Types of Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-population-sample-parameter-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Population, Sample, Parameter, Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Descriptive Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Descriptive Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1 Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-median" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2 Median
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3 Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.4 Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.5 Variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.6 Standard Deviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157-quartiles-and-percentiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.7 Quartiles and Percentiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158-z-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.8 Z-Score
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#159-skewness-and-kurtosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.9 Skewness and Kurtosis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-probability-and-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Probability and Random Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Probability and Random Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-random-experiment-and-sample-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Random Experiment and Sample Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-random-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2 Random Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-probability-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3 Probability Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-expected-value-and-variance-of-random-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4 Expected Value and Variance of Random Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-common-probability-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Common Probability Distributions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Common Probability Distributions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-categorical-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1 Categorical Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-bernoulli-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2 Bernoulli Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3 Binomial Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174-poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.4 Poisson Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#175-uniform-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.5 Uniform Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176-normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.6 Normal Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#177-when-to-use-which-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.7 When to Use Which Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-sampling-and-sampling-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Sampling and Sampling Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 Sampling and Sampling Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-why-sampling-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1 Why Sampling Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-sampling-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2 Sampling Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183-simple-random-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.3 Simple Random Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184-sampling-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.4 Sampling Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185-sampling-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.5 Sampling Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#186-central-limit-theorem-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.6 Central Limit Theorem (CLT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Estimation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9 Estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-point-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Point Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-interval-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Interval Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#194-margin-of-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.4 Margin of Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-hypothesis-testing-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Hypothesis Testing Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Hypothesis Testing Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-what-is-a-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 What Is a Hypothesis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-null-and-alternative-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 Null and Alternative Hypothesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-types-of-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Types of Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-test-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Test Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1105-p-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.5 P-value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1106-type-i-and-type-ii-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.6 Type I and Type II Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1107-parametric-vs-non-parametric-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.7 Parametric vs Non-Parametric Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-assumption-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Assumption Checks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.11 Assumption Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1111-normality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.1 Normality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1112-equal-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.2 Equal Variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1113-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.3 Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-z-tests-for-large-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Z Tests for Large Samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12 Z Tests for Large Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-one-sample-z-test-for-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1 One-Sample Z Test for Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-two-sample-z-test-for-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2 Two-Sample Z Test for Means
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-one-sample-z-test-for-proportion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3 One-Sample Z Test for Proportion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124-two-sample-z-test-for-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.4 Two-Sample Z Test for Proportions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1125-real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.5 Real-World Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-t-tests-for-small-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 T Tests for Small Samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 T Tests for Small Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-t-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1 T Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-one-sample-t-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2 One-Sample T Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1133-two-sample-t-test-for-unpaired-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.3 Two-Sample T Test for Unpaired Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1134-paired-t-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.4 Paired T Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-chi-square-tests-for-categorical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 Chi-Square Tests for Categorical Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14 Chi-Square Tests for Categorical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-chi-square-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1 Chi-Square Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-chi-square-goodness-of-fit-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2 Chi-Square Goodness-of-Fit Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143-chi-square-test-of-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.3 Chi-Square Test of Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1144-minimum-expected-frequency-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.4 Minimum Expected Frequency Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-analysis-of-variance-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 Analysis of Variance (ANOVA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 Analysis of Variance (ANOVA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-why-anova-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Why ANOVA Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-one-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 One-Way ANOVA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-anova-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 ANOVA Variations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-f-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 F Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1155-one-way-anova-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.5 One-Way ANOVA Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1156-post-hoc-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.6 Post-Hoc Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1157-two-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.7 Two-Way ANOVA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-covariance-correlation-and-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Covariance, Correlation, and Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 Covariance, Correlation, and Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 Covariance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 Correlation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 Linear Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-r-squared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 R-Squared
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-when-to-use-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 When to Use What
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-common-python-functions-in-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Common Python Functions in Statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-core-statistical-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19 Core Statistical Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-statistical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20 Statistical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (ML)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analytics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytics/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytics/power-bi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Power BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/de-cycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DE Cycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Programming Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/pyspark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PySaprk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataBricks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DataBricks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataBricks/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/aws_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Web Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-what-is-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is Statistics?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-main-branches-of-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Main Branches of Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Main Branches of Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 Descriptive Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-inferential-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 Inferential Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-detailed-statistics-hierarchy-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Detailed Statistics Hierarchy Chart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-basic-terms-you-must-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Basic Terms You Must Know
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Basic Terms You Must Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-data-and-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 Data and Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-types-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 Types of Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-population-sample-parameter-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Population, Sample, Parameter, Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-descriptive-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Descriptive Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Descriptive Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1 Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-median" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2 Median
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3 Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.4 Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.5 Variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.6 Standard Deviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157-quartiles-and-percentiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.7 Quartiles and Percentiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158-z-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.8 Z-Score
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#159-skewness-and-kurtosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.9 Skewness and Kurtosis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-probability-and-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Probability and Random Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Probability and Random Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-random-experiment-and-sample-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Random Experiment and Sample Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-random-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2 Random Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-probability-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3 Probability Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-expected-value-and-variance-of-random-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4 Expected Value and Variance of Random Variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-common-probability-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Common Probability Distributions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Common Probability Distributions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-categorical-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1 Categorical Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-bernoulli-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2 Bernoulli Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3 Binomial Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174-poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.4 Poisson Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#175-uniform-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.5 Uniform Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176-normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.6 Normal Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#177-when-to-use-which-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.7 When to Use Which Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-sampling-and-sampling-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Sampling and Sampling Distribution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 Sampling and Sampling Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-why-sampling-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1 Why Sampling Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-sampling-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2 Sampling Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183-simple-random-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.3 Simple Random Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184-sampling-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.4 Sampling Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185-sampling-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.5 Sampling Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#186-central-limit-theorem-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.6 Central Limit Theorem (CLT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Estimation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9 Estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-point-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Point Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-interval-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Interval Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#194-margin-of-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.4 Margin of Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-hypothesis-testing-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Hypothesis Testing Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Hypothesis Testing Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-what-is-a-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 What Is a Hypothesis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-null-and-alternative-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 Null and Alternative Hypothesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-types-of-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Types of Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-test-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Test Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1105-p-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.5 P-value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1106-type-i-and-type-ii-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.6 Type I and Type II Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1107-parametric-vs-non-parametric-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.7 Parametric vs Non-Parametric Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-assumption-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Assumption Checks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.11 Assumption Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1111-normality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.1 Normality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1112-equal-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.2 Equal Variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1113-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.3 Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-z-tests-for-large-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Z Tests for Large Samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12 Z Tests for Large Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-one-sample-z-test-for-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1 One-Sample Z Test for Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-two-sample-z-test-for-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2 Two-Sample Z Test for Means
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-one-sample-z-test-for-proportion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3 One-Sample Z Test for Proportion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124-two-sample-z-test-for-proportions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.4 Two-Sample Z Test for Proportions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1125-real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.5 Real-World Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-t-tests-for-small-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 T Tests for Small Samples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 T Tests for Small Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-t-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1 T Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-one-sample-t-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2 One-Sample T Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1133-two-sample-t-test-for-unpaired-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.3 Two-Sample T Test for Unpaired Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1134-paired-t-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.4 Paired T Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-chi-square-tests-for-categorical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 Chi-Square Tests for Categorical Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14 Chi-Square Tests for Categorical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-chi-square-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1 Chi-Square Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-chi-square-goodness-of-fit-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2 Chi-Square Goodness-of-Fit Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143-chi-square-test-of-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.3 Chi-Square Test of Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1144-minimum-expected-frequency-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.4 Minimum Expected Frequency Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-analysis-of-variance-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 Analysis of Variance (ANOVA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 Analysis of Variance (ANOVA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-why-anova-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Why ANOVA Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-one-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 One-Way ANOVA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-anova-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 ANOVA Variations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-f-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 F Statistic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1155-one-way-anova-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.5 One-Way ANOVA Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1156-post-hoc-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.6 Post-Hoc Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1157-two-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.7 Two-Way ANOVA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-covariance-correlation-and-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Covariance, Correlation, and Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 Covariance, Correlation, and Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 Covariance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 Correlation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 Linear Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-r-squared" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 R-Squared
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-when-to-use-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 When to Use What
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-common-python-functions-in-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Common Python Functions in Statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-core-statistical-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19 Core Statistical Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-statistical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20 Statistical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="aws-hero">
+  <div class="aws-chip">Data Science | Statistics | Inference</div>
+  <h1>Statistics</h1>
+  <p>
+    Statistics is the subject of collecting, organizing, analyzing, and interpreting data.
+    It covers how data is summarized, how uncertainty is measured, how conclusions are drawn from samples,
+    and how relationships between variables are studied.
+  </p>
+</div>
+
+<h2 class="aws-h2" id="11-what-is-statistics">1.1 What Is Statistics?<a class="headerlink" href="#11-what-is-statistics" title="Permanent link">&para;</a></h2>
+<p>Statistics helps us understand data and make decisions using evidence instead of guesses.</p>
+<p>In simple words:</p>
+<ul>
+<li>It helps summarize data</li>
+<li>It helps compare groups</li>
+<li>It helps test claims</li>
+<li>It helps estimate unknown values</li>
+<li>It helps study relationships between variables</li>
+</ul>
+<p>Simple example:</p>
+<ul>
+<li>A company wants to know whether customer satisfaction is improving</li>
+<li>Statistics helps summarize survey scores and test whether the change is real</li>
+</ul>
+<p><strong>High-level tree:</strong></p>
+<div class="highlight"><pre><span></span><code>Statistics
+|
++-- Descriptive Statistics
+|   +-- What happened in the data?
+|   +-- Mean, Median, Mode
+|   +-- Range, Variance, Standard Deviation
+|   +-- Quartiles, Percentiles, Z-score
+|   +-- Skewness, Kurtosis
+|
++-- Inferential Statistics
+    +-- What will happen or what can be concluded beyond the sample?
+    +-- Sampling
+    +-- Central Limit Theorem
+    +-- Estimation
+    +-- Confidence Interval
+    +-- Hypothesis Testing
+    +-- Correlation and Regression
+</code></pre></div>
+<h2 class="aws-h2" id="12-main-branches-of-statistics">1.2 Main Branches of Statistics<a class="headerlink" href="#12-main-branches-of-statistics" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="121-descriptive-statistics">1.2.1 Descriptive Statistics<a class="headerlink" href="#121-descriptive-statistics" title="Permanent link">&para;</a></h3>
+<p>Descriptive statistics is used to summarize and present the data we already have.</p>
+<p>In one line: descriptive statistics answers <strong>what happened</strong> in the data.</p>
+<p>Used for:</p>
+<ul>
+<li>averages</li>
+<li>spread of data</li>
+<li>charts</li>
+<li>percentages</li>
+<li>summary tables</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Find the average salary of 100 employees</li>
+<li>Show the minimum, maximum, and median sales value</li>
+</ul>
+<h3 class="aws-h3" id="122-inferential-statistics">1.2.2 Inferential Statistics<a class="headerlink" href="#122-inferential-statistics" title="Permanent link">&para;</a></h3>
+<p>Inferential statistics is used to draw conclusions about a population using a sample.</p>
+<p>In one line: inferential statistics answers <strong>what will happen</strong>, or more carefully, what is likely true beyond the sample data.</p>
+<p>Used for:</p>
+<ul>
+<li>estimation</li>
+<li>confidence intervals</li>
+<li>hypothesis testing</li>
+<li>comparing groups</li>
+<li>prediction support</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>A hospital studies 200 patients and uses that sample to estimate the recovery rate for all patients</li>
+</ul>
+<h2 class="aws-h2" id="13-detailed-statistics-hierarchy-chart">1.3 Detailed Statistics Hierarchy Chart<a class="headerlink" href="#13-detailed-statistics-hierarchy-chart" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Statistics
+|
++-- Descriptive Statistics
+|   |
+|   +-- Central Tendency
+|   |   +-- Mean
+|   |   +-- Median
+|   |   +-- Mode
+|   |
+|   +-- Dispersion
+|   |   +-- Range
+|   |   +-- Variance
+|   |   +-- Standard Deviation
+|   |   +-- IQR
+|   |
+|   +-- Position Measures
+|   |   +-- Quartiles
+|   |   +-- Percentiles
+|   |   +-- Z-score
+|   |
+|   +-- Shape of Distribution
+|       +-- Skewness
+|       +-- Kurtosis
+|
++-- Probability and Distributions
+|   |
+|   +-- Random Variable
+|   |   +-- Discrete
+|   |   +-- Continuous
+|   |
+|   +-- Distributions
+|       +-- Bernoulli
+|       +-- Binomial
+|       +-- Poisson
+|       +-- Uniform
+|       +-- Normal
+|
++-- Sampling and Estimation
+|   |
+|   +-- Population vs Sample
+|   +-- Sampling Techniques
+|   +-- Sampling Distribution
+|   +-- Central Limit Theorem
+|   +-- Point Estimation
+|   +-- Interval Estimation
+|   +-- Confidence Interval
+|
++-- Hypothesis Testing
+|   |
+|   +-- Null and Alternative Hypothesis
+|   +-- Type I and Type II Error
+|   +-- P-value
+|   +-- Z Test
+|   +-- T Test
+|   +-- Chi-Square Test
+|   +-- ANOVA
+|
++-- Relationship and Prediction
+    |
+    +-- Covariance
+    +-- Correlation
+    +-- Regression
+</code></pre></div>
+<h2 class="aws-h2" id="14-basic-terms-you-must-know">1.4 Basic Terms You Must Know<a class="headerlink" href="#14-basic-terms-you-must-know" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="141-data-and-variable">1.4.1 Data and Variable<a class="headerlink" href="#141-data-and-variable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Data</strong>: collection of values or observations</li>
+<li><strong>Variable</strong>: a property that can change from one observation to another</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>age</li>
+<li>salary</li>
+<li>city</li>
+<li>exam marks</li>
+</ul>
+<h3 class="aws-h3" id="142-types-of-variables">1.4.2 Types of Variables<a class="headerlink" href="#142-types-of-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Categorical variable</strong>: stores labels such as gender, city, payment type</li>
+<li><strong>Numerical variable</strong>: stores numbers such as height, marks, income</li>
+<li><strong>Discrete variable</strong>: countable values such as number of calls</li>
+<li><strong>Continuous variable</strong>: measured values such as weight, time, speed</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Number of customers entering a store is discrete</li>
+<li>Waiting time of a customer is continuous</li>
+</ul>
+<h3 class="aws-h3" id="143-population-sample-parameter-statistic">1.4.3 Population, Sample, Parameter, Statistic<a class="headerlink" href="#143-population-sample-parameter-statistic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Population</strong>: the complete group we want to study</li>
+<li><strong>Sample</strong>: a smaller part selected from the population</li>
+<li><strong>Parameter</strong>: a value describing the population</li>
+<li><strong>Statistic</strong>: a value describing the sample</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>All voters in a state = population</li>
+<li>2,000 surveyed voters = sample</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Population Quantity</th>
+<th>Sample Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean <code>mu</code></td>
+<td>Mean <code>x_bar</code></td>
+</tr>
+<tr>
+<td>Variance <code>sigma^2</code></td>
+<td>Variance <code>s^2</code></td>
+</tr>
+<tr>
+<td>Standard deviation <code>sigma</code></td>
+<td>Standard deviation <code>s</code></td>
+</tr>
+<tr>
+<td>Proportion <code>p</code></td>
+<td>Sample proportion <code>p_hat</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="aws-h2" id="15-descriptive-statistics">1.5 Descriptive Statistics<a class="headerlink" href="#15-descriptive-statistics" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="151-mean">1.5.1 Mean<a class="headerlink" href="#151-mean" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Mean is the average of all values.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean = Sum of all values / Number of values
+x_bar = (x1 + x2 + ... + xn) / n
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Add everything and divide by how many values you have.</p>
+<p><strong>Example:</strong></p>
+<p>Marks = 60, 70, 80</p>
+<p>Mean = <code>(60 + 70 + 80) / 3 = 70</code></p>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>average monthly sales</li>
+<li>average student marks</li>
+<li>average temperature</li>
+</ul>
+<h3 class="aws-h3" id="152-median">1.5.2 Median<a class="headerlink" href="#152-median" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Median is the middle value after sorting the data.</p>
+<p><strong>Formula idea:</strong></p>
+<ul>
+<li>If <code>n</code> is odd: middle value</li>
+<li>If <code>n</code> is even: average of the two middle values</li>
+</ul>
+<p><strong>Simple explanation:</strong></p>
+<p>Median shows the center of the data without being heavily affected by extreme values.</p>
+<p><strong>Example:</strong></p>
+<p>Data = 10, 15, 20, 100</p>
+<p>Median = <code>(15 + 20) / 2 = 17.5</code></p>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>salary analysis where a few very high salaries can distort the mean</li>
+</ul>
+<h3 class="aws-h3" id="153-mode">1.5.3 Mode<a class="headerlink" href="#153-mode" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Mode is the most frequently occurring value.</p>
+<p><strong>Simple explanation:</strong></p>
+<p>It tells what value appears the most.</p>
+<p><strong>Example:</strong></p>
+<p>Data = 2, 3, 3, 5, 7</p>
+<p>Mode = <code>3</code></p>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>most common shirt size sold</li>
+<li>most used payment method</li>
+</ul>
+<h3 class="aws-h3" id="154-range">1.5.4 Range<a class="headerlink" href="#154-range" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Range is the difference between the maximum and minimum values.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Range = Maximum - Minimum
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>It tells how wide the data is spread from smallest to largest.</p>
+<p><strong>Example:</strong></p>
+<p>Data = 12, 15, 20, 25</p>
+<p>Range = <code>25 - 12 = 13</code></p>
+<h3 class="aws-h3" id="155-variance">1.5.5 Variance<a class="headerlink" href="#155-variance" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Variance measures how far data points are spread from the mean.</p>
+<p><strong>Sample formula:</strong></p>
+<div class="highlight"><pre><span></span><code>s^2 = [(x1 - x_bar)^2 + (x2 - x_bar)^2 + ... + (xn - x_bar)^2] / (n - 1)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Take each value, see how far it is from the average, square it, and average those squared gaps.</p>
+<p><strong>Example use:</strong></p>
+<ul>
+<li>compare whether two stores have stable or unstable daily sales</li>
+</ul>
+<h3 class="aws-h3" id="156-standard-deviation">1.5.6 Standard Deviation<a class="headerlink" href="#156-standard-deviation" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Standard deviation is the square root of variance.</p>
+<p>Another common way to describe it is: standard deviation is the typical or average-like distance of observations from a central point, usually the mean.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Step 1: Find the mean
+Step 2: Find how far each value is from the mean
+Step 3: Square those differences
+Step 4: Average them to get variance
+Step 5: Take the square root
+
+Standard deviation = sqrt(variance)
+s = sqrt(s^2)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>It tells the typical distance of values from the mean in the original unit.</p>
+<p><strong>Relation with standard error of the mean:</strong></p>
+<p>Standard deviation and standard error are related, but they are not the same.</p>
+<ul>
+<li><strong>Standard deviation (SD)</strong> describes how individual data points are spread out</li>
+<li><strong>Standard error of the mean (SEM)</strong> describes how sample means are spread out</li>
+</ul>
+<div class="highlight"><pre><span></span><code>SEM = s / sqrt(n)
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<ul>
+<li>If average delivery time is 30 minutes and standard deviation is 2 minutes, delivery times are usually close to 30</li>
+</ul>
+<h3 class="aws-h3" id="157-quartiles-and-percentiles">1.5.7 Quartiles and Percentiles<a class="headerlink" href="#157-quartiles-and-percentiles" title="Permanent link">&para;</a></h3>
+<p><strong>Quartiles</strong> divide sorted data into 4 equal parts.</p>
+<ul>
+<li><code>Q1</code>: 25th percentile</li>
+<li><code>Q2</code>: 50th percentile or median</li>
+<li><code>Q3</code>: 75th percentile</li>
+</ul>
+<p><strong>Percentiles</strong> divide sorted data into 100 parts.</p>
+<p><strong>IQR Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>IQR = Q3 - Q1
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>These measures show where a value stands inside the dataset.</p>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>exam rankings</li>
+<li>salary bands</li>
+<li>customer spend segmentation</li>
+</ul>
+<h3 class="aws-h3" id="158-z-score">1.5.8 Z-Score<a class="headerlink" href="#158-z-score" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong></p>
+<p>Z-score tells how many standard deviations a value is away from the mean.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>z = (x - mu) / sigma
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<ul>
+<li>positive z-score means above average</li>
+<li>negative z-score means below average</li>
+<li>zero means exactly average</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>If mean score is 70, standard deviation is 10, and a student got 90:</p>
+<p><code>z = (90 - 70) / 10 = 2</code></p>
+<p>The student is 2 standard deviations above average.</p>
+<h3 class="aws-h3" id="159-skewness-and-kurtosis">1.5.9 Skewness and Kurtosis<a class="headerlink" href="#159-skewness-and-kurtosis" title="Permanent link">&para;</a></h3>
+<p><strong>Skewness</strong> tells the direction of asymmetry.</p>
+<ul>
+<li>right skew: long tail on right</li>
+<li>left skew: long tail on left</li>
+</ul>
+<p><strong>Kurtosis</strong> tells how heavy or light the tails are.</p>
+<p><strong>Simple explanation:</strong></p>
+<ul>
+<li>skewness helps understand shape</li>
+<li>kurtosis helps understand extreme values</li>
+</ul>
+<p><strong>Real-world example:</strong></p>
+<ul>
+<li>income data is often right-skewed because a small number of people earn much more than the rest</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mean:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;median:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mode:&quot;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;variance:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;std:&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;q1, q3:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">75</span><span class="p">]))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="16-probability-and-random-variables">1.6 Probability and Random Variables<a class="headerlink" href="#16-probability-and-random-variables" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="161-random-experiment-and-sample-space">1.6.1 Random Experiment and Sample Space<a class="headerlink" href="#161-random-experiment-and-sample-space" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Random experiment</strong>: an action with uncertain outcome</li>
+<li><strong>Sample space</strong>: all possible outcomes</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Roll a die</li>
+<li>Sample space = <code>{1, 2, 3, 4, 5, 6}</code></li>
+</ul>
+<h3 class="aws-h3" id="162-random-variable">1.6.2 Random Variable<a class="headerlink" href="#162-random-variable" title="Permanent link">&para;</a></h3>
+<p>A random variable is a numerical value assigned to an outcome of a random experiment.</p>
+<p>Types:</p>
+<ul>
+<li><strong>Discrete random variable</strong>: takes countable values</li>
+<li><strong>Continuous random variable</strong>: takes values over a range</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>number of complaints in a day = discrete</li>
+<li>amount of rainfall = continuous</li>
+</ul>
+<h3 class="aws-h3" id="163-probability-distribution">1.6.3 Probability Distribution<a class="headerlink" href="#163-probability-distribution" title="Permanent link">&para;</a></h3>
+<p>Probability distribution tells how probabilities are assigned to values of a random variable.</p>
+<p>Important forms:</p>
+<ul>
+<li><strong>PMF</strong> for discrete variables</li>
+<li><strong>PDF</strong> for continuous variables</li>
+<li><strong>CDF</strong> for cumulative probability</li>
+</ul>
+<p>For a <strong>discrete random variable</strong>, the distribution is written using probabilities assigned to each possible value. One important discrete distribution is the <strong>binomial distribution</strong>, but discrete distributions also include <strong>Bernoulli</strong>, <strong>Poisson</strong>, and <strong>categorical</strong> distributions.</p>
+<p><strong>Categorical distribution in brief:</strong></p>
+<p>Categorical distribution is used when one observation can fall into one of several categories.</p>
+<p>Example:</p>
+<ul>
+<li>a user clicks an ad from <strong>search</strong>, <strong>social</strong>, <strong>email</strong>, or <strong>display</strong></li>
+</ul>
+<p>If the probabilities of these categories are <code>p1, p2, p3, ..., pk</code>, then the categorical distribution tells the probability of each category.</p>
+<h3 class="aws-h3" id="164-expected-value-and-variance-of-random-variable">1.6.4 Expected Value and Variance of Random Variable<a class="headerlink" href="#164-expected-value-and-variance-of-random-variable" title="Permanent link">&para;</a></h3>
+<p><strong>Expected value</strong> is the long-run average.</p>
+<p><strong>Formula for discrete case:</strong></p>
+<div class="highlight"><pre><span></span><code>E(X) = x1 * P(X = x1) + x2 * P(X = x2) + ... + xn * P(X = xn)
+</code></pre></div>
+<p><strong>Variance formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Var(X) = Sum[(value - mean)^2 * probability of that value]
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<ul>
+<li>expected value tells the average outcome in the long run</li>
+<li>variance tells how much outcomes move around that average</li>
+</ul>
+<h2 class="aws-h2" id="17-common-probability-distributions">1.7 Common Probability Distributions<a class="headerlink" href="#17-common-probability-distributions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Probability Distributions
+|
++-- Discrete Distributions
+|   +-- Categorical
+|   |   +-- Example: which ad channel did the user click from? search / social / email / display
+|   +-- Bernoulli
+|   |   +-- Example: did a user click an ad? yes or no
+|   +-- Binomial
+|   |   +-- Example: out of 100 users shown an ad, how many clicked?
+|   +-- Poisson
+|       +-- Example: how many ad clicks happened in one minute?
+|
++-- Continuous Distributions
+    +-- Uniform
+    |   +-- Example: a random value chosen anywhere between 0 and 1 with equal chance
+    +-- Normal
+        +-- Example: average daily ad clicks across many days often cluster around a center
+</code></pre></div>
+<h3 class="aws-h3" id="171-categorical-distribution">1.7.1 Categorical Distribution<a class="headerlink" href="#171-categorical-distribution" title="Permanent link">&para;</a></h3>
+<p>Used when one observation belongs to exactly one of several categories.</p>
+<p>Examples:</p>
+<ul>
+<li>which ad channel a user clicked from</li>
+<li>preferred payment method of a customer</li>
+<li>blood group of a patient</li>
+</ul>
+<p><strong>Simple probability idea:</strong></p>
+<div class="highlight"><pre><span></span><code>P(X = category i) = pi
+</code></pre></div>
+<p>where all category probabilities add up to 1.</p>
+<h3 class="aws-h3" id="172-bernoulli-distribution">1.7.2 Bernoulli Distribution<a class="headerlink" href="#172-bernoulli-distribution" title="Permanent link">&para;</a></h3>
+<p>Used for one trial with only two outcomes.</p>
+<p>Examples:</p>
+<ul>
+<li>pass or fail</li>
+<li>success or failure</li>
+<li>heads or tails</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>P(X = x) = p^x * (1-p)^(1-x), where x = 0 or 1
+</code></pre></div>
+<p><strong>Mean and variance:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean = p
+Variance = p(1-p)
+</code></pre></div>
+<h3 class="aws-h3" id="173-binomial-distribution">1.7.3 Binomial Distribution<a class="headerlink" href="#173-binomial-distribution" title="Permanent link">&para;</a></h3>
+<p>Used for the number of successes in <code>n</code> independent trials.</p>
+<p>Examples:</p>
+<ul>
+<li>number of customers who click an ad out of 100 users</li>
+<li>number of defective bulbs in a batch sample</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>P(X = x) = nCx * p^x * (1-p)^(n-x)
+</code></pre></div>
+<p>Read it as:</p>
+<div class="highlight"><pre><span></span><code>Probability of exactly x successes
+= number of ways to choose x successes
+  * (success probability)^x
+  * (failure probability)^(remaining trials)
+</code></pre></div>
+<p><strong>Mean and variance:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean = np
+Variance = np(1-p)
+</code></pre></div>
+<h3 class="aws-h3" id="174-poisson-distribution">1.7.4 Poisson Distribution<a class="headerlink" href="#174-poisson-distribution" title="Permanent link">&para;</a></h3>
+<p>Used to model counts of events in a fixed interval.</p>
+<p>Examples:</p>
+<ul>
+<li>number of calls received in an hour</li>
+<li>number of website errors per day</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>P(X = x) = (e^(-lambda) * lambda^x) / x!
+</code></pre></div>
+<p>Read it as:</p>
+<div class="highlight"><pre><span></span><code>Probability of exactly x events in a fixed interval
+when events occur at an average rate lambda
+</code></pre></div>
+<p><strong>Mean and variance:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean = lambda
+Variance = lambda
+</code></pre></div>
+<h3 class="aws-h3" id="175-uniform-distribution">1.7.5 Uniform Distribution<a class="headerlink" href="#175-uniform-distribution" title="Permanent link">&para;</a></h3>
+<p>All values in a range are equally likely.</p>
+<p>Example:</p>
+<ul>
+<li>random number generated between 0 and 1</li>
+</ul>
+<p><strong>Continuous uniform density:</strong></p>
+<div class="highlight"><pre><span></span><code>f(x) = 1 / (b - a), for a &lt;= x &lt;= b
+</code></pre></div>
+<h3 class="aws-h3" id="176-normal-distribution">1.7.6 Normal Distribution<a class="headerlink" href="#176-normal-distribution" title="Permanent link">&para;</a></h3>
+<p>Normal distribution is a bell-shaped, symmetric distribution.</p>
+<p>Examples:</p>
+<ul>
+<li>exam scores</li>
+<li>IQ scores</li>
+<li>measurement errors</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>f(x) = [1 / (sigma * sqrt(2*pi))] * e^(-(x-mu)^2 / (2*sigma^2))
+</code></pre></div>
+<p>For first-time learning, the most useful idea is usually the shape:</p>
+<ul>
+<li>center is around <code>mu</code></li>
+<li>spread is controlled by <code>sigma</code></li>
+<li>values closer to the mean are more common</li>
+</ul>
+<p><strong>Mean and variance:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean = mu
+Variance = sigma^2
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Most values stay near the center, and fewer values appear in the tails.</p>
+<p><strong>Standard normal transformation:</strong></p>
+<div class="highlight"><pre><span></span><code>z = (x - mu) / sigma
+</code></pre></div>
+<p><strong>Area within standard deviations of the mean:</strong></p>
+<ul>
+<li>from <code>mu - 1sigma</code> to <code>mu + 1sigma</code> = about <code>68.2%</code></li>
+<li>from <code>mu - 2sigma</code> to <code>mu + 2sigma</code> = about <code>95.4%</code></li>
+<li>from <code>mu - 3sigma</code> to <code>mu + 3sigma</code> = about <code>99.7%</code></li>
+</ul>
+<p>This is often called the <strong>68-95-99.7 rule</strong>.</p>
+<h3 class="aws-h3" id="177-when-to-use-which-distribution">1.7.7 When to Use Which Distribution<a class="headerlink" href="#177-when-to-use-which-distribution" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One outcome from many named categories</td>
+<td>Categorical</td>
+</tr>
+<tr>
+<td>One trial with yes/no outcome</td>
+<td>Bernoulli</td>
+</tr>
+<tr>
+<td>Number of successes in a fixed number of trials</td>
+<td>Binomial</td>
+</tr>
+<tr>
+<td>Number of events in a fixed time or space interval</td>
+<td>Poisson</td>
+</tr>
+<tr>
+<td>Continuous value where all values in a range are equally likely</td>
+<td>Uniform</td>
+</tr>
+<tr>
+<td>Continuous bell-shaped data around a center</td>
+<td>Normal</td>
+</tr>
+</tbody>
+</table>
+<p>Ad-click examples:</p>
+<ul>
+<li>Use <strong>categorical</strong> when tracking where the click came from: search, social, email, or display</li>
+<li>Use <strong>Bernoulli</strong> for one user impression: clicked or did not click</li>
+<li>Use <strong>binomial</strong> for a fixed campaign sample: how many clicks out of 100 shown ads</li>
+<li>Use <strong>Poisson</strong> for click counts in time: how many clicks in one minute</li>
+<li>Use <strong>normal</strong> when looking at averages, such as average daily clicks across many days</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">bernoulli</span><span class="p">,</span> <span class="n">binom</span><span class="p">,</span> <span class="n">poisson</span><span class="p">,</span> <span class="n">norm</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bernoulli:&quot;</span><span class="p">,</span> <span class="n">bernoulli</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Binomial:&quot;</span><span class="p">,</span> <span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Poisson:&quot;</span><span class="p">,</span> <span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normal CDF:&quot;</span><span class="p">,</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mf">1.96</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="18-sampling-and-sampling-distribution">1.8 Sampling and Sampling Distribution<a class="headerlink" href="#18-sampling-and-sampling-distribution" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="181-why-sampling-is-needed">1.8.1 Why Sampling Is Needed<a class="headerlink" href="#181-why-sampling-is-needed" title="Permanent link">&para;</a></h3>
+<p>Studying the full population is often expensive, slow, or impossible.</p>
+<p>Example:</p>
+<ul>
+<li>To estimate the average life of all bulbs produced in a factory, testing every bulb is not practical</li>
+</ul>
+<h3 class="aws-h3" id="182-sampling-terms">1.8.2 Sampling Terms<a class="headerlink" href="#182-sampling-terms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sampling unit</strong>: basic item that can be selected</li>
+<li><strong>Sampling frame</strong>: full list of units</li>
+<li><strong>Sampling fraction</strong>: ratio of sample size to population size</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Sampling fraction = n / N
+</code></pre></div>
+<h3 class="aws-h3" id="183-simple-random-sampling">1.8.3 Simple Random Sampling<a class="headerlink" href="#183-simple-random-sampling" title="Permanent link">&para;</a></h3>
+<p>In simple random sampling, each unit has an equal chance of selection.</p>
+<p>Types:</p>
+<ul>
+<li>with replacement</li>
+<li>without replacement</li>
+</ul>
+<h3 class="aws-h3" id="184-sampling-error">1.8.4 Sampling Error<a class="headerlink" href="#184-sampling-error" title="Permanent link">&para;</a></h3>
+<p>Sampling error is the difference between a sample statistic and the true population parameter.</p>
+<p><strong>Formula idea:</strong></p>
+<div class="highlight"><pre><span></span><code>Sampling error = Statistic - Parameter
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Different samples give slightly different answers.</p>
+<h3 class="aws-h3" id="185-sampling-distribution">1.8.5 Sampling Distribution<a class="headerlink" href="#185-sampling-distribution" title="Permanent link">&para;</a></h3>
+<p>Sampling distribution is the distribution of a statistic over many possible samples.</p>
+<p>Important cases:</p>
+<ul>
+<li>sampling distribution of mean</li>
+<li>sampling distribution of proportion</li>
+</ul>
+<h3 class="aws-h3" id="186-central-limit-theorem-clt">1.8.6 Central Limit Theorem (CLT)<a class="headerlink" href="#186-central-limit-theorem-clt" title="Permanent link">&para;</a></h3>
+<p>For large samples, the sampling distribution of the sample mean becomes approximately normal.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Mean of sample means = mu
+Standard deviation of sample means = sigma / sqrt(n)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Even if raw data is not perfectly normal, sample means from large samples behave normally.</p>
+<p>This is true whether the original distribution is left-skewed, right-skewed, or not symmetric, as long as the sample is large enough and the observations are taken properly.</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>used in confidence intervals</li>
+<li>used in z-tests</li>
+<li>makes large-sample inference possible</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">population</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;without replacement:&quot;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;with replacement:&quot;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="19-estimation">1.9 Estimation<a class="headerlink" href="#19-estimation" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="191-point-estimation">1.9.1 Point Estimation<a class="headerlink" href="#191-point-estimation" title="Permanent link">&para;</a></h3>
+<p>Point estimate is a single value used to estimate a population parameter.</p>
+<p>Examples:</p>
+<ul>
+<li>sample mean estimates population mean</li>
+<li>sample proportion estimates population proportion</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Population mean estimate = x_bar
+Population proportion estimate = p_hat = x / n
+</code></pre></div>
+<h3 class="aws-h3" id="192-interval-estimation">1.9.2 Interval Estimation<a class="headerlink" href="#192-interval-estimation" title="Permanent link">&para;</a></h3>
+<p>Interval estimation gives a range of likely values instead of a single value.</p>
+<h3 class="aws-h3" id="193-confidence-interval">1.9.3 Confidence Interval<a class="headerlink" href="#193-confidence-interval" title="Permanent link">&para;</a></h3>
+<p>A confidence interval gives a lower bound and upper bound for the parameter.</p>
+<p><strong>General form:</strong></p>
+<div class="highlight"><pre><span></span><code>Confidence Interval = Point Estimate +/- Margin of Error
+</code></pre></div>
+<p><strong>Mean CI formula using z-value:</strong></p>
+<div class="highlight"><pre><span></span><code>x_bar +/- z(alpha/2) * sigma / sqrt(n)
+</code></pre></div>
+<p><strong>Proportion CI formula:</strong></p>
+<div class="highlight"><pre><span></span><code>p_hat +/- z(alpha/2) * sqrt[(p_hat * (1-p_hat)) / n]
+</code></pre></div>
+<h3 class="aws-h3" id="194-margin-of-error">1.9.4 Margin of Error<a class="headerlink" href="#194-margin-of-error" title="Permanent link">&para;</a></h3>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Margin of Error = z(alpha/2) * sigma / sqrt(n)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>It shows how far the estimate can be from the true value.</p>
+<p><strong>Real-world example:</strong></p>
+<ul>
+<li>A poll says a candidate has 52% support with a 3% margin of error</li>
+<li>Actual support is likely between 49% and 55%</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+
+<span class="n">sample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">49.8</span><span class="p">,</span> <span class="mf">52.3</span><span class="p">,</span> <span class="mf">51.0</span><span class="p">,</span> <span class="mf">56.9</span><span class="p">,</span> <span class="mf">54.8</span><span class="p">,</span> <span class="mf">63.0</span><span class="p">,</span> <span class="mf">58.2</span><span class="p">,</span> <span class="mf">54.1</span><span class="p">])</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">se</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sample</span><span class="p">))</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.975</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;95% CI:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">mean</span> <span class="o">-</span> <span class="n">z</span> <span class="o">*</span> <span class="n">se</span><span class="p">,</span> <span class="n">mean</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">se</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="110-hypothesis-testing-basics">1.10 Hypothesis Testing Basics<a class="headerlink" href="#110-hypothesis-testing-basics" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1101-what-is-a-hypothesis">1.10.1 What Is a Hypothesis?<a class="headerlink" href="#1101-what-is-a-hypothesis" title="Permanent link">&para;</a></h3>
+<p>A hypothesis is a claim about a population parameter.</p>
+<h3 class="aws-h3" id="1102-null-and-alternative-hypothesis">1.10.2 Null and Alternative Hypothesis<a class="headerlink" href="#1102-null-and-alternative-hypothesis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Null hypothesis (<code>H0</code>)</strong>: default assumption</li>
+<li><strong>Alternative hypothesis (<code>H1</code>)</strong>: what we want to test for</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li><code>H0</code>: average delivery time is 60 minutes</li>
+<li><code>H1</code>: average delivery time is not 60 minutes</li>
+</ul>
+<h3 class="aws-h3" id="1103-types-of-tests">1.10.3 Types of Tests<a class="headerlink" href="#1103-types-of-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Two-tailed</strong>: checks for any difference</li>
+<li><strong>Left-tailed</strong>: checks whether the value is smaller</li>
+<li><strong>Right-tailed</strong>: checks whether the value is larger</li>
+</ul>
+<h3 class="aws-h3" id="1104-test-statistic">1.10.4 Test Statistic<a class="headerlink" href="#1104-test-statistic" title="Permanent link">&para;</a></h3>
+<p>A test statistic is a standardized number computed from sample data.</p>
+<p><strong>Simple explanation:</strong></p>
+<p>It tells how far the sample result is from the null hypothesis claim.</p>
+<h3 class="aws-h3" id="1105-p-value">1.10.5 P-value<a class="headerlink" href="#1105-p-value" title="Permanent link">&para;</a></h3>
+<p>P-value is the probability of seeing a result this extreme if <code>H0</code> is true.</p>
+<p>In simple words:</p>
+<ul>
+<li>it measures how unusual the sample result is under the null hypothesis</li>
+<li>a small p-value means the observed result would be rare if <code>H0</code> were true</li>
+</ul>
+<p><strong>Decision rule:</strong></p>
+<ul>
+<li>if <code>p-value &lt;= alpha</code>, reject <code>H0</code></li>
+<li>otherwise fail to reject <code>H0</code></li>
+</ul>
+<h3 class="aws-h3" id="1106-type-i-and-type-ii-error">1.10.6 Type I and Type II Error<a class="headerlink" href="#1106-type-i-and-type-ii-error" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Type I error</strong>: reject a true null hypothesis</li>
+<li><strong>Type II error</strong>: fail to reject a false null hypothesis</li>
+</ul>
+<p><strong>Power of test:</strong></p>
+<div class="highlight"><pre><span></span><code>Power = 1 - beta
+</code></pre></div>
+<h3 class="aws-h3" id="1107-parametric-vs-non-parametric-tests">1.10.7 Parametric vs Non-Parametric Tests<a class="headerlink" href="#1107-parametric-vs-non-parametric-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Parametric tests</strong>: assume a distribution and test parameters like mean or proportion</li>
+<li><strong>Non-parametric tests</strong>: use fewer assumptions and are often used for categories or non-normal data</li>
+</ul>
+<h2 class="aws-h2" id="111-assumption-checks">1.11 Assumption Checks<a class="headerlink" href="#111-assumption-checks" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1111-normality">1.11.1 Normality<a class="headerlink" href="#1111-normality" title="Permanent link">&para;</a></h3>
+<p>Some tests assume the data is approximately normal.</p>
+<p><strong>Check using:</strong></p>
+<ul>
+<li>Shapiro-Wilk test</li>
+</ul>
+<h3 class="aws-h3" id="1112-equal-variance">1.11.2 Equal Variance<a class="headerlink" href="#1112-equal-variance" title="Permanent link">&para;</a></h3>
+<p>Some group comparison tests assume equal variances.</p>
+<p><strong>Check using:</strong></p>
+<ul>
+<li>Levene's test</li>
+</ul>
+<h3 class="aws-h3" id="1113-independence">1.11.3 Independence<a class="headerlink" href="#1113-independence" title="Permanent link">&para;</a></h3>
+<p>Observations should not influence one another.</p>
+<p>Example:</p>
+<ul>
+<li>marks of one student should not depend on another student's copied answers</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">shapiro</span><span class="p">,</span> <span class="n">levene</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shapiro p-value:&quot;</span><span class="p">,</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Levene p-value:&quot;</span><span class="p">,</span> <span class="n">levene</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+</code></pre></div>
+<h2 class="aws-h2" id="112-z-tests-for-large-samples">1.12 Z Tests for Large Samples<a class="headerlink" href="#112-z-tests-for-large-samples" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1121-one-sample-z-test-for-mean">1.12.1 One-Sample Z Test for Mean<a class="headerlink" href="#1121-one-sample-z-test-for-mean" title="Permanent link">&para;</a></h3>
+<p>Used to test a population mean against a claimed value.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>z = (x_bar - mu0) / (sigma / sqrt(n))
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>x_bar</code> = sample mean</li>
+<li><code>mu0</code> = claimed population mean</li>
+<li><code>sigma</code> = population standard deviation</li>
+<li><code>n</code> = sample size</li>
+</ul>
+<h3 class="aws-h3" id="1122-two-sample-z-test-for-means">1.12.2 Two-Sample Z Test for Means<a class="headerlink" href="#1122-two-sample-z-test-for-means" title="Permanent link">&para;</a></h3>
+<p>Used to compare two independent population means.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>z = [(x_bar1 - x_bar2) - d0] / sqrt[(sigma1^2 / n1) + (sigma2^2 / n2)]
+</code></pre></div>
+<h3 class="aws-h3" id="1123-one-sample-z-test-for-proportion">1.12.3 One-Sample Z Test for Proportion<a class="headerlink" href="#1123-one-sample-z-test-for-proportion" title="Permanent link">&para;</a></h3>
+<p>Used to compare a sample proportion with a claimed population proportion.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>z = (p_hat - p0) / sqrt[p0(1-p0)/n]
+</code></pre></div>
+<h3 class="aws-h3" id="1124-two-sample-z-test-for-proportions">1.12.4 Two-Sample Z Test for Proportions<a class="headerlink" href="#1124-two-sample-z-test-for-proportions" title="Permanent link">&para;</a></h3>
+<p>Used to compare two population proportions.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>z = (p_hat1 - p_hat2) / sqrt[p_hat(1-p_hat)(1/n1 + 1/n2)]
+</code></pre></div>
+<h3 class="aws-h3" id="1125-real-world-examples">1.12.5 Real-World Examples<a class="headerlink" href="#1125-real-world-examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>test whether average app response time is still 2 seconds</li>
+<li>compare conversion rates of two landing pages</li>
+<li>test whether defect rate exceeds the allowed limit</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.weightstats</span><span class="w"> </span><span class="kn">import</span> <span class="n">ztest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.proportion</span><span class="w"> </span><span class="kn">import</span> <span class="n">proportions_ztest</span>
+
+<span class="n">sample</span> <span class="o">=</span> <span class="p">[</span><span class="mf">24.6</span><span class="p">,</span> <span class="mf">24.2</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">,</span> <span class="mf">24.8</span><span class="p">,</span> <span class="mf">24.1</span><span class="p">,</span> <span class="mf">24.3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;one-sample z-test:&quot;</span><span class="p">,</span> <span class="n">ztest</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">25</span><span class="p">))</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span> <span class="mi">65</span><span class="p">]</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">70</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;two-proportion z-test:&quot;</span><span class="p">,</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">obs</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="113-t-tests-for-small-samples">1.13 T Tests for Small Samples<a class="headerlink" href="#113-t-tests-for-small-samples" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1131-t-distribution">1.13.1 T Distribution<a class="headerlink" href="#1131-t-distribution" title="Permanent link">&para;</a></h3>
+<p>T distribution is used when population variance is unknown and sample size is small.</p>
+<p><strong>Simple explanation:</strong></p>
+<p>It looks like the normal distribution but has heavier tails.</p>
+<h3 class="aws-h3" id="1132-one-sample-t-test">1.13.2 One-Sample T Test<a class="headerlink" href="#1132-one-sample-t-test" title="Permanent link">&para;</a></h3>
+<p>Used to compare a sample mean with a claimed population mean.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>t = (x_bar - mu0) / (s / sqrt(n))
+</code></pre></div>
+<h3 class="aws-h3" id="1133-two-sample-t-test-for-unpaired-data">1.13.3 Two-Sample T Test for Unpaired Data<a class="headerlink" href="#1133-two-sample-t-test-for-unpaired-data" title="Permanent link">&para;</a></h3>
+<p>Used to compare means of two independent groups.</p>
+<p><strong>Formula idea:</strong></p>
+<div class="highlight"><pre><span></span><code>t = [(x_bar1 - x_bar2) - d0] / Standard Error
+</code></pre></div>
+<h3 class="aws-h3" id="1134-paired-t-test">1.13.4 Paired T Test<a class="headerlink" href="#1134-paired-t-test" title="Permanent link">&para;</a></h3>
+<p>Used when the same item or person is measured twice.</p>
+<p>Examples:</p>
+<ul>
+<li>before training vs after training</li>
+<li>before medicine vs after medicine</li>
+</ul>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>t = d_bar / (sd / sqrt(n))
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>d_bar</code> = mean of paired differences</li>
+<li><code>sd</code> = standard deviation of paired differences</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">ttest_1samp</span><span class="p">,</span> <span class="n">ttest_ind</span><span class="p">,</span> <span class="n">ttest_rel</span>
+
+<span class="n">before</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">after</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;one-sample t-test:&quot;</span><span class="p">,</span> <span class="n">ttest_1samp</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="n">popmean</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;two-sample t-test:&quot;</span><span class="p">,</span> <span class="n">ttest_ind</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="n">after</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;paired t-test:&quot;</span><span class="p">,</span> <span class="n">ttest_rel</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="n">after</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="114-chi-square-tests-for-categorical-data">1.14 Chi-Square Tests for Categorical Data<a class="headerlink" href="#114-chi-square-tests-for-categorical-data" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1141-chi-square-distribution">1.14.1 Chi-Square Distribution<a class="headerlink" href="#1141-chi-square-distribution" title="Permanent link">&para;</a></h3>
+<p>Chi-square distribution is used in tests involving categorical frequency data.</p>
+<h3 class="aws-h3" id="1142-chi-square-goodness-of-fit-test">1.14.2 Chi-Square Goodness-of-Fit Test<a class="headerlink" href="#1142-chi-square-goodness-of-fit-test" title="Permanent link">&para;</a></h3>
+<p>Used to check whether observed frequencies match expected frequencies.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>chi^2 = Sum[(Oi - Ei)^2 / Ei]
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>Oi</code> = observed frequency</li>
+<li><code>Ei</code> = expected frequency</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>test whether customer age groups match a claimed market distribution</li>
+</ul>
+<h3 class="aws-h3" id="1143-chi-square-test-of-independence">1.14.3 Chi-Square Test of Independence<a class="headerlink" href="#1143-chi-square-test-of-independence" title="Permanent link">&para;</a></h3>
+<p>Used to test whether two categorical variables are related.</p>
+<p>Example:</p>
+<ul>
+<li>is customer satisfaction related to subscription plan</li>
+<li>is disease outcome related to blood group</li>
+</ul>
+<p><strong>Expected frequency formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Eij = (Row Total * Column Total) / Grand Total
+</code></pre></div>
+<h3 class="aws-h3" id="1144-minimum-expected-frequency-rule">1.14.4 Minimum Expected Frequency Rule<a class="headerlink" href="#1144-minimum-expected-frequency-rule" title="Permanent link">&para;</a></h3>
+<p>Expected frequencies should usually be at least 5 for reliable chi-square results.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">chisquare</span><span class="p">,</span> <span class="n">chi2_contingency</span>
+
+<span class="n">observed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;goodness-of-fit:&quot;</span><span class="p">,</span> <span class="n">chisquare</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">f_exp</span><span class="o">=</span><span class="n">expected</span><span class="p">))</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;independence:&quot;</span><span class="p">,</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">table</span><span class="p">)[:</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div>
+<h2 class="aws-h2" id="115-analysis-of-variance-anova">1.15 Analysis of Variance (ANOVA)<a class="headerlink" href="#115-analysis-of-variance-anova" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1151-why-anova-is-needed">1.15.1 Why ANOVA Is Needed<a class="headerlink" href="#1151-why-anova-is-needed" title="Permanent link">&para;</a></h3>
+<p>ANOVA is used to compare the means of 3 or more groups.</p>
+<p>Why not many t-tests?</p>
+<ul>
+<li>many t-tests increase the chance of Type I error</li>
+</ul>
+<h3 class="aws-h3" id="1152-one-way-anova">1.15.2 One-Way ANOVA<a class="headerlink" href="#1152-one-way-anova" title="Permanent link">&para;</a></h3>
+<p>Used when one categorical factor affects one numerical variable.</p>
+<p>Example:</p>
+<ul>
+<li>compare average sales across 4 regions</li>
+<li>compare machine performance across 3 machines</li>
+</ul>
+<p><strong>Hypothesis:</strong></p>
+<ul>
+<li><code>H0</code>: all group means are equal</li>
+<li><code>H1</code>: at least one group mean is different</li>
+</ul>
+<h3 class="aws-h3" id="1153-anova-variations">1.15.3 ANOVA Variations<a class="headerlink" href="#1153-anova-variations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Total variation</strong></li>
+<li><strong>Between-group variation</strong></li>
+<li><strong>Within-group variation</strong></li>
+</ul>
+<p><strong>Relationship:</strong></p>
+<div class="highlight"><pre><span></span><code>Total Variation = Between Variation + Within Variation
+</code></pre></div>
+<h3 class="aws-h3" id="1154-f-statistic">1.15.4 F Statistic<a class="headerlink" href="#1154-f-statistic" title="Permanent link">&para;</a></h3>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>F = Mean Square Between / Mean Square Within
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>If variation between groups is much larger than variation within groups, group means are likely not equal.</p>
+<h3 class="aws-h3" id="1155-one-way-anova-assumptions">1.15.5 One-Way ANOVA Assumptions<a class="headerlink" href="#1155-one-way-anova-assumptions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>groups are independent</li>
+<li>data in each group is approximately normal</li>
+<li>variances are approximately equal</li>
+</ul>
+<h3 class="aws-h3" id="1156-post-hoc-tests">1.15.6 Post-Hoc Tests<a class="headerlink" href="#1156-post-hoc-tests" title="Permanent link">&para;</a></h3>
+<p>If ANOVA rejects <code>H0</code>, post-hoc tests show which groups are different.</p>
+<p>Common post-hoc tests:</p>
+<ul>
+<li>Tukey HSD</li>
+<li>Scheffe test</li>
+</ul>
+<h3 class="aws-h3" id="1157-two-way-anova">1.15.7 Two-Way ANOVA<a class="headerlink" href="#1157-two-way-anova" title="Permanent link">&para;</a></h3>
+<p>Two-way ANOVA studies the effect of two categorical factors on one numerical outcome.</p>
+<p>Example:</p>
+<ul>
+<li>machine type and work shift affecting production output</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">f_oneway</span>
+
+<span class="n">machine_a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">68.7</span><span class="p">,</span> <span class="mf">75.4</span><span class="p">,</span> <span class="mf">70.9</span><span class="p">]</span>
+<span class="n">machine_b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">62.7</span><span class="p">,</span> <span class="mf">68.5</span><span class="p">,</span> <span class="mf">63.1</span><span class="p">]</span>
+<span class="n">machine_c</span> <span class="o">=</span> <span class="p">[</span><span class="mf">55.9</span><span class="p">,</span> <span class="mf">56.1</span><span class="p">,</span> <span class="mf">57.3</span><span class="p">]</span>
+<span class="n">machine_d</span> <span class="o">=</span> <span class="p">[</span><span class="mf">80.7</span><span class="p">,</span> <span class="mf">70.3</span><span class="p">,</span> <span class="mf">80.9</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;one-way ANOVA:&quot;</span><span class="p">,</span> <span class="n">f_oneway</span><span class="p">(</span><span class="n">machine_a</span><span class="p">,</span> <span class="n">machine_b</span><span class="p">,</span> <span class="n">machine_c</span><span class="p">,</span> <span class="n">machine_d</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.multicomp</span><span class="w"> </span><span class="kn">import</span> <span class="n">pairwise_tukeyhsd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;strength&quot;</span><span class="p">:</span> <span class="n">machine_a</span> <span class="o">+</span> <span class="n">machine_b</span> <span class="o">+</span> <span class="n">machine_c</span> <span class="o">+</span> <span class="n">machine_d</span><span class="p">,</span>
+    <span class="s2">&quot;machine&quot;</span><span class="p">:</span> <span class="p">([</span><span class="s2">&quot;A&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">([</span><span class="s2">&quot;B&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">([</span><span class="s2">&quot;C&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">([</span><span class="s2">&quot;D&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">),</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pairwise_tukeyhsd</span><span class="p">(</span><span class="n">endog</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;strength&quot;</span><span class="p">],</span> <span class="n">groups</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;machine&quot;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="116-covariance-correlation-and-regression">1.16 Covariance, Correlation, and Regression<a class="headerlink" href="#116-covariance-correlation-and-regression" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1161-covariance">1.16.1 Covariance<a class="headerlink" href="#1161-covariance" title="Permanent link">&para;</a></h3>
+<p>Covariance shows whether two variables move together.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Cov(X,Y) = Sum[(Xi - X_bar)(Yi - Y_bar)] / (n - 1)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<ul>
+<li>positive covariance: both move together</li>
+<li>negative covariance: one rises while the other falls</li>
+</ul>
+<h3 class="aws-h3" id="1162-correlation">1.16.2 Correlation<a class="headerlink" href="#1162-correlation" title="Permanent link">&para;</a></h3>
+<p>Correlation gives the strength and direction of linear relationship.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>r = Cov(X,Y) / (Sx * Sy)
+</code></pre></div>
+<p><strong>Range:</strong></p>
+<div class="highlight"><pre><span></span><code>-1 &lt;= r &lt;= 1
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<ul>
+<li>near <code>1</code>: strong positive relationship</li>
+<li>near <code>-1</code>: strong negative relationship</li>
+<li>near <code>0</code>: weak linear relationship</li>
+</ul>
+<p><strong>Real-world example:</strong></p>
+<ul>
+<li>study hours and marks often show positive correlation</li>
+</ul>
+<h3 class="aws-h3" id="1163-linear-regression">1.16.3 Linear Regression<a class="headerlink" href="#1163-linear-regression" title="Permanent link">&para;</a></h3>
+<p>Regression models the relationship between a target and predictor variables.</p>
+<p><strong>Simple linear regression formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Y = beta0 + beta1X + error
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>beta0</code> = intercept</li>
+<li><code>beta1</code> = slope</li>
+</ul>
+<p><strong>Simple explanation:</strong></p>
+<p>Regression helps predict a value and measure how one variable changes with another.</p>
+<h3 class="aws-h3" id="1164-r-squared">1.16.4 R-Squared<a class="headerlink" href="#1164-r-squared" title="Permanent link">&para;</a></h3>
+<p>R-squared tells how much of the variation in <code>Y</code> is explained by the model.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>R^2 = Explained Variation / Total Variation
+</code></pre></div>
+<p><strong>Real-world example:</strong></p>
+<ul>
+<li>predict house price using area</li>
+<li>predict sales using advertising spend</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">pearsonr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;correlation:&quot;</span><span class="p">,</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">y</span><span class="p">))</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;slope:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;intercept:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="s2">&quot;r2:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+<h2 class="aws-h2" id="117-when-to-use-what">1.17 When to Use What<a class="headerlink" href="#117-when-to-use-what" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Summarize data</td>
+<td>Descriptive statistics</td>
+</tr>
+<tr>
+<td>Model success/failure in one trial</td>
+<td>Bernoulli</td>
+</tr>
+<tr>
+<td>Count successes in fixed trials</td>
+<td>Binomial</td>
+</tr>
+<tr>
+<td>Count events in a time interval</td>
+<td>Poisson</td>
+</tr>
+<tr>
+<td>Model bell-shaped continuous data</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Estimate unknown population value</td>
+<td>Point estimate / confidence interval</td>
+</tr>
+<tr>
+<td>Compare sample mean to claimed mean</td>
+<td>One-sample z-test or t-test</td>
+</tr>
+<tr>
+<td>Compare two means</td>
+<td>Two-sample z-test or t-test</td>
+</tr>
+<tr>
+<td>Compare before and after values</td>
+<td>Paired t-test</td>
+</tr>
+<tr>
+<td>Check fit of observed frequencies</td>
+<td>Chi-square goodness-of-fit</td>
+</tr>
+<tr>
+<td>Check relationship between categories</td>
+<td>Chi-square independence</td>
+</tr>
+<tr>
+<td>Compare 3 or more group means</td>
+<td>ANOVA</td>
+</tr>
+<tr>
+<td>Study relation between two variables</td>
+<td>Correlation / regression</td>
+</tr>
+</tbody>
+</table>
+<h2 class="aws-h2" id="118-common-python-functions-in-statistics">1.18 Common Python Functions in Statistics<a class="headerlink" href="#118-common-python-functions-in-statistics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Common Python Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean / variance / std</td>
+<td><code>numpy.mean()</code>, <code>numpy.var()</code>, <code>numpy.std()</code></td>
+</tr>
+<tr>
+<td>Percentiles</td>
+<td><code>numpy.percentile()</code></td>
+</tr>
+<tr>
+<td>Mode</td>
+<td><code>scipy.stats.mode()</code></td>
+</tr>
+<tr>
+<td>Binomial distribution</td>
+<td><code>scipy.stats.binom.pmf()</code>, <code>binom.cdf()</code></td>
+</tr>
+<tr>
+<td>Poisson distribution</td>
+<td><code>scipy.stats.poisson.pmf()</code></td>
+</tr>
+<tr>
+<td>Normal distribution</td>
+<td><code>scipy.stats.norm.cdf()</code>, <code>norm.sf()</code></td>
+</tr>
+<tr>
+<td>Random sampling</td>
+<td><code>random.sample()</code>, <code>random.choices()</code></td>
+</tr>
+<tr>
+<td>One-sample z-test</td>
+<td><code>statsmodels.stats.weightstats.ztest()</code></td>
+</tr>
+<tr>
+<td>Proportion z-test</td>
+<td><code>statsmodels.stats.proportion.proportions_ztest()</code></td>
+</tr>
+<tr>
+<td>One-sample t-test</td>
+<td><code>scipy.stats.ttest_1samp()</code></td>
+</tr>
+<tr>
+<td>Two-sample t-test</td>
+<td><code>scipy.stats.ttest_ind()</code></td>
+</tr>
+<tr>
+<td>Paired t-test</td>
+<td><code>scipy.stats.ttest_rel()</code></td>
+</tr>
+<tr>
+<td>Shapiro-Wilk test</td>
+<td><code>scipy.stats.shapiro()</code></td>
+</tr>
+<tr>
+<td>Levene's test</td>
+<td><code>scipy.stats.levene()</code></td>
+</tr>
+<tr>
+<td>Chi-square goodness of fit</td>
+<td><code>scipy.stats.chisquare()</code></td>
+</tr>
+<tr>
+<td>Chi-square independence</td>
+<td><code>scipy.stats.chi2_contingency()</code></td>
+</tr>
+<tr>
+<td>One-way ANOVA</td>
+<td><code>scipy.stats.f_oneway()</code></td>
+</tr>
+<tr>
+<td>Tukey HSD</td>
+<td><code>statsmodels.stats.multicomp.pairwise_tukeyhsd()</code></td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td><code>scipy.stats.pearsonr()</code></td>
+</tr>
+<tr>
+<td>Regression</td>
+<td><code>sklearn.linear_model.LinearRegression()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="aws-h2" id="119-core-statistical-ideas">1.19 Core Statistical Ideas<a class="headerlink" href="#119-core-statistical-ideas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>mean, median, and mode describe the center of data</li>
+<li>variance and standard deviation describe spread</li>
+<li>quartiles and percentiles describe position</li>
+<li>random variables can be discrete or continuous</li>
+<li>binomial, Poisson, and normal are the most common basic distributions</li>
+<li>sampling is used because full population study is often impractical</li>
+<li>confidence intervals give a likely range for a parameter</li>
+<li>p-value is used to decide whether to reject <code>H0</code></li>
+<li>z-test is common for large samples</li>
+<li>t-test is common when variance is unknown and sample size is small</li>
+<li>chi-square is used for categorical frequency data</li>
+<li>ANOVA compares means across more than two groups</li>
+<li>correlation measures relationship, regression helps prediction</li>
+</ul>
+<h2 class="aws-h2" id="120-statistical-workflow">1.20 Statistical Workflow<a class="headerlink" href="#120-statistical-workflow" title="Permanent link">&para;</a></h2>
+<p>Statistics starts with understanding data and ends with making decisions from data.</p>
+<p>The overall flow is usually:</p>
+<ol>
+<li>describe the data</li>
+<li>understand randomness using probability distributions</li>
+<li>take samples and estimate unknown values</li>
+<li>test claims using z, t, chi-square, or ANOVA</li>
+<li>study relationships using correlation and regression</li>
+</ol>
+<p>For data science and analytics roles, the most important topics to know strongly are:</p>
+<ul>
+<li>descriptive statistics</li>
+<li>probability distributions</li>
+<li>sampling and CLT</li>
+<li>confidence intervals</li>
+<li>hypothesis testing</li>
+<li>z-tests and t-tests</li>
+<li>chi-square tests</li>
+<li>ANOVA</li>
+<li>correlation and regression</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
