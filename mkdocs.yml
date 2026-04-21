@@ -25,6 +25,7 @@ nav:
 
   - Data Science:
       - Python: DataScience/python.md
+      - Statistics: DataScience/statistics.md
       - Machine Learning (ML): DataScience/machine-learning.md
 
   - Analytics:
