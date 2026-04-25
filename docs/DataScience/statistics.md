@@ -200,7 +200,17 @@ Example:
 
 ## 1.5 Descriptive Statistics { .aws-h2 }
 
-### 1.5.1 Mean { .aws-h3 }
+### 1.5.1 Measures of Central Tendency { .aws-h3 }
+
+Measures of central tendency describe the **center** or typical value of a dataset.
+
+Common measures:
+
+- **Mean**: arithmetic average
+- **Median**: middle value
+- **Mode**: most frequent value
+
+#### Mean
 
 **Definition:**
 
@@ -229,11 +239,23 @@ Mean = `(60 + 70 + 80) / 3 = 70`
 - average student marks
 - average temperature
 
-### 1.5.2 Median { .aws-h3 }
+#### Median
 
 **Definition:**
 
 Median is the middle value after sorting the data.
+
+**Formula:**
+
+```text
+First sort the data in ascending order.
+
+If n is odd:
+Median = value at position (n + 1) / 2
+
+If n is even:
+Median = [value at position n / 2 + value at position (n / 2) + 1] / 2
+```
 
 **Formula idea:**
 
@@ -254,11 +276,19 @@ Median = `(15 + 20) / 2 = 17.5`
 
 - salary analysis where a few very high salaries can distort the mean
 
-### 1.5.3 Mode { .aws-h3 }
+#### Mode
 
 **Definition:**
 
 Mode is the most frequently occurring value.
+
+**Formula idea:**
+
+```text
+Mode = value with the highest frequency
+```
+
+If two values appear most often, the data is **bimodal**. If more than two values share the highest frequency, the data is **multimodal**.
 
 **Simple explanation:**
 
@@ -275,7 +305,18 @@ Mode = `3`
 - most common shirt size sold
 - most used payment method
 
-### 1.5.4 Range { .aws-h3 }
+### 1.5.2 Measures of Variation or Dispersion { .aws-h3 }
+
+Measures of variation, also called measures of dispersion, describe how much the data values are spread out.
+
+Common measures:
+
+- **Range**: total spread from smallest to largest value
+- **Variance**: average squared distance from the mean
+- **Standard deviation**: typical distance from the mean in the original unit
+- **IQR**: spread of the middle 50% of the data
+
+#### Range
 
 **Definition:**
 
@@ -297,27 +338,70 @@ Data = 12, 15, 20, 25
 
 Range = `25 - 12 = 13`
 
-### 1.5.5 Variance { .aws-h3 }
+#### Variance
 
 **Definition:**
 
 Variance measures how far data points are spread from the mean.
 
-**Sample formula:**
+**Population formula:**
+
+Use this when the data contains the full population.
 
 ```text
-s^2 = [(x1 - x_bar)^2 + (x2 - x_bar)^2 + ... + (xn - x_bar)^2] / (n - 1)
+sigma^2 = Sum[(xi - mu)^2] / N
 ```
+
+Where:
+
+- `sigma^2` = population variance
+- `xi` = each data value
+- `mu` = population mean
+- `N` = number of values in the population
+
+**Sample formula:**
+
+Use this when the data is only a sample from a larger population.
+
+```text
+s^2 = Sum[(xi - x_bar)^2] / (n - 1)
+```
+
+Where:
+
+- `s^2` = sample variance
+- `xi` = each sample value
+- `x_bar` = sample mean
+- `n` = number of values in the sample
+- `n - 1` is used for sample variance because a sample usually underestimates population spread
 
 **Simple explanation:**
 
-Take each value, see how far it is from the average, square it, and average those squared gaps.
+Take each value, see how far it is from the average, square that distance, add all squared distances, and divide by `N` for population data or `n - 1` for sample data.
+
+**Small example:**
+
+Data = 2, 4, 6
+
+Mean = `(2 + 4 + 6) / 3 = 4`
+
+Squared gaps:
+
+```text
+(2 - 4)^2 = 4
+(4 - 4)^2 = 0
+(6 - 4)^2 = 4
+```
+
+Population variance = `(4 + 0 + 4) / 3 = 2.67`
+
+Sample variance = `(4 + 0 + 4) / (3 - 1) = 4`
 
 **Example use:**
 
 - compare whether two stores have stable or unstable daily sales
 
-### 1.5.6 Standard Deviation { .aws-h3 }
+#### Standard Deviation
 
 **Definition:**
 
@@ -357,7 +441,7 @@ SEM = s / sqrt(n)
 
 - If average delivery time is 30 minutes and standard deviation is 2 minutes, delivery times are usually close to 30
 
-### 1.5.7 Quartiles and Percentiles { .aws-h3 }
+#### Quartiles and Percentiles
 
 **Quartiles** divide sorted data into 4 equal parts.
 
@@ -383,7 +467,11 @@ These measures show where a value stands inside the dataset.
 - salary bands
 - customer spend segmentation
 
-### 1.5.8 Z-Score { .aws-h3 }
+### 1.5.3 Position Measures { .aws-h3 }
+
+Position measures describe where a value stands compared with the rest of the data.
+
+#### Z-Score
 
 **Definition:**
 
@@ -409,7 +497,25 @@ If mean score is 70, standard deviation is 10, and a student got 90:
 
 The student is 2 standard deviations above average.
 
-### 1.5.9 Skewness and Kurtosis { .aws-h3 }
+**Difference between z-score and z-value:**
+
+| Term | Meaning | Common use |
+|---|---|---|
+| **Z-score** | A standardized value calculated from one data point | Describing where one observation lies in a distribution |
+| **Z-value** | A cutoff value from the standard normal distribution | Confidence intervals and hypothesis tests |
+
+Example:
+
+- A student's mark may have a **z-score** of `2`
+- A 95% confidence interval often uses the **z-value** `1.96`
+
+**Small reference to the Z table:**
+
+A Z table gives the area or probability under the standard normal curve for a given z-value. For example, `z = 1.96` gives about `0.975` area to the left, which is why `1.96` is commonly used for two-sided 95% confidence intervals.
+
+### 1.5.4 Shape of Distribution { .aws-h3 }
+
+#### Skewness and Kurtosis
 
 **Skewness** tells the direction of asymmetry.
 
@@ -475,6 +581,47 @@ Important forms:
 - **PMF** for discrete variables
 - **PDF** for continuous variables
 - **CDF** for cumulative probability
+
+**PMF: Probability Mass Function**
+
+A PMF gives the probability of an exact value for a **discrete** random variable.
+
+```text
+PMF = P(X = x)
+```
+
+Example:
+
+- probability of getting exactly 3 heads
+- probability of receiving exactly 2 calls in one hour
+
+**PDF: Probability Density Function**
+
+A PDF describes the density of probability for a **continuous** random variable.
+
+For continuous variables, the probability at one exact point is usually `0`, so we use area under the curve over an interval.
+
+```text
+P(a <= X <= b) = area under the PDF curve from a to b
+```
+
+Example:
+
+- probability that height is between 160 cm and 170 cm
+- probability that delivery time is between 25 and 30 minutes
+
+**CDF: Cumulative Distribution Function**
+
+A CDF gives the probability that a random variable is less than or equal to a value.
+
+```text
+CDF = P(X <= x)
+```
+
+Example:
+
+- `P(X <= 3)` means probability that `X` is at most 3
+- `norm.cdf(1.96)` means area under the standard normal curve to the left of `1.96`
 
 For a **discrete random variable**, the distribution is written using probabilities assigned to each possible value. One important discrete distribution is the **binomial distribution**, but discrete distributions also include **Bernoulli**, **Poisson**, and **categorical** distributions.
 
@@ -721,6 +868,22 @@ print("Poisson:", poisson.pmf(2, mu=3))
 print("Normal CDF:", norm.cdf(1.96))
 ```
 
+**Code explanation:**
+
+- `bernoulli.pmf(1, p=0.7)` gives the probability of success (`1`) in one yes/no trial where success probability is `0.7`. The answer is `0.7`.
+- `binom.pmf(3, n=5, p=0.4)` gives the probability of exactly `3` successes in `5` independent trials when each trial has success probability `0.4`.
+- `poisson.pmf(2, mu=3)` gives the probability of exactly `2` events when the average event rate is `3`.
+- `norm.cdf(1.96)` gives the probability that a standard normal value is less than or equal to `1.96`. The value is about `0.975`, meaning about `97.5%` of the area is to the left of `1.96`.
+
+In short:
+
+| Code value | Meaning |
+|---|---|
+| `p` | probability of success in Bernoulli or Binomial distribution |
+| `n` | number of trials in Binomial distribution |
+| `mu` | average rate or mean in Poisson distribution |
+| `1.96` | z-value often used for a two-sided 95% confidence interval |
+
 ## 1.8 Sampling and Sampling Distribution { .aws-h2 }
 
 ### 1.8.1 Why Sampling Is Needed { .aws-h3 }
@@ -850,6 +1013,25 @@ x_bar +/- z(alpha/2) * sigma / sqrt(n)
 p_hat +/- z(alpha/2) * sqrt[(p_hat * (1-p_hat)) / n]
 ```
 
+**Standard error vs margin of error:**
+
+| Term | Meaning | Formula idea |
+|---|---|---|
+| **Standard Error (SE)** | Measures how much a sample statistic varies from sample to sample | `s / sqrt(n)` for a sample mean |
+| **Margin of Error (ME)** | Maximum likely distance between the estimate and the true parameter at a chosen confidence level | `critical value * SE` |
+
+Simple difference:
+
+- **Standard error** measures uncertainty due to sampling
+- **Margin of error** converts that uncertainty into a confidence interval width using a z-value or t-value
+
+Example:
+
+```text
+If SE = 2 and z-value = 1.96:
+Margin of Error = 1.96 * 2 = 3.92
+```
+
 ### 1.9.4 Margin of Error { .aws-h3 }
 
 **Formula:**
@@ -861,6 +1043,11 @@ Margin of Error = z(alpha/2) * sigma / sqrt(n)
 **Simple explanation:**
 
 It shows how far the estimate can be from the true value.
+
+Margin of error depends on two things:
+
+- the **standard error**, which comes from sample spread and sample size
+- the **critical value**, such as `1.96` for a two-sided 95% confidence interval
 
 **Real-world example:**
 
