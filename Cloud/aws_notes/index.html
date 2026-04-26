@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../../DataBricks/introduction/">
+        <link rel="prev" href="../introduction/">
       
+      
+        <link rel="next" href="../azure_notes/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Amazon Web Service - AnalyticsWithAkshay</title>
+        <title>AWS - AnalyticsWithAkshay</title>
       
     
     
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Amazon Web Service
+              AWS
             
           </span>
         </div>
@@ -300,11 +302,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../introduction/" class="md-tabs__link">
           
   
   
-  AWS
+  Cloud
 
         </a>
       </li>
@@ -931,7 +933,7 @@
   <span class="md-ellipsis">
     
   
-    AWS
+    Cloud
   
 
     
@@ -947,11 +949,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    AWS
+    Cloud
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -974,7 +1004,7 @@
   <span class="md-ellipsis">
     
   
-    Amazon Web Service
+    AWS
   
 
     
@@ -992,7 +1022,7 @@
   <span class="md-ellipsis">
     
   
-    Amazon Web Service
+    AWS
   
 
     
@@ -1646,6 +1676,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcp_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2331,8 +2417,7 @@
   <h1>AWS for Data Science, Analytics, and Engineering</h1>
   <p>
     Amazon Web Services (AWS) is one of the most widely used cloud platforms for building data pipelines,
-    storing data, training machine learning models, and running analytics workloads. These notes are organized
-    for beginner-friendly understanding with practical examples.
+    storing data, training machine learning models, and running analytics workloads.
   </p>
 </div>
 
@@ -2521,6 +2606,7 @@
 <h3 class="aws-h3" id="152-aws-lambda">1.5.2 AWS Lambda<a class="headerlink" href="#152-aws-lambda" title="Permanent link">&para;</a></h3>
 <p>AWS Lambda is a serverless compute service.</p>
 <p>It lets you run code without managing servers.</p>
+<p>You write a function, choose a runtime such as Python or Node.js, connect an event source, and AWS runs the function only when it is triggered.</p>
 <p>Main benefits:</p>
 <ul>
 <li>No server management</li>
@@ -2528,15 +2614,103 @@
 <li>Auto scaling</li>
 <li>Pay per execution</li>
 </ul>
+<p>Important ideas:</p>
+<ul>
+<li>Function: the code that runs</li>
+<li>Runtime: the language environment, such as Python</li>
+<li>Handler: the entry point AWS Lambda calls</li>
+<li>Event: input data passed to the function</li>
+<li>Context: runtime information about the function execution</li>
+<li>Trigger: the AWS service or schedule that starts the function</li>
+<li>Execution role: IAM role that gives the function permission to access AWS services</li>
+</ul>
 <p>Common use cases:</p>
 <ul>
 <li>Trigger ETL jobs</li>
 <li>Process files uploaded to S3</li>
 <li>Send notifications</li>
 <li>Run lightweight automation</li>
+<li>Call APIs</li>
+<li>Clean or transform small files</li>
+<li>Start Glue jobs, Step Functions workflows, or other AWS services</li>
 </ul>
 <p>Simple example:</p>
 <p>When a CSV file is uploaded to S3, a Lambda function can automatically validate it or trigger a downstream pipeline.</p>
+<p>Example Lambda flow:</p>
+<ol>
+<li>User uploads <code>sales.csv</code> to S3</li>
+<li>S3 sends an event to Lambda</li>
+<li>Lambda reads file metadata</li>
+<li>Lambda checks file format</li>
+<li>Lambda starts a Glue ETL job</li>
+<li>Processed data is stored back in S3</li>
+</ol>
+<p>Simple Python handler:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">bucket_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;Records&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;s3&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s2">&quot;Records&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;s3&quot;</span><span class="p">][</span><span class="s2">&quot;object&quot;</span><span class="p">][</span><span class="s2">&quot;key&quot;</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;New file uploaded: </span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;File processed successfully&quot;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Common Lambda triggers:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3</td>
+<td>Run when a file is uploaded</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>Run when an API endpoint is called</td>
+</tr>
+<tr>
+<td>EventBridge</td>
+<td>Run on a schedule</td>
+</tr>
+<tr>
+<td>DynamoDB Streams</td>
+<td>Run when table data changes</td>
+</tr>
+<tr>
+<td>SQS</td>
+<td>Process messages from a queue</td>
+</tr>
+</tbody>
+</table>
+<p>When Lambda is a good choice:</p>
+<ul>
+<li>Task is event-driven</li>
+<li>Code runs for a short time</li>
+<li>Workload changes frequently</li>
+<li>You do not want to manage servers</li>
+<li>Automation is lightweight</li>
+</ul>
+<p>When Lambda is not ideal:</p>
+<ul>
+<li>Long-running jobs</li>
+<li>Very large data processing</li>
+<li>Applications that need full server control</li>
+<li>Heavy machine learning training</li>
+</ul>
+<p>Important limits to remember:</p>
+<ul>
+<li>Lambda functions have a maximum execution time</li>
+<li>Memory and CPU are configured together</li>
+<li>Temporary storage is limited</li>
+<li>Cold starts can add delay when a function starts after being idle</li>
+</ul>
+<p>For data engineering, Lambda is often used as a connector or trigger, not as the main engine for large processing.</p>
 <h3 class="aws-h3" id="153-elastic-beanstalk">1.5.3 Elastic Beanstalk<a class="headerlink" href="#153-elastic-beanstalk" title="Permanent link">&para;</a></h3>
 <p>Elastic Beanstalk is a platform service for deploying applications easily.</p>
 <p>You upload code, and AWS manages much of the infrastructure for you.</p>

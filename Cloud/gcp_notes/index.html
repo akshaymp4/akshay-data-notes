@@ -1,0 +1,2588 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal Notes on Data Science, Analytics & Data Engineering">
+      
+      
+        <meta name="author" content="Akshay MP">
+      
+      
+      
+        <link rel="prev" href="../azure_notes/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>GCP - AnalyticsWithAkshay</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-what-is-gcp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-header__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AnalyticsWithAkshay
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GCP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataScience/python/" class="md-tabs__link">
+          
+  
+  
+  Data Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Analytics/sql/" class="md-tabs__link">
+          
+  
+  
+  Analytics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataEngineering/de-cycle/" class="md-tabs__link">
+          
+  
+  
+  Data Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DataBricks/introduction/" class="md-tabs__link">
+          
+  
+  
+  DataBricks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  
+  Cloud
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AnalyticsWithAkshay" class="md-nav__button md-logo" aria-label="AnalyticsWithAkshay" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AnalyticsWithAkshay
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Science
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Science
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataScience/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataScience/statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataScience/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (ML)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analytics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytics/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytics/power-bi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Power BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Engineering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Engineering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/de-cycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DE Cycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Programming Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataEngineering/pyspark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PySaprk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DataBricks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DataBricks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataBricks/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cloud
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GCP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-what-is-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is GCP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-why-gcp-is-useful-for-data-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why GCP Is Useful for Data Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-core-cloud-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Core Cloud Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Core Cloud Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-regions-and-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 Regions and Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-gcp-storage-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 GCP Storage Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 GCP Storage Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-storage-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 Storage Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-persistent-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Persistent Disk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-gcp-compute-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 GCP Compute Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 GCP Compute Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-compute-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1 Compute Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-cloud-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2 Cloud Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-cloud-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3 Cloud Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-networking-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Networking Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Networking Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-vpc-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 VPC Network
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-firewall-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2 Firewall Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-public-vs-private-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3 Public vs Private Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-security-and-access-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Security and Access Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Security and Access Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1 IAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-service-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2 Service Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-principle-of-least-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3 Principle of Least Privilege
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-google-cloud-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Google Cloud CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-databases-in-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Databases in GCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9 Databases in GCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-cloud-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Cloud SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-cloud-spanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Cloud Spanner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-firestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Firestore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-analytics-and-data-engineering-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Analytics and Data Engineering Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Analytics and Data Engineering Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 BigQuery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-dataflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 Dataflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-dataproc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Dataproc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-pubsub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Pub/Sub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-vertex-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Vertex AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-beginner-data-architecture-on-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Beginner Data Architecture on GCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-pay-as-you-go-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 Pay-As-You-Go Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-when-to-use-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 When to Use What
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-gcp-products-and-their-normal-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 GCP Products and Their Normal Equivalent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-quick-revision-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Quick Revision Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-what-is-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is GCP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-why-gcp-is-useful-for-data-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why GCP Is Useful for Data Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-core-cloud-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Core Cloud Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Core Cloud Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-regions-and-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 Regions and Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-gcp-storage-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 GCP Storage Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 GCP Storage Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-storage-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 Storage Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-persistent-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 Persistent Disk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-gcp-compute-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 GCP Compute Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 GCP Compute Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-compute-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1 Compute Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-cloud-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2 Cloud Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-cloud-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3 Cloud Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-networking-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Networking Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Networking Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-vpc-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 VPC Network
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-firewall-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2 Firewall Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-public-vs-private-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3 Public vs Private Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-security-and-access-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Security and Access Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7 Security and Access Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1 IAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-service-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2 Service Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-principle-of-least-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3 Principle of Least Privilege
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-google-cloud-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Google Cloud CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-databases-in-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Databases in GCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9 Databases in GCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-cloud-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Cloud SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-cloud-spanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Cloud Spanner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-firestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Firestore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-analytics-and-data-engineering-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Analytics and Data Engineering Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10 Analytics and Data Engineering Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1 BigQuery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-dataflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2 Dataflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-dataproc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3 Dataproc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-pubsub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Pub/Sub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-vertex-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Vertex AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-beginner-data-architecture-on-gcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Beginner Data Architecture on GCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-pay-as-you-go-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 Pay-As-You-Go Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-when-to-use-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 When to Use What
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-gcp-products-and-their-normal-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 GCP Products and Their Normal Equivalent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-quick-revision-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Quick Revision Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="aws-hero">
+  <div class="aws-chip">Cloud | Data Engineering | Analytics</div>
+  <h1>GCP for Data Science, Analytics, and Engineering</h1>
+  <p>
+    Google Cloud Platform (GCP) is a cloud computing platform used to store data,
+    run analytics, build pipelines, train machine learning models, and deploy applications.
+  </p>
+</div>
+
+<h2 class="aws-h2" id="11-what-is-gcp">1.1 What Is GCP?<a class="headerlink" href="#11-what-is-gcp" title="Permanent link">&para;</a></h2>
+<p>GCP is Google's cloud platform.</p>
+<p>It provides services for:</p>
+<ul>
+<li>Storage</li>
+<li>Compute</li>
+<li>Databases</li>
+<li>Networking</li>
+<li>Data analytics</li>
+<li>Machine learning</li>
+<li>Application deployment</li>
+</ul>
+<p>GCP is especially well known for analytics services such as BigQuery.</p>
+<h2 class="aws-h2" id="12-why-gcp-is-useful-for-data-work">1.2 Why GCP Is Useful for Data Work<a class="headerlink" href="#12-why-gcp-is-useful-for-data-work" title="Permanent link">&para;</a></h2>
+<p>GCP is useful for teams that want strong managed analytics, serverless data warehousing, and scalable machine learning tools.</p>
+<p>GCP helps data teams:</p>
+<ul>
+<li>Store large datasets</li>
+<li>Run SQL analytics at scale</li>
+<li>Build batch and streaming pipelines</li>
+<li>Process big data</li>
+<li>Train and deploy machine learning models</li>
+<li>Connect dashboards and BI tools</li>
+<li>Use managed services instead of managing servers</li>
+</ul>
+<p>Simple example:</p>
+<ul>
+<li>Traditional way: store data in local databases and manually run reports</li>
+<li>GCP way: store files in Cloud Storage, load data into BigQuery, transform with Dataflow or Dataproc, and visualize using Looker Studio</li>
+</ul>
+<h2 class="aws-h2" id="13-core-cloud-concepts">1.3 Core Cloud Concepts<a class="headerlink" href="#13-core-cloud-concepts" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="131-projects">1.3.1 Projects<a class="headerlink" href="#131-projects" title="Permanent link">&para;</a></h3>
+<p>A GCP project is the main container for resources, billing, permissions, and APIs.</p>
+<p>Example resources inside a project:</p>
+<ul>
+<li>Cloud Storage bucket</li>
+<li>BigQuery dataset</li>
+<li>Compute Engine VM</li>
+<li>Cloud Function</li>
+<li>Service account</li>
+</ul>
+<h3 class="aws-h3" id="132-regions-and-zones">1.3.2 Regions and Zones<a class="headerlink" href="#132-regions-and-zones" title="Permanent link">&para;</a></h3>
+<p>A region is a geographic area where Google has data centers.</p>
+<p>A zone is a location inside a region.</p>
+<p>Choosing the right region helps reduce latency and control data location.</p>
+<h3 class="aws-h3" id="133-apis">1.3.3 APIs<a class="headerlink" href="#133-apis" title="Permanent link">&para;</a></h3>
+<p>Many GCP services must have their APIs enabled before use.</p>
+<p>Example:</p>
+<p>Before using BigQuery or Cloud Storage in a project, the related API must be enabled.</p>
+<h2 class="aws-h2" id="14-gcp-storage-services">1.4 GCP Storage Services<a class="headerlink" href="#14-gcp-storage-services" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="141-cloud-storage">1.4.1 Cloud Storage<a class="headerlink" href="#141-cloud-storage" title="Permanent link">&para;</a></h3>
+<p>Cloud Storage is object storage for files, logs, images, backups, CSV files, Parquet files, and machine learning datasets.</p>
+<p>It is similar to Amazon S3 and Azure Blob Storage.</p>
+<p>Common uses:</p>
+<ul>
+<li>Store raw data</li>
+<li>Store processed data</li>
+<li>Keep backups</li>
+<li>Host static assets</li>
+<li>Build a data lake</li>
+</ul>
+<h3 class="aws-h3" id="142-storage-classes">1.4.2 Storage Classes<a class="headerlink" href="#142-storage-classes" title="Permanent link">&para;</a></h3>
+<p>Cloud Storage provides different storage classes based on how often data is accessed.</p>
+<p>Examples:</p>
+<ul>
+<li>Standard: frequently accessed data</li>
+<li>Nearline: data accessed less often</li>
+<li>Coldline: rarely accessed data</li>
+<li>Archive: long-term archival data</li>
+</ul>
+<h3 class="aws-h3" id="143-persistent-disk">1.4.3 Persistent Disk<a class="headerlink" href="#143-persistent-disk" title="Permanent link">&para;</a></h3>
+<p>Persistent Disk provides block storage for Compute Engine virtual machines.</p>
+<p>It is similar to a hard drive attached to a server.</p>
+<h2 class="aws-h2" id="15-gcp-compute-services">1.5 GCP Compute Services<a class="headerlink" href="#15-gcp-compute-services" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="151-compute-engine">1.5.1 Compute Engine<a class="headerlink" href="#151-compute-engine" title="Permanent link">&para;</a></h3>
+<p>Compute Engine provides virtual machines in the cloud.</p>
+<p>You can install software, run applications, host APIs, or run custom data jobs.</p>
+<p>Common use cases:</p>
+<ul>
+<li>Run Linux or Windows servers</li>
+<li>Host applications</li>
+<li>Install Python and data tools</li>
+<li>Run small batch jobs</li>
+<li>Build custom environments</li>
+</ul>
+<h3 class="aws-h3" id="152-cloud-functions">1.5.2 Cloud Functions<a class="headerlink" href="#152-cloud-functions" title="Permanent link">&para;</a></h3>
+<p>Cloud Functions is a serverless compute service.</p>
+<p>It lets you run code when an event happens.</p>
+<p>Common triggers:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud Storage</td>
+<td>Run when a file is uploaded</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>Run when an endpoint is called</td>
+</tr>
+<tr>
+<td>Pub/Sub</td>
+<td>Process messages from a topic</td>
+</tr>
+<tr>
+<td>Eventarc</td>
+<td>React to cloud events</td>
+</tr>
+<tr>
+<td>Scheduler</td>
+<td>Run on a schedule</td>
+</tr>
+</tbody>
+</table>
+<p>Common data use cases:</p>
+<ul>
+<li>Validate uploaded files</li>
+<li>Trigger a pipeline</li>
+<li>Call an external API</li>
+<li>Send alerts</li>
+<li>Run small automation scripts</li>
+</ul>
+<h3 class="aws-h3" id="153-cloud-run">1.5.3 Cloud Run<a class="headerlink" href="#153-cloud-run" title="Permanent link">&para;</a></h3>
+<p>Cloud Run runs containerized applications without managing servers.</p>
+<p>It is useful for:</p>
+<ul>
+<li>APIs</li>
+<li>Web applications</li>
+<li>Data services</li>
+<li>Lightweight container workloads</li>
+</ul>
+<h2 class="aws-h2" id="16-networking-basics">1.6 Networking Basics<a class="headerlink" href="#16-networking-basics" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="161-vpc-network">1.6.1 VPC Network<a class="headerlink" href="#161-vpc-network" title="Permanent link">&para;</a></h3>
+<p>A VPC network is a private network inside GCP.</p>
+<p>It controls how cloud resources communicate with each other and with the internet.</p>
+<h3 class="aws-h3" id="162-firewall-rules">1.6.2 Firewall Rules<a class="headerlink" href="#162-firewall-rules" title="Permanent link">&para;</a></h3>
+<p>Firewall rules control inbound and outbound traffic for resources in a VPC.</p>
+<p>Example:</p>
+<p>Allow SSH only from trusted IP addresses.</p>
+<h3 class="aws-h3" id="163-public-vs-private-access">1.6.3 Public vs Private Access<a class="headerlink" href="#163-public-vs-private-access" title="Permanent link">&para;</a></h3>
+<p>Public access means a resource can be reached from the internet.</p>
+<p>Private access means only selected networks or internal services can reach it.</p>
+<p>Production data systems usually prefer private access.</p>
+<h2 class="aws-h2" id="17-security-and-access-management">1.7 Security and Access Management<a class="headerlink" href="#17-security-and-access-management" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="171-iam">1.7.1 IAM<a class="headerlink" href="#171-iam" title="Permanent link">&para;</a></h3>
+<p>Identity and Access Management, or IAM, controls who can access GCP resources and what actions they can perform.</p>
+<p>IAM is based on:</p>
+<ul>
+<li>Principals: users, groups, or service accounts</li>
+<li>Roles: permissions grouped together</li>
+<li>Resources: projects, buckets, datasets, and other services</li>
+</ul>
+<h3 class="aws-h3" id="172-service-accounts">1.7.2 Service Accounts<a class="headerlink" href="#172-service-accounts" title="Permanent link">&para;</a></h3>
+<p>A service account is an identity used by applications or services.</p>
+<p>Example:</p>
+<p>A Cloud Function can use a service account to read from Cloud Storage and write to BigQuery.</p>
+<h3 class="aws-h3" id="173-principle-of-least-privilege">1.7.3 Principle of Least Privilege<a class="headerlink" href="#173-principle-of-least-privilege" title="Permanent link">&para;</a></h3>
+<p>Give users and services only the permissions they need.</p>
+<p>This reduces security risk and prevents accidental changes.</p>
+<h2 class="aws-h2" id="18-google-cloud-cli">1.8 Google Cloud CLI<a class="headerlink" href="#18-google-cloud-cli" title="Permanent link">&para;</a></h2>
+<p>Google Cloud CLI is the command-line tool used to manage GCP resources.</p>
+<p>Example commands:</p>
+<div class="highlight"><pre><span></span><code>gcloud<span class="w"> </span>auth<span class="w"> </span>login
+gcloud<span class="w"> </span>projects<span class="w"> </span>list
+gcloud<span class="w"> </span>compute<span class="w"> </span>instances<span class="w"> </span>list
+gsutil<span class="w"> </span>ls
+</code></pre></div>
+<p>For data roles, the CLI is useful for checking resources, copying files, and troubleshooting permissions.</p>
+<h2 class="aws-h2" id="19-databases-in-gcp">1.9 Databases in GCP<a class="headerlink" href="#19-databases-in-gcp" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="191-cloud-sql">1.9.1 Cloud SQL<a class="headerlink" href="#191-cloud-sql" title="Permanent link">&para;</a></h3>
+<p>Cloud SQL is a managed relational database service.</p>
+<p>It supports common relational database engines such as PostgreSQL, MySQL, and SQL Server.</p>
+<h3 class="aws-h3" id="192-cloud-spanner">1.9.2 Cloud Spanner<a class="headerlink" href="#192-cloud-spanner" title="Permanent link">&para;</a></h3>
+<p>Cloud Spanner is a globally distributed relational database.</p>
+<p>It is useful for applications that need relational structure, strong consistency, and global scale.</p>
+<h3 class="aws-h3" id="193-firestore">1.9.3 Firestore<a class="headerlink" href="#193-firestore" title="Permanent link">&para;</a></h3>
+<p>Firestore is a NoSQL document database.</p>
+<p>It is commonly used for web, mobile, and application data.</p>
+<h2 class="aws-h2" id="110-analytics-and-data-engineering-services">1.10 Analytics and Data Engineering Services<a class="headerlink" href="#110-analytics-and-data-engineering-services" title="Permanent link">&para;</a></h2>
+<h3 class="aws-h3" id="1101-bigquery">1.10.1 BigQuery<a class="headerlink" href="#1101-bigquery" title="Permanent link">&para;</a></h3>
+<p>BigQuery is a serverless data warehouse.</p>
+<p>It lets you run SQL queries on large datasets without managing infrastructure.</p>
+<p>Common uses:</p>
+<ul>
+<li>Data warehousing</li>
+<li>Analytics reporting</li>
+<li>Ad hoc SQL analysis</li>
+<li>Dashboard data source</li>
+<li>Machine learning with BigQuery ML</li>
+</ul>
+<h3 class="aws-h3" id="1102-dataflow">1.10.2 Dataflow<a class="headerlink" href="#1102-dataflow" title="Permanent link">&para;</a></h3>
+<p>Dataflow is a managed service for batch and streaming data processing.</p>
+<p>It is based on Apache Beam.</p>
+<p>Common uses:</p>
+<ul>
+<li>Streaming pipelines</li>
+<li>Batch transformations</li>
+<li>ETL processing</li>
+<li>Event processing</li>
+</ul>
+<h3 class="aws-h3" id="1103-dataproc">1.10.3 Dataproc<a class="headerlink" href="#1103-dataproc" title="Permanent link">&para;</a></h3>
+<p>Dataproc is a managed service for Spark and Hadoop workloads.</p>
+<p>It is useful when teams want managed clusters for big data processing.</p>
+<h3 class="aws-h3" id="1104-pubsub">1.10.4 Pub/Sub<a class="headerlink" href="#1104-pubsub" title="Permanent link">&para;</a></h3>
+<p>Pub/Sub is a messaging service.</p>
+<p>It helps connect systems using events and messages.</p>
+<p>Common example:</p>
+<p>An application publishes events to Pub/Sub, and a Dataflow pipeline processes them in near real time.</p>
+<h2 class="aws-h2" id="111-vertex-ai">1.11 Vertex AI<a class="headerlink" href="#111-vertex-ai" title="Permanent link">&para;</a></h2>
+<p>Vertex AI is GCP's managed machine learning platform.</p>
+<p>It helps with:</p>
+<ul>
+<li>Dataset management</li>
+<li>Model training</li>
+<li>Experiment tracking</li>
+<li>Model registry</li>
+<li>Model deployment</li>
+<li>MLOps workflows</li>
+</ul>
+<p>Typical workflow:</p>
+<ol>
+<li>Store data in Cloud Storage or BigQuery</li>
+<li>Prepare features using BigQuery or Dataflow</li>
+<li>Train a model using Vertex AI</li>
+<li>Register the model</li>
+<li>Deploy the model to an endpoint</li>
+<li>Monitor model performance</li>
+</ol>
+<h2 class="aws-h2" id="112-beginner-data-architecture-on-gcp">1.12 Beginner Data Architecture on GCP<a class="headerlink" href="#112-beginner-data-architecture-on-gcp" title="Permanent link">&para;</a></h2>
+<p>Example workflow:</p>
+<ol>
+<li>Store raw files in Cloud Storage</li>
+<li>Use Cloud Functions or Pub/Sub to trigger processing</li>
+<li>Transform data using Dataflow or Dataproc</li>
+<li>Load cleaned data into BigQuery</li>
+<li>Run SQL analytics in BigQuery</li>
+<li>Build dashboards using Looker Studio or another BI tool</li>
+<li>Train models using Vertex AI</li>
+</ol>
+<h2 class="aws-h2" id="113-pay-as-you-go-model">1.13 Pay-As-You-Go Model<a class="headerlink" href="#113-pay-as-you-go-model" title="Permanent link">&para;</a></h2>
+<p>GCP generally charges based on usage.</p>
+<p>Common cost areas:</p>
+<ul>
+<li>Storage size</li>
+<li>Compute time</li>
+<li>Data warehouse queries</li>
+<li>Data transfer</li>
+<li>Pipeline processing</li>
+<li>Machine learning training and endpoints</li>
+</ul>
+<p>Important habit:</p>
+<p>Stop or delete unused resources after practice.</p>
+<h2 class="aws-h2" id="114-when-to-use-what">1.14 When to Use What<a class="headerlink" href="#114-when-to-use-what" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>GCP Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object storage</td>
+<td>Cloud Storage</td>
+</tr>
+<tr>
+<td>Virtual machine</td>
+<td>Compute Engine</td>
+</tr>
+<tr>
+<td>Serverless function</td>
+<td>Cloud Functions</td>
+</tr>
+<tr>
+<td>Containerized app</td>
+<td>Cloud Run</td>
+</tr>
+<tr>
+<td>Managed SQL database</td>
+<td>Cloud SQL</td>
+</tr>
+<tr>
+<td>NoSQL database</td>
+<td>Firestore</td>
+</tr>
+<tr>
+<td>Data warehouse</td>
+<td>BigQuery</td>
+</tr>
+<tr>
+<td>Batch and streaming processing</td>
+<td>Dataflow</td>
+</tr>
+<tr>
+<td>Spark and Hadoop</td>
+<td>Dataproc</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>Pub/Sub</td>
+</tr>
+<tr>
+<td>Machine learning</td>
+<td>Vertex AI</td>
+</tr>
+<tr>
+<td>Identity and access</td>
+<td>IAM</td>
+</tr>
+</tbody>
+</table>
+<h2 class="aws-h2" id="115-gcp-products-and-their-normal-equivalent">1.15 GCP Products and Their Normal Equivalent<a class="headerlink" href="#115-gcp-products-and-their-normal-equivalent" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>GCP Product</th>
+<th>Category</th>
+<th>What It Is</th>
+<th>Normal Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud Storage</td>
+<td>Storage</td>
+<td>Object storage</td>
+<td>Cloud hard drive for files</td>
+</tr>
+<tr>
+<td>Compute Engine</td>
+<td>Compute</td>
+<td>Virtual machine in cloud</td>
+<td>Physical server or laptop</td>
+</tr>
+<tr>
+<td>Cloud Functions</td>
+<td>Serverless Compute</td>
+<td>Run code on events</td>
+<td>Cron job or background script</td>
+</tr>
+<tr>
+<td>Cloud Run</td>
+<td>Containers</td>
+<td>Run containers without servers</td>
+<td>Managed container hosting</td>
+</tr>
+<tr>
+<td>Cloud SQL</td>
+<td>Database</td>
+<td>Managed relational database</td>
+<td>MySQL, PostgreSQL, or SQL Server database</td>
+</tr>
+<tr>
+<td>Firestore</td>
+<td>NoSQL Database</td>
+<td>Document database</td>
+<td>JSON-based application database</td>
+</tr>
+<tr>
+<td>BigQuery</td>
+<td>Analytics</td>
+<td>Serverless data warehouse</td>
+<td>SQL analytics warehouse</td>
+</tr>
+<tr>
+<td>Dataflow</td>
+<td>Data Processing</td>
+<td>Batch and streaming pipelines</td>
+<td>ETL processing engine</td>
+</tr>
+<tr>
+<td>Dataproc</td>
+<td>Big Data</td>
+<td>Managed Spark and Hadoop</td>
+<td>Spark cluster</td>
+</tr>
+<tr>
+<td>Pub/Sub</td>
+<td>Messaging</td>
+<td>Event messaging</td>
+<td>Message queue or event bus</td>
+</tr>
+<tr>
+<td>Vertex AI</td>
+<td>Machine Learning</td>
+<td>ML platform</td>
+<td>Managed ML workspace</td>
+</tr>
+</tbody>
+</table>
+<h2 class="aws-h2" id="116-quick-revision-notes">1.16 Quick Revision Notes<a class="headerlink" href="#116-quick-revision-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>GCP is Google's cloud platform</li>
+<li>Projects organize resources, billing, APIs, and permissions</li>
+<li>Cloud Storage stores files and objects</li>
+<li>Compute Engine provides virtual machines</li>
+<li>Cloud Functions runs event-driven code</li>
+<li>Cloud Run runs containers without server management</li>
+<li>BigQuery is a major GCP analytics service</li>
+<li>Dataflow is used for batch and streaming pipelines</li>
+<li>Pub/Sub is used for event messaging</li>
+<li>Vertex AI supports machine learning workflows</li>
+<li>IAM controls access</li>
+</ul>
+<h2 class="aws-h2" id="117-final-summary">1.17 Final Summary<a class="headerlink" href="#117-final-summary" title="Permanent link">&para;</a></h2>
+<p>GCP provides:</p>
+<ul>
+<li>Storage</li>
+<li>Compute</li>
+<li>Networking</li>
+<li>Databases</li>
+<li>Data engineering tools</li>
+<li>Analytics services</li>
+<li>Machine learning services</li>
+<li>Security and identity management</li>
+</ul>
+<p>For data roles, GCP is valuable because of BigQuery, Cloud Storage, Dataflow, Pub/Sub, and Vertex AI.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
