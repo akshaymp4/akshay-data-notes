@@ -40,8 +40,11 @@ nav:
 
   - DataBricks: 
       - Table of Contents: DataBricks/introduction.md
-  - AWS:
-      - Amazon Web Service: AWS/aws_notes.md
+  - Cloud:
+      - Introduction: Cloud/introduction.md
+      - AWS: Cloud/aws_notes.md
+      - Azure: Cloud/azure_notes.md
+      - GCP: Cloud/gcp_notes.md
 
 markdown_extensions:
   - admonition

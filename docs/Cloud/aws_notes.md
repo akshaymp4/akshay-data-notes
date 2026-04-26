@@ -3,8 +3,7 @@
   <h1>AWS for Data Science, Analytics, and Engineering</h1>
   <p>
     Amazon Web Services (AWS) is one of the most widely used cloud platforms for building data pipelines,
-    storing data, training machine learning models, and running analytics workloads. These notes are organized
-    for beginner-friendly understanding with practical examples.
+    storing data, training machine learning models, and running analytics workloads.
   </p>
 </div>
 
@@ -231,6 +230,8 @@ AWS Lambda is a serverless compute service.
 
 It lets you run code without managing servers.
 
+You write a function, choose a runtime such as Python or Node.js, connect an event source, and AWS runs the function only when it is triggered.
+
 Main benefits:
 
 - No server management
@@ -238,16 +239,87 @@ Main benefits:
 - Auto scaling
 - Pay per execution
 
+Important ideas:
+
+- Function: the code that runs
+- Runtime: the language environment, such as Python
+- Handler: the entry point AWS Lambda calls
+- Event: input data passed to the function
+- Context: runtime information about the function execution
+- Trigger: the AWS service or schedule that starts the function
+- Execution role: IAM role that gives the function permission to access AWS services
+
 Common use cases:
 
 - Trigger ETL jobs
 - Process files uploaded to S3
 - Send notifications
 - Run lightweight automation
+- Call APIs
+- Clean or transform small files
+- Start Glue jobs, Step Functions workflows, or other AWS services
 
 Simple example:
 
 When a CSV file is uploaded to S3, a Lambda function can automatically validate it or trigger a downstream pipeline.
+
+Example Lambda flow:
+
+1. User uploads `sales.csv` to S3
+2. S3 sends an event to Lambda
+3. Lambda reads file metadata
+4. Lambda checks file format
+5. Lambda starts a Glue ETL job
+6. Processed data is stored back in S3
+
+Simple Python handler:
+
+```python
+def lambda_handler(event, context):
+    bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
+    file_name = event["Records"][0]["s3"]["object"]["key"]
+
+    print(f"New file uploaded: {bucket_name}/{file_name}")
+
+    return {
+        "statusCode": 200,
+        "message": "File processed successfully"
+    }
+```
+
+Common Lambda triggers:
+
+| Trigger | Example |
+|---|---|
+| S3 | Run when a file is uploaded |
+| API Gateway | Run when an API endpoint is called |
+| EventBridge | Run on a schedule |
+| DynamoDB Streams | Run when table data changes |
+| SQS | Process messages from a queue |
+
+When Lambda is a good choice:
+
+- Task is event-driven
+- Code runs for a short time
+- Workload changes frequently
+- You do not want to manage servers
+- Automation is lightweight
+
+When Lambda is not ideal:
+
+- Long-running jobs
+- Very large data processing
+- Applications that need full server control
+- Heavy machine learning training
+
+Important limits to remember:
+
+- Lambda functions have a maximum execution time
+- Memory and CPU are configured together
+- Temporary storage is limited
+- Cold starts can add delay when a function starts after being idle
+
+For data engineering, Lambda is often used as a connector or trigger, not as the main engine for large processing.
 
 ### 1.5.3 Elastic Beanstalk { .aws-h3 }
 

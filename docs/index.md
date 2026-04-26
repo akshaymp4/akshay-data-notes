@@ -5,12 +5,12 @@
   <h1>Building a strong data foundation with practical notes, cloud learning, and engineering-focused study guides.</h1>
   <p>
     This knowledge hub brings together my learning path across SQL, Python, Machine Learning,
-    Data Engineering, Databricks, and AWS. It is designed to reflect how I think about data:
+    Data Engineering, Databricks, and cloud platforms. It is designed to reflect how I think about data:
     clearly, practically, and with a strong focus on real-world systems.
   </p>
   <div class="hero-actions">
     <a class="md-button md-button--primary" href="DataEngineering/de-cycle/">Explore Data Engineering</a>
-    <a class="md-button" href="AWS/aws_notes/">View AWS Notes</a>
+    <a class="md-button" href="Cloud/aws_notes/">View Cloud Notes</a>
   </div>
 </div>
 
@@ -24,7 +24,7 @@
 
 - :material-chart-line: **Focus Areas**
 
-  SQL, Python, AWS, Databricks, PySpark, data pipelines, analytics workflows, and machine learning fundamentals.
+  SQL, Python, cloud platforms, Databricks, PySpark, data pipelines, analytics workflows, and machine learning fundamentals.
 
 - :material-school-outline: **Learning Approach**
 
@@ -44,7 +44,7 @@ I'm especially interested in:
 
 - Data analytics and reporting
 - Data engineering workflows
-- Cloud platforms like AWS
+- Cloud platforms like AWS, Azure, and GCP
 - Lakehouse concepts in Databricks
 - Machine learning foundations for real-world applications
 
@@ -55,7 +55,7 @@ Use this section as your professional intro summary.
 > Replace the lines below with your exact experience, current role, internship details, and strongest achievements.
 
 - Aspiring data professional with focused learning across analytics, engineering, and cloud technologies
-- Building hands-on understanding of AWS, Databricks, SQL, Python, APIs, and PySpark
+- Building hands-on understanding of AWS, Azure, GCP, Databricks, SQL, Python, APIs, and PySpark
 - Creating structured technical notes to deepen understanding and accelerate interview preparation
 - Interested in solving data problems through clean pipelines, analysis, and business-friendly insights
 
@@ -83,9 +83,9 @@ Use this section as your professional intro summary.
 
   APIs, data pipelines, storage patterns, compute layers, networking basics, and processing concepts.
 
-- **AWS for Data Roles**
+- **Cloud for Data Roles**
 
-  S3, EC2, Lambda, RDS, Athena, Glue, Redshift, SageMaker, IAM, and VPC fundamentals.
+  AWS, Azure, and GCP fundamentals for storage, compute, databases, analytics, security, and machine learning.
 
 - **Databricks and Lakehouse Concepts**
 
@@ -112,7 +112,9 @@ Strong focus on understanding how data moves through systems, how pipelines are 
 
 This section reflects my cloud and platform journey for analytics and engineering use cases.
 
-- [AWS Notes](AWS/aws_notes.md)
+- [AWS Notes](Cloud/aws_notes.md)
+- [Azure Notes](Cloud/azure_notes.md)
+- [GCP Notes](Cloud/gcp_notes.md)
 - [Databricks Introduction](DataBricks/introduction.md)
 
 ### Data Science and Analytics
@@ -145,4 +147,4 @@ Add your final contact details here.
 
 If you want a shorter homepage summary for recruiters, use this:
 
-> Akshay MP is building a strong professional foundation in Data Analytics, Data Engineering, and Cloud technologies through structured learning, technical documentation, and hands-on concept building across AWS, Databricks, SQL, Python, and Machine Learning.
+> Akshay MP is building a strong professional foundation in Data Analytics, Data Engineering, and Cloud technologies through structured learning, technical documentation, and hands-on concept building across AWS, Azure, GCP, Databricks, SQL, Python, and Machine Learning.
