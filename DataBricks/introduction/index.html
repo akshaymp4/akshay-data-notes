@@ -1189,33 +1189,72 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#19-databricks-account-setup" class="md-nav__link">
+  <a href="#19-azure-databricks-account-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.9 Databricks Account Setup
+        1.9 Azure Databricks Account Setup
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1.9 Azure Databricks Account Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-create-azure-databricks-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Create Azure Databricks Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-initial-workspace-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Initial Workspace Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#110-managed-tables-vs-external-tables" class="md-nav__link">
+  <a href="#110-workspace-metastore-catalog-schema-and-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10 Managed Tables vs External Tables
+        1.10 Workspace, Metastore, Catalog, Schema, and Tables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.10 Managed Tables vs External Tables">
+    <nav class="md-nav" aria-label="1.10 Workspace, Metastore, Catalog, Schema, and Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1101-managed-tables" class="md-nav__link">
+  <a href="#1101-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.1 Managed Tables
+        1.10.1 Workspace
       
     </span>
   </a>
@@ -1223,10 +1262,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1102-external-tables" class="md-nav__link">
+  <a href="#1102-metastore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.2 External Tables
+        1.10.2 Metastore
       
     </span>
   </a>
@@ -1234,10 +1273,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1103-managed-vs-external-tables" class="md-nav__link">
+  <a href="#1103-catalog" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.3 Managed vs External Tables
+        1.10.3 Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1105-recommended-data-engineering-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.5 Recommended Data Engineering Layout
       
     </span>
   </a>
@@ -1344,15 +1405,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#113-delta-lake" class="md-nav__link">
+  <a href="#113-delta-lake-and-delta-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.13 Delta Lake
+        1.13 Delta Lake and Delta Tables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.13 Delta Lake">
+    <nav class="md-nav" aria-label="1.13 Delta Lake and Delta Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1377,28 +1438,11 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#114-unity-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.14 Unity Catalog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.14 Unity Catalog">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#1141-unity-catalog-manages" class="md-nav__link">
+  <a href="#1133-what-is-a-delta-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.14.1 Unity Catalog Manages
+        1.13.3 What Is a Delta Table?
       
     </span>
   </a>
@@ -1406,38 +1450,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1142-benefits-of-unity-catalog" class="md-nav__link">
+  <a href="#1134-create-delta-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.14.2 Benefits of Unity Catalog
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#115-acid-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15 ACID Principles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.15 ACID Principles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1151-atomicity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.1 Atomicity
+        1.13.4 Create Delta Table
       
     </span>
   </a>
@@ -1445,43 +1461,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1152-consistency" class="md-nav__link">
+  <a href="#1135-useful-delta-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.15.2 Consistency
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1153-isolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.3 Isolation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1154-durability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.4 Durability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1155-acid-properties-in-delta-lake" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.5 ACID Properties in Delta Lake
+        1.13.5 Useful Delta Commands
       
     </span>
   </a>
@@ -1494,78 +1477,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#116-oltp-vs-olap" class="md-nav__link">
+  <a href="#114-types-of-tables-and-views-in-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16 OLTP vs OLAP
+        1.14 Types of Tables and Views in Databricks
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.16 OLTP vs OLAP">
+    <nav class="md-nav" aria-label="1.14 Types of Tables and Views in Databricks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1161-what-is-oltp" class="md-nav__link">
+  <a href="#1141-managed-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.1 What Is OLTP?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.16.1 What Is OLTP?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11611-oltp-database-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.1.1 OLTP Database Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1162-what-is-olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.2 What Is OLAP?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.16.2 What Is OLAP?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11621-olap-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.2.1 OLAP Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1163-oltp-vs-olap-comparison-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.3 OLTP vs OLAP Comparison Table
+        1.14.1 Managed Tables
       
     </span>
   </a>
@@ -1573,10 +1500,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1164-simple-real-life-example" class="md-nav__link">
+  <a href="#1142-external-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.4 Simple Real-Life Example
+        1.14.2 External Tables
       
     </span>
   </a>
@@ -1584,10 +1511,76 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1165-why-it-matters-for-data-engineers" class="md-nav__link">
+  <a href="#1143-managed-vs-external-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.5 Why It Matters for Data Engineers
+        1.14.3 Managed vs External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1144-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.4 View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1145-temporary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.5 Temporary View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1146-global-temporary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.6 Global Temporary View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1147-materialized-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.7 Materialized View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1148-ctas-create-table-as-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.8 CTAS - Create Table As Select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1149-streaming-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.9 Streaming Tables
       
     </span>
   </a>
@@ -1600,10 +1593,304 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#117-databricks-hierarchy" class="md-nav__link">
+  <a href="#115-data-skipping-z-ordering-and-liquid-clustering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.17 Databricks Hierarchy
+        1.15 Data Skipping, Z-Ordering, and Liquid Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 Data Skipping, Z-Ordering, and Liquid Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-data-skipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Data Skipping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-optimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 OPTIMIZE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-z-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 Z-Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-liquid-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 Liquid Clustering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-deep-clone-shallow-clone-soft-delete-and-deletion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Deep Clone, Shallow Clone, Soft Delete, and Deletion Vectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 Deep Clone, Shallow Clone, Soft Delete, and Deletion Vectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-deep-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 Deep Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-shallow-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 Shallow Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-soft-delete-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 Soft Delete in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-deletion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 Deletion Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-databricks-utilities-dbutils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Databricks Utilities - dbutils
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.17 Databricks Utilities - dbutils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1171-file-system-utilities-dbutilsfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.1 File System Utilities - dbutils.fs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1172-secret-utilities-dbutilssecrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.2 Secret Utilities - dbutils.secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1173-notebook-utilities-dbutilsnotebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.3 Notebook Utilities - dbutils.notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1174-jobs-utilities-dbutilsjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.4 Jobs Utilities - dbutils.jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1175-library-utilities-dbutilslibrary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.5 Library Utilities - dbutils.library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1176-help-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.6 Help Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-widgets-in-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Widgets in Databricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.18 Widgets in Databricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1181-widget-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.1 Widget Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1182-widgets-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.2 Widgets in SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1183-widget-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.3 Widget Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-dbr-databricks-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19 DBR - Databricks Runtime
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.19 DBR - Databricks Runtime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1191-runtime-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.1 Runtime Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1192-dbr-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.2 DBR Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-photon-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20 Photon Acceleration
       
     </span>
   </a>
@@ -1611,10 +1898,603 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#118-summary" class="md-nav__link">
+  <a href="#121-lakeflow-jobs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.18 Summary
+        1.21 Lakeflow Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.21 Lakeflow Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1211-what-is-a-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.1 What Is a Job?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1212-building-blocks-of-lakeflow-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.2 Building Blocks of Lakeflow Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1213-task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.3 Task Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1214-job-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.4 Job DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1215-job-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.5 Job Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1216-job-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.6 Job Compute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1217-monitoring-and-failure-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.7 Monitoring and Failure Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-jobs-schedule-and-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22 Jobs Schedule and Triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.22 Jobs Schedule and Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1221-trigger-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.1 Trigger Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1222-schedule-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.2 Schedule Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1223-backfill-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.3 Backfill Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-placeholder-table-or-empty-delta-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.23 Placeholder Table or Empty Delta Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-dlt-lakeflow-declarative-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24 DLT / Lakeflow Declarative Pipelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.24 DLT / Lakeflow Declarative Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1241-why-use-dlt-declarative-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.1 Why Use DLT / Declarative Pipelines?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1242-normal-jobs-vs-dlt-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.2 Normal Jobs vs DLT Pipelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1243-pipeline-core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.3 Pipeline Core Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1244-simple-python-pipeline-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.4 Simple Python Pipeline Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1245-sql-pipeline-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.5 SQL Pipeline Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1246-expectations-data-quality-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.6 Expectations - Data Quality Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1247-triggered-vs-continuous-pipeline-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.7 Triggered vs Continuous Pipeline Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1248-dlt-pipeline-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.8 DLT Pipeline Setup Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1249-development-vs-production-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.9 Development vs Production Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12410-dlt-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.10 DLT Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-additional-data-engineering-concepts-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25 Additional Data Engineering Concepts to Know
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.25 Additional Data Engineering Concepts to Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1251-auto-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.1 Auto Loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1252-merge-for-upsert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.2 MERGE for Upsert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1253-time-travel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.3 Time Travel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1254-vacuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.4 VACUUM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1255-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.5 Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1256-change-data-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.6 Change Data Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26 Unity Catalog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.26 Unity Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1261-unity-catalog-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26.1 Unity Catalog Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1262-benefits-of-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26.2 Benefits of Unity Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-acid-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27 ACID Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.27 ACID Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1271-atomicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.1 Atomicity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1272-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.2 Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1273-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.3 Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1274-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.4 Durability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1275-acid-properties-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.5 ACID Properties in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-oltp-vs-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28 OLTP vs OLAP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28 OLTP vs OLAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1281-what-is-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.1 What Is OLTP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28.1 What Is OLTP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12811-oltp-database-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.1.1 OLTP Database Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1282-what-is-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.2 What Is OLAP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28.2 What Is OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12821-olap-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.2.1 OLAP Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1283-oltp-vs-olap-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.3 OLTP vs OLAP Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1284-simple-real-life-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.4 Simple Real-Life Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1285-why-it-matters-for-data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.5 Why It Matters for Data Engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#129-databricks-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.29 Databricks Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.30 Summary
       
     </span>
   </a>
@@ -2095,33 +2975,72 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#19-databricks-account-setup" class="md-nav__link">
+  <a href="#19-azure-databricks-account-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.9 Databricks Account Setup
+        1.9 Azure Databricks Account Setup
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1.9 Azure Databricks Account Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1 Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-create-azure-databricks-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2 Create Azure Databricks Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#193-initial-workspace-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.3 Initial Workspace Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#110-managed-tables-vs-external-tables" class="md-nav__link">
+  <a href="#110-workspace-metastore-catalog-schema-and-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10 Managed Tables vs External Tables
+        1.10 Workspace, Metastore, Catalog, Schema, and Tables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.10 Managed Tables vs External Tables">
+    <nav class="md-nav" aria-label="1.10 Workspace, Metastore, Catalog, Schema, and Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1101-managed-tables" class="md-nav__link">
+  <a href="#1101-workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.1 Managed Tables
+        1.10.1 Workspace
       
     </span>
   </a>
@@ -2129,10 +3048,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1102-external-tables" class="md-nav__link">
+  <a href="#1102-metastore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.2 External Tables
+        1.10.2 Metastore
       
     </span>
   </a>
@@ -2140,10 +3059,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1103-managed-vs-external-tables" class="md-nav__link">
+  <a href="#1103-catalog" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.10.3 Managed vs External Tables
+        1.10.3 Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4 Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1105-recommended-data-engineering-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.5 Recommended Data Engineering Layout
       
     </span>
   </a>
@@ -2250,15 +3191,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#113-delta-lake" class="md-nav__link">
+  <a href="#113-delta-lake-and-delta-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.13 Delta Lake
+        1.13 Delta Lake and Delta Tables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.13 Delta Lake">
+    <nav class="md-nav" aria-label="1.13 Delta Lake and Delta Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2283,28 +3224,11 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#114-unity-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.14 Unity Catalog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.14 Unity Catalog">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#1141-unity-catalog-manages" class="md-nav__link">
+  <a href="#1133-what-is-a-delta-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.14.1 Unity Catalog Manages
+        1.13.3 What Is a Delta Table?
       
     </span>
   </a>
@@ -2312,38 +3236,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1142-benefits-of-unity-catalog" class="md-nav__link">
+  <a href="#1134-create-delta-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.14.2 Benefits of Unity Catalog
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#115-acid-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15 ACID Principles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.15 ACID Principles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1151-atomicity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.1 Atomicity
+        1.13.4 Create Delta Table
       
     </span>
   </a>
@@ -2351,43 +3247,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1152-consistency" class="md-nav__link">
+  <a href="#1135-useful-delta-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.15.2 Consistency
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1153-isolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.3 Isolation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1154-durability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.4 Durability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1155-acid-properties-in-delta-lake" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.15.5 ACID Properties in Delta Lake
+        1.13.5 Useful Delta Commands
       
     </span>
   </a>
@@ -2400,78 +3263,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#116-oltp-vs-olap" class="md-nav__link">
+  <a href="#114-types-of-tables-and-views-in-databricks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16 OLTP vs OLAP
+        1.14 Types of Tables and Views in Databricks
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.16 OLTP vs OLAP">
+    <nav class="md-nav" aria-label="1.14 Types of Tables and Views in Databricks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1161-what-is-oltp" class="md-nav__link">
+  <a href="#1141-managed-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.1 What Is OLTP?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.16.1 What Is OLTP?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11611-oltp-database-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.1.1 OLTP Database Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1162-what-is-olap" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.2 What Is OLAP?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.16.2 What Is OLAP?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11621-olap-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.2.1 OLAP Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1163-oltp-vs-olap-comparison-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.16.3 OLTP vs OLAP Comparison Table
+        1.14.1 Managed Tables
       
     </span>
   </a>
@@ -2479,10 +3286,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1164-simple-real-life-example" class="md-nav__link">
+  <a href="#1142-external-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.4 Simple Real-Life Example
+        1.14.2 External Tables
       
     </span>
   </a>
@@ -2490,10 +3297,76 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1165-why-it-matters-for-data-engineers" class="md-nav__link">
+  <a href="#1143-managed-vs-external-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.16.5 Why It Matters for Data Engineers
+        1.14.3 Managed vs External Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1144-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.4 View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1145-temporary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.5 Temporary View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1146-global-temporary-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.6 Global Temporary View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1147-materialized-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.7 Materialized View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1148-ctas-create-table-as-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.8 CTAS - Create Table As Select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1149-streaming-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.9 Streaming Tables
       
     </span>
   </a>
@@ -2506,10 +3379,304 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#117-databricks-hierarchy" class="md-nav__link">
+  <a href="#115-data-skipping-z-ordering-and-liquid-clustering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.17 Databricks Hierarchy
+        1.15 Data Skipping, Z-Ordering, and Liquid Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15 Data Skipping, Z-Ordering, and Liquid Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151-data-skipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1 Data Skipping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-optimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2 OPTIMIZE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-z-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3 Z-Ordering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1154-liquid-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.4 Liquid Clustering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-deep-clone-shallow-clone-soft-delete-and-deletion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Deep Clone, Shallow Clone, Soft Delete, and Deletion Vectors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16 Deep Clone, Shallow Clone, Soft Delete, and Deletion Vectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-deep-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1 Deep Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-shallow-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2 Shallow Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1163-soft-delete-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.3 Soft Delete in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164-deletion-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.4 Deletion Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-databricks-utilities-dbutils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Databricks Utilities - dbutils
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.17 Databricks Utilities - dbutils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1171-file-system-utilities-dbutilsfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.1 File System Utilities - dbutils.fs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1172-secret-utilities-dbutilssecrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.2 Secret Utilities - dbutils.secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1173-notebook-utilities-dbutilsnotebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.3 Notebook Utilities - dbutils.notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1174-jobs-utilities-dbutilsjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.4 Jobs Utilities - dbutils.jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1175-library-utilities-dbutilslibrary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.5 Library Utilities - dbutils.library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1176-help-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.6 Help Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-widgets-in-databricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Widgets in Databricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.18 Widgets in Databricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1181-widget-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.1 Widget Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1182-widgets-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.2 Widgets in SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1183-widget-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.3 Widget Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-dbr-databricks-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19 DBR - Databricks Runtime
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.19 DBR - Databricks Runtime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1191-runtime-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.1 Runtime Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1192-dbr-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.2 DBR Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-photon-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20 Photon Acceleration
       
     </span>
   </a>
@@ -2517,10 +3684,603 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#118-summary" class="md-nav__link">
+  <a href="#121-lakeflow-jobs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.18 Summary
+        1.21 Lakeflow Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.21 Lakeflow Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1211-what-is-a-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.1 What Is a Job?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1212-building-blocks-of-lakeflow-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.2 Building Blocks of Lakeflow Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1213-task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.3 Task Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1214-job-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.4 Job DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1215-job-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.5 Job Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1216-job-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.6 Job Compute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1217-monitoring-and-failure-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21.7 Monitoring and Failure Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-jobs-schedule-and-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22 Jobs Schedule and Triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.22 Jobs Schedule and Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1221-trigger-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.1 Trigger Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1222-schedule-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.2 Schedule Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1223-backfill-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22.3 Backfill Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-placeholder-table-or-empty-delta-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.23 Placeholder Table or Empty Delta Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-dlt-lakeflow-declarative-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24 DLT / Lakeflow Declarative Pipelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.24 DLT / Lakeflow Declarative Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1241-why-use-dlt-declarative-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.1 Why Use DLT / Declarative Pipelines?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1242-normal-jobs-vs-dlt-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.2 Normal Jobs vs DLT Pipelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1243-pipeline-core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.3 Pipeline Core Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1244-simple-python-pipeline-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.4 Simple Python Pipeline Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1245-sql-pipeline-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.5 SQL Pipeline Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1246-expectations-data-quality-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.6 Expectations - Data Quality Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1247-triggered-vs-continuous-pipeline-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.7 Triggered vs Continuous Pipeline Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1248-dlt-pipeline-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.8 DLT Pipeline Setup Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1249-development-vs-production-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.9 Development vs Production Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12410-dlt-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24.10 DLT Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-additional-data-engineering-concepts-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25 Additional Data Engineering Concepts to Know
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.25 Additional Data Engineering Concepts to Know">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1251-auto-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.1 Auto Loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1252-merge-for-upsert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.2 MERGE for Upsert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1253-time-travel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.3 Time Travel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1254-vacuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.4 VACUUM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1255-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.5 Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1256-change-data-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25.6 Change Data Feed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26 Unity Catalog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.26 Unity Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1261-unity-catalog-manages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26.1 Unity Catalog Manages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1262-benefits-of-unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26.2 Benefits of Unity Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127-acid-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27 ACID Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.27 ACID Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1271-atomicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.1 Atomicity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1272-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.2 Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1273-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.3 Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1274-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.4 Durability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1275-acid-properties-in-delta-lake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27.5 ACID Properties in Delta Lake
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128-oltp-vs-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28 OLTP vs OLAP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28 OLTP vs OLAP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1281-what-is-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.1 What Is OLTP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28.1 What Is OLTP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12811-oltp-database-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.1.1 OLTP Database Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1282-what-is-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.2 What Is OLAP?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.28.2 What Is OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12821-olap-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.2.1 OLAP Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1283-oltp-vs-olap-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.3 OLTP vs OLAP Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1284-simple-real-life-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.4 Simple Real-Life Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1285-why-it-matters-for-data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28.5 Why It Matters for Data Engineers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#129-databricks-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.29 Databricks Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#130-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.30 Summary
       
     </span>
   </a>
@@ -2806,78 +4566,159 @@
 <li>Access control</li>
 <li>Query optimization</li>
 </ul>
-<h2 class="databricks-h2" id="19-databricks-account-setup">1.9 Databricks Account Setup<a class="headerlink" href="#19-databricks-account-setup" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="19-azure-databricks-account-setup">1.9 Azure Databricks Account Setup<a class="headerlink" href="#19-azure-databricks-account-setup" title="Permanent link">&para;</a></h2>
+<p>Azure Databricks setup has two sides:</p>
+<ul>
+<li>Azure side: subscription, resource group, networking, storage, and identities</li>
+<li>Databricks side: account console, workspace, users, compute, Unity Catalog, and permissions</li>
+</ul>
+<h3 class="databricks-h3" id="191-prerequisites">1.9.1 Prerequisites<a class="headerlink" href="#191-prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before creating Azure Databricks, make sure you have:</p>
+<ul>
+<li>An Azure subscription. A free trial subscription may not be enough for full workspace creation and compute usage.</li>
+<li>Owner or Contributor permission on the subscription or resource group.</li>
+<li>Required Azure resource providers registered, commonly:</li>
+<li><code>Microsoft.Databricks</code></li>
+<li><code>Microsoft.Storage</code></li>
+<li><code>Microsoft.Compute</code></li>
+<li><code>Microsoft.Network</code></li>
+<li><code>Microsoft.ManagedIdentity</code></li>
+<li>A resource group for Databricks resources.</li>
+<li>A region selected, for example East US, West Europe, or Central India.</li>
+<li>A naming standard for workspace, storage account, metastore, catalogs, and schemas.</li>
+<li>Budget alert or cost control enabled, especially for learning environments.</li>
+</ul>
+<h3 class="databricks-h3" id="192-create-azure-databricks-workspace">1.9.2 Create Azure Databricks Workspace<a class="headerlink" href="#192-create-azure-databricks-workspace" title="Permanent link">&para;</a></h3>
+<p>Steps from Azure portal:</p>
 <ol>
-<li>Create an Azure account.</li>
+<li>Sign in to Azure portal.</li>
+<li>Select <code>Create a resource</code>.</li>
+<li>Search for <code>Azure Databricks</code>.</li>
+<li>Select <code>Azure Databricks</code> and click <code>Create</code>.</li>
+<li>Fill the basic details:</li>
+<li>Subscription</li>
+<li>Resource group</li>
+<li>Workspace name</li>
+<li>Region</li>
+<li>Pricing tier, usually Premium for Unity Catalog and governance features</li>
+<li>Workspace type, such as serverless or classic/hybrid depending on requirement</li>
+<li>Configure networking if required:</li>
+<li>Public access for simple learning setup</li>
+<li>VNet injection/private endpoints for enterprise setup</li>
+<li>Configure encryption if customer-managed keys are required.</li>
+<li>Review and create.</li>
+<li>Wait until deployment status becomes <code>Running</code>.</li>
+<li>Open the workspace from Azure portal or Databricks account console.</li>
 </ol>
-<h2 class="databricks-h2" id="110-managed-tables-vs-external-tables">1.10 Managed Tables vs External Tables<a class="headerlink" href="#110-managed-tables-vs-external-tables" title="Permanent link">&para;</a></h2>
-<p>Databricks supports two main types of tables.</p>
-<h3 class="databricks-h3" id="1101-managed-tables">1.10.1 Managed Tables<a class="headerlink" href="#1101-managed-tables" title="Permanent link">&para;</a></h3>
-<p>In managed tables, Databricks manages both metadata and physical data storage.</p>
-<p>Characteristics:</p>
+<h3 class="databricks-h3" id="193-initial-workspace-configuration">1.9.3 Initial Workspace Configuration<a class="headerlink" href="#193-initial-workspace-configuration" title="Permanent link">&para;</a></h3>
+<p>After workspace creation:</p>
 <ul>
-<li>Storage location controlled by Databricks</li>
-<li>Dropping the table deletes both metadata and data</li>
-<li>Strong governance using Unity Catalog</li>
-<li>Suitable for fully controlled environments</li>
-<li>Multi-tool access: difficult</li>
-<li>Data governance: fully governed</li>
-<li>Use case: quick analytics, internal BI systems, tightly controlled environments</li>
+<li>Add users, groups, or service principals.</li>
+<li>Use Microsoft Entra ID groups instead of assigning permissions user by user.</li>
+<li>Create or attach Unity Catalog metastore.</li>
+<li>Create SQL warehouse or cluster for development.</li>
+<li>Create catalogs and schemas for environments or domains.</li>
+<li>Configure storage credentials and external locations if using ADLS Gen2.</li>
+<li>Avoid storing production data directly in DBFS root.</li>
 </ul>
-<h3 class="databricks-h3" id="1102-external-tables">1.10.2 External Tables<a class="headerlink" href="#1102-external-tables" title="Permanent link">&para;</a></h3>
-<p>In external tables, Databricks manages only metadata, while data remains in external storage such as S3, ADLS, or GCS.</p>
-<p>Characteristics:</p>
+<h2 class="databricks-h2" id="110-workspace-metastore-catalog-schema-and-tables">1.10 Workspace, Metastore, Catalog, Schema, and Tables<a class="headerlink" href="#110-workspace-metastore-catalog-schema-and-tables" title="Permanent link">&para;</a></h2>
+<p>The common Databricks hierarchy is:</p>
+<div class="highlight"><pre><span></span><code>Databricks Account
+  -&gt; Workspace
+      -&gt; Unity Catalog Metastore
+          -&gt; Catalog
+              -&gt; Schema
+                  -&gt; Table / View / Volume / Function / Model
+</code></pre></div>
+<h3 class="databricks-h3" id="1101-workspace">1.10.1 Workspace<a class="headerlink" href="#1101-workspace" title="Permanent link">&para;</a></h3>
+<p>A workspace is the working environment where users create notebooks, jobs, clusters, SQL warehouses, dashboards, and pipelines.</p>
+<p>Important points:</p>
 <ul>
-<li>Data stored outside Databricks-managed location</li>
-<li>Dropping the table removes only metadata</li>
-<li>Flexible integration with other tools</li>
-<li>Requires governance discipline</li>
-<li>Multi-tool access: easy</li>
-<li>Data governance: flexible but requires discipline</li>
-<li>Use case: shared datasets, existing data lakes, multi-tool ecosystems</li>
+<li>One Databricks account can have multiple workspaces.</li>
+<li>Workspaces are usually separated by environment, region, team, or business unit.</li>
+<li>Compute is created inside the workspace.</li>
+<li>A workspace must be attached to a Unity Catalog metastore to use Unity Catalog objects.</li>
 </ul>
-<h3 class="databricks-h3" id="1103-managed-vs-external-tables">1.10.3 Managed vs External Tables<a class="headerlink" href="#1103-managed-vs-external-tables" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Managed Table</th>
-<th>External Table</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Metadata Management</td>
-<td>Databricks</td>
-<td>Databricks</td>
-</tr>
-<tr>
-<td>Data Storage</td>
-<td>Managed by Databricks</td>
-<td>Stored externally (S3/ADLS/GCS)</td>
-</tr>
-<tr>
-<td>Data Deletion</td>
-<td>Metadata + data deleted</td>
-<td>Only metadata deleted</td>
-</tr>
-<tr>
-<td>Multi-tool Access</td>
-<td>Limited</td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>Governance</td>
-<td>Fully controlled</td>
-<td>Flexible</td>
-</tr>
-<tr>
-<td>Best For</td>
-<td>Internal analytics</td>
-<td>Shared datasets or existing data lakes</td>
-</tr>
-</tbody>
-</table>
+<h3 class="databricks-h3" id="1102-metastore">1.10.2 Metastore<a class="headerlink" href="#1102-metastore" title="Permanent link">&para;</a></h3>
+<p>A Unity Catalog metastore is the top-level metadata and governance container.</p>
+<p>It stores metadata for:</p>
+<ul>
+<li>Catalogs</li>
+<li>Schemas</li>
+<li>Tables</li>
+<li>Views</li>
+<li>Volumes</li>
+<li>External locations</li>
+<li>Storage credentials</li>
+<li>Permissions</li>
+<li>Lineage</li>
+</ul>
+<p>Important points:</p>
+<ul>
+<li>Usually one metastore is created per cloud region.</li>
+<li>A workspace can be attached to one metastore.</li>
+<li>Multiple workspaces in the same region can share one metastore.</li>
+<li>This enables centralized governance across workspaces.</li>
+</ul>
+<p>Basic creation flow:</p>
+<ol>
+<li>Go to Databricks account console.</li>
+<li>Open <code>Catalog</code>.</li>
+<li>Create metastore.</li>
+<li>Select the cloud region.</li>
+<li>Optionally provide metastore-level managed storage.</li>
+<li>Assign workspace to the metastore.</li>
+<li>Assign metastore admin to a group, not only one person.</li>
+</ol>
+<h3 class="databricks-h3" id="1103-catalog">1.10.3 Catalog<a class="headerlink" href="#1103-catalog" title="Permanent link">&para;</a></h3>
+<p>A catalog is the first level inside Unity Catalog. It is used to organize data by environment, business domain, or product.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>dev
+test
+prod
+sales
+finance
+hr
+</code></pre></div>
+<p>Create catalog:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">CATALOG</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dev</span><span class="p">;</span>
+</code></pre></div>
+<p>Use catalog:</p>
+<div class="highlight"><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="k">CATALOG</span><span class="w"> </span><span class="n">dev</span><span class="p">;</span>
+</code></pre></div>
+<p>Grant access:</p>
+<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="n">USE</span><span class="w"> </span><span class="k">CATALOG</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">CATALOG</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">`</span><span class="n">data_engineers</span><span class="o">`</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">CATALOG</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">`</span><span class="n">data_engineers</span><span class="o">`</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1104-schema">1.10.4 Schema<a class="headerlink" href="#1104-schema" title="Permanent link">&para;</a></h3>
+<p>A schema, also called database, is created inside a catalog.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>dev.bronze
+dev.silver
+dev.gold
+prod.bronze
+prod.silver
+prod.gold
+</code></pre></div>
+<p>Create schema:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">gold</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1105-recommended-data-engineering-layout">1.10.5 Recommended Data Engineering Layout<a class="headerlink" href="#1105-recommended-data-engineering-layout" title="Permanent link">&para;</a></h3>
+<p>For learning and project work, a simple layout is:</p>
+<div class="highlight"><pre><span></span><code>dev.bronze.raw_orders
+dev.silver.clean_orders
+dev.gold.sales_summary
+</code></pre></div>
+<p>For production, prefer:</p>
+<ul>
+<li>Separate catalogs for <code>dev</code>, <code>test</code>, and <code>prod</code></li>
+<li>Separate schemas for <code>bronze</code>, <code>silver</code>, and <code>gold</code></li>
+<li>Service principals for production jobs</li>
+<li>Group-based permissions</li>
+<li>External locations for controlled ADLS access</li>
+</ul>
 <h2 class="databricks-h2" id="111-lakehouse-architecture">1.11 Lakehouse Architecture<a class="headerlink" href="#111-lakehouse-architecture" title="Permanent link">&para;</a></h2>
 <p>Databricks implements the Lakehouse architecture, which combines:</p>
 <table>
@@ -2978,7 +4819,7 @@
 </tbody>
 </table>
 <p>Source -&gt; Bronze -&gt; Silver -&gt; Gold -&gt; BI / ML</p>
-<h2 class="databricks-h2" id="113-delta-lake">1.13 Delta Lake<a class="headerlink" href="#113-delta-lake" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="113-delta-lake-and-delta-tables">1.13 Delta Lake and Delta Tables<a class="headerlink" href="#113-delta-lake-and-delta-tables" title="Permanent link">&para;</a></h2>
 <p>Delta Lake is the storage layer of Databricks that adds reliability to data lakes.</p>
 <p>It is an open-source storage layer that brings ACID transactions, schema enforcement, and time travel capabilities to data lakes.</p>
 <h3 class="databricks-h3" id="1131-delta-lake-provides">1.13.1 Delta Lake Provides<a class="headerlink" href="#1131-delta-lake-provides" title="Permanent link">&para;</a></h3>
@@ -2995,37 +4836,1079 @@
 <li>Data corruption</li>
 <li>Concurrent write issues</li>
 </ul>
-<h2 class="databricks-h2" id="114-unity-catalog">1.14 Unity Catalog<a class="headerlink" href="#114-unity-catalog" title="Permanent link">&para;</a></h2>
+<h3 class="databricks-h3" id="1133-what-is-a-delta-table">1.13.3 What Is a Delta Table?<a class="headerlink" href="#1133-what-is-a-delta-table" title="Permanent link">&para;</a></h3>
+<p>A Delta table is a table stored in Delta Lake format.</p>
+<p>Physically, it contains:</p>
+<ul>
+<li>Data files, usually Parquet files</li>
+<li>A <code>_delta_log</code> folder</li>
+<li>Transaction log JSON/checkpoint files</li>
+</ul>
+<p>The <code>_delta_log</code> records every table change such as insert, update, delete, merge, schema change, and optimize operation.</p>
+<h3 class="databricks-h3" id="1134-create-delta-table">1.13.4 Create Delta Table<a class="headerlink" href="#1134-create-delta-table" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">order_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">order_date</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">amount</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span><span class="p">;</span>
+</code></pre></div>
+<p>Create table from query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<p>Write using PySpark:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;overwrite&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">&quot;dev.bronze.orders&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1135-useful-delta-commands">1.13.5 Useful Delta Commands<a class="headerlink" href="#1135-useful-delta-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">DESCRIBE</span><span class="w"> </span><span class="n">DETAIL</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+<span class="k">DESCRIBE</span><span class="w"> </span><span class="n">HISTORY</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+
+<span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+<span class="k">VACUUM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+
+<span class="n">RESTORE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="k">VERSION</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<h2 class="databricks-h2" id="114-types-of-tables-and-views-in-databricks">1.14 Types of Tables and Views in Databricks<a class="headerlink" href="#114-types-of-tables-and-views-in-databricks" title="Permanent link">&para;</a></h2>
+<p>Databricks has multiple data objects. For data engineering, the most important are managed tables, external tables, views, temporary views, materialized views, and streaming tables.</p>
+<h3 class="databricks-h3" id="1141-managed-tables">1.14.1 Managed Tables<a class="headerlink" href="#1141-managed-tables" title="Permanent link">&para;</a></h3>
+<p>In managed tables, Databricks manages both metadata and physical data storage.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Storage location is controlled by Unity Catalog or Databricks.</li>
+<li>Dropping the table removes metadata and Databricks-managed table data.</li>
+<li>Strong governance using Unity Catalog.</li>
+<li>Best for curated internal data.</li>
+<li>Recommended when Databricks should fully own the table lifecycle.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">customers</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">customer_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_name</span><span class="w"> </span><span class="n">STRING</span>
+<span class="p">)</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1142-external-tables">1.14.2 External Tables<a class="headerlink" href="#1142-external-tables" title="Permanent link">&para;</a></h3>
+<p>In external tables, Databricks manages metadata, while data remains in external storage such as ADLS Gen2, S3, or GCS.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Data is stored outside Databricks-managed locations.</li>
+<li>Dropping the table removes table metadata but does not normally delete the underlying external files.</li>
+<li>Good for existing data lakes and multi-tool access.</li>
+<li>Requires proper storage credentials and external locations.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">raw_orders</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;abfss://bronze@storageaccount.dfs.core.windows.net/orders&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1143-managed-vs-external-tables">1.14.3 Managed vs External Tables<a class="headerlink" href="#1143-managed-vs-external-tables" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Managed Table</th>
+<th>External Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metadata</td>
+<td>Managed by Databricks</td>
+<td>Managed by Databricks</td>
+</tr>
+<tr>
+<td>Data storage</td>
+<td>Managed location</td>
+<td>External cloud path</td>
+</tr>
+<tr>
+<td>Drop behavior</td>
+<td>Metadata and managed data removed</td>
+<td>Usually metadata only</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Curated Databricks-owned data</td>
+<td>Shared/existing lake data</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Strong with Unity Catalog</td>
+<td>Strong if external locations are governed</td>
+</tr>
+</tbody>
+</table>
+<h3 class="databricks-h3" id="1144-view">1.14.4 View<a class="headerlink" href="#1144-view" title="Permanent link">&para;</a></h3>
+<p>A view is a saved SQL query. It does not store data by itself.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">gold</span><span class="p">.</span><span class="n">vw_customer_sales</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">customer_id</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_amount</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">customer_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Use when:</p>
+<ul>
+<li>You want reusable business logic.</li>
+<li>You want to hide columns.</li>
+<li>You want simplified access for analysts.</li>
+</ul>
+<h3 class="databricks-h3" id="1145-temporary-view">1.14.5 Temporary View<a class="headerlink" href="#1145-temporary-view" title="Permanent link">&para;</a></h3>
+<p>A temporary view exists only in the current Spark session.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s2">&quot;temp_orders&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">temp_orders</span><span class="p">;</span>
+</code></pre></div>
+<p>Use when:</p>
+<ul>
+<li>You are developing in a notebook.</li>
+<li>You need a short-lived intermediate result.</li>
+<li>You do not want to create a permanent object.</li>
+</ul>
+<h3 class="databricks-h3" id="1146-global-temporary-view">1.14.6 Global Temporary View<a class="headerlink" href="#1146-global-temporary-view" title="Permanent link">&para;</a></h3>
+<p>A global temporary view is available across sessions in the same cluster and is stored under <code>global_temp</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">createOrReplaceGlobalTempView</span><span class="p">(</span><span class="s2">&quot;orders_global&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">global_temp</span><span class="p">.</span><span class="n">orders_global</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1147-materialized-view">1.14.7 Materialized View<a class="headerlink" href="#1147-materialized-view" title="Permanent link">&para;</a></h3>
+<p>A materialized view stores the query result physically and refreshes it when required.</p>
+<p>Use when:</p>
+<ul>
+<li>Query is expensive.</li>
+<li>Result is reused frequently.</li>
+<li>BI dashboard needs faster response.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">MATERIALIZED</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">gold</span><span class="p">.</span><span class="n">mv_daily_sales</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">order_date</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">order_date</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1148-ctas-create-table-as-select">1.14.8 CTAS - Create Table As Select<a class="headerlink" href="#1148-ctas-create-table-as-select" title="Permanent link">&para;</a></h3>
+<p>CTAS creates a new table from query output.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">gold</span><span class="p">.</span><span class="n">customer_sales</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">customer_id</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_amount</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">customer_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Use CTAS for:</p>
+<ul>
+<li>Creating transformed tables</li>
+<li>Creating test tables</li>
+<li>Building silver or gold tables from bronze/silver</li>
+</ul>
+<h3 class="databricks-h3" id="1149-streaming-tables">1.14.9 Streaming Tables<a class="headerlink" href="#1149-streaming-tables" title="Permanent link">&para;</a></h3>
+<p>Streaming tables are commonly used in Lakeflow Declarative Pipelines for incremental data processing.</p>
+<p>Use when:</p>
+<ul>
+<li>Source data arrives continuously.</li>
+<li>You want Databricks to manage incremental processing.</li>
+<li>You are building bronze or silver streaming ingestion pipelines.</li>
+</ul>
+<h2 class="databricks-h2" id="115-data-skipping-z-ordering-and-liquid-clustering">1.15 Data Skipping, Z-Ordering, and Liquid Clustering<a class="headerlink" href="#115-data-skipping-z-ordering-and-liquid-clustering" title="Permanent link">&para;</a></h2>
+<p>Performance tuning in Delta Lake is mainly about reducing how much data must be scanned.</p>
+<h3 class="databricks-h3" id="1151-data-skipping">1.15.1 Data Skipping<a class="headerlink" href="#1151-data-skipping" title="Permanent link">&para;</a></h3>
+<p>Data skipping means Databricks avoids reading files that cannot contain the required data.</p>
+<p>Delta Lake stores file-level statistics such as:</p>
+<ul>
+<li>Minimum value</li>
+<li>Maximum value</li>
+<li>Null count</li>
+<li>Number of records</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">&#39;2026-01-01&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>If file statistics show that a file does not contain <code>2026-01-01</code>, Databricks skips that file.</p>
+<p>Works best when:</p>
+<ul>
+<li>Filters are used often.</li>
+<li>Data is clustered by filter columns.</li>
+<li>Files are not too small.</li>
+<li>Statistics exist for important columns.</li>
+</ul>
+<h3 class="databricks-h3" id="1152-optimize">1.15.2 OPTIMIZE<a class="headerlink" href="#1152-optimize" title="Permanent link">&para;</a></h3>
+<p><code>OPTIMIZE</code> compacts many small files into fewer larger files.</p>
+<div class="highlight"><pre><span></span><code><span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span><span class="p">;</span>
+</code></pre></div>
+<p>Use when:</p>
+<ul>
+<li>Streaming or frequent small batch writes create many small files.</li>
+<li>Queries become slow due to small-file problem.</li>
+<li>Table is frequently read by BI or downstream jobs.</li>
+</ul>
+<h3 class="databricks-h3" id="1153-z-ordering">1.15.3 Z-Ordering<a class="headerlink" href="#1153-z-ordering" title="Permanent link">&para;</a></h3>
+<p>Z-ordering colocates related data in the same set of files so data skipping becomes more effective.</p>
+<div class="highlight"><pre><span></span><code><span class="n">OPTIMIZE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="n">ZORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="n">customer_id</span><span class="p">,</span><span class="w"> </span><span class="n">order_date</span><span class="p">);</span>
+</code></pre></div>
+<p>Good columns for Z-order:</p>
+<ul>
+<li>Frequently used in <code>WHERE</code> filters</li>
+<li>High-cardinality columns like <code>customer_id</code>, <code>order_id</code>, <code>device_id</code></li>
+<li>Join/filter columns used in large queries</li>
+</ul>
+<p>Avoid Z-order on:</p>
+<ul>
+<li>Too many columns</li>
+<li>Low-cardinality columns like gender or status</li>
+<li>Columns rarely used in filters</li>
+</ul>
+<h3 class="databricks-h3" id="1154-liquid-clustering">1.15.4 Liquid Clustering<a class="headerlink" href="#1154-liquid-clustering" title="Permanent link">&para;</a></h3>
+<p>Liquid clustering is a newer Delta table layout feature that replaces the need for choosing static partitions or manually applying Z-order for many workloads.</p>
+<p>It allows Databricks to incrementally cluster data based on selected clustering columns.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">order_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">order_date</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">amount</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span>
+<span class="k">CLUSTER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="n">customer_id</span><span class="p">,</span><span class="w"> </span><span class="n">order_date</span><span class="p">);</span>
+</code></pre></div>
+<p>Use liquid clustering when:</p>
+<ul>
+<li>Table is large.</li>
+<li>Query filters change over time.</li>
+<li>You want simpler table optimization.</li>
+<li>Partitioning may create too many folders.</li>
+</ul>
+<p>Partitioning vs Z-order vs liquid clustering:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Best For</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partitioning</td>
+<td>Very common low/medium-cardinality filters like date</td>
+<td>Can create too many small partitions</td>
+</tr>
+<tr>
+<td>Z-order</td>
+<td>Improving skipping for selected columns</td>
+<td>Requires <code>OPTIMIZE ZORDER BY</code></td>
+</tr>
+<tr>
+<td>Liquid clustering</td>
+<td>Modern large Delta tables</td>
+<td>More flexible for evolving query patterns</td>
+</tr>
+</tbody>
+</table>
+<h2 class="databricks-h2" id="116-deep-clone-shallow-clone-soft-delete-and-deletion-vectors">1.16 Deep Clone, Shallow Clone, Soft Delete, and Deletion Vectors<a class="headerlink" href="#116-deep-clone-shallow-clone-soft-delete-and-deletion-vectors" title="Permanent link">&para;</a></h2>
+<h3 class="databricks-h3" id="1161-deep-clone">1.16.1 Deep Clone<a class="headerlink" href="#1161-deep-clone" title="Permanent link">&para;</a></h3>
+<p>A deep clone copies both table metadata and data files.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders_backup</span>
+<span class="n">DEEP</span><span class="w"> </span><span class="n">CLONE</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+</code></pre></div>
+<p>Use when:</p>
+<ul>
+<li>You need independent backup.</li>
+<li>You want to test changes without affecting source table.</li>
+<li>You want a copy that survives even if source data is removed.</li>
+</ul>
+<h3 class="databricks-h3" id="1162-shallow-clone">1.16.2 Shallow Clone<a class="headerlink" href="#1162-shallow-clone" title="Permanent link">&para;</a></h3>
+<p>A shallow clone copies table metadata but references the original data files.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders_test</span>
+<span class="n">SHALLOW</span><span class="w"> </span><span class="n">CLONE</span><span class="w"> </span><span class="n">prod</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+</code></pre></div>
+<p>Use when:</p>
+<ul>
+<li>You need a quick copy for testing.</li>
+<li>You want to save storage.</li>
+<li>You do not need full physical independence from source.</li>
+</ul>
+<p>Important: If source files are vacuumed or removed, shallow clone can break because it depends on source data files.</p>
+<h3 class="databricks-h3" id="1163-soft-delete-in-delta-lake">1.16.3 Soft Delete in Delta Lake<a class="headerlink" href="#1163-soft-delete-in-delta-lake" title="Permanent link">&para;</a></h3>
+<p>In Delta Lake, deletes are transaction-log based.</p>
+<p>When you run:</p>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Delta Lake records the delete in the transaction log. Old files may still exist physically for a retention period, so time travel and rollback can work.</p>
+<p>Physical cleanup happens later using:</p>
+<div class="highlight"><pre><span></span><code><span class="k">VACUUM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="p">;</span>
+</code></pre></div>
+<p>Simple meaning:</p>
+<ul>
+<li><code>DELETE</code> removes rows logically from the current table version.</li>
+<li>Time travel can still access older versions during retention.</li>
+<li><code>VACUUM</code> permanently removes old unused files after retention.</li>
+</ul>
+<h3 class="databricks-h3" id="1164-deletion-vectors">1.16.4 Deletion Vectors<a class="headerlink" href="#1164-deletion-vectors" title="Permanent link">&para;</a></h3>
+<p>Deletion vectors improve performance for row-level operations like <code>DELETE</code>, <code>UPDATE</code>, and <code>MERGE</code>.</p>
+<p>Without deletion vectors:</p>
+<ul>
+<li>Delta often rewrites full data files when some rows are deleted or updated.</li>
+</ul>
+<p>With deletion vectors:</p>
+<ul>
+<li>Delta can mark deleted rows using metadata.</li>
+<li>File rewrite can be delayed or avoided.</li>
+<li>Row-level changes become faster for many workloads.</li>
+</ul>
+<p>Use cases:</p>
+<ul>
+<li>GDPR or right-to-delete operations</li>
+<li>Incremental upserts</li>
+<li>Slowly changing dimension updates</li>
+<li>Tables with frequent row-level changes</li>
+</ul>
+<h2 class="databricks-h2" id="117-databricks-utilities-dbutils">1.17 Databricks Utilities - dbutils<a class="headerlink" href="#117-databricks-utilities-dbutils" title="Permanent link">&para;</a></h2>
+<p><code>dbutils</code> provides helper utilities inside Databricks notebooks.</p>
+<p>Common modules:</p>
+<ul>
+<li><code>dbutils.fs</code></li>
+<li><code>dbutils.widgets</code></li>
+<li><code>dbutils.secrets</code></li>
+<li><code>dbutils.notebook</code></li>
+<li><code>dbutils.jobs</code></li>
+<li><code>dbutils.library</code></li>
+</ul>
+<h3 class="databricks-h3" id="1171-file-system-utilities-dbutilsfs">1.17.1 File System Utilities - dbutils.fs<a class="headerlink" href="#1171-file-system-utilities-dbutilsfs" title="Permanent link">&para;</a></h3>
+<p>Used to work with files and directories.</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s2">&quot;dbfs:/&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">mkdirs</span><span class="p">(</span><span class="s2">&quot;dbfs:/tmp/demo&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">cp</span><span class="p">(</span><span class="s2">&quot;dbfs:/tmp/source.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;dbfs:/tmp/target.csv&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span><span class="s2">&quot;dbfs:/tmp/old.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;dbfs:/tmp/new.csv&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">rm</span><span class="p">(</span><span class="s2">&quot;dbfs:/tmp/demo&quot;</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="s2">&quot;dbfs:/tmp/file.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>In Unity Catalog projects, prefer volumes or external locations for production data instead of DBFS root.</p>
+<p>Example with volume:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s2">&quot;/Volumes/dev/bronze/raw_files/&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1172-secret-utilities-dbutilssecrets">1.17.2 Secret Utilities - dbutils.secrets<a class="headerlink" href="#1172-secret-utilities-dbutilssecrets" title="Permanent link">&para;</a></h3>
+<p>Used to read secrets from secret scopes.</p>
+<div class="highlight"><pre><span></span><code><span class="n">password</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">secrets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s2">&quot;kv-scope&quot;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;sql-password&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Use for:</p>
+<ul>
+<li>Passwords</li>
+<li>Client secrets</li>
+<li>API keys</li>
+<li>Connection strings</li>
+</ul>
+<p>Do not hardcode secrets in notebooks.</p>
+<h3 class="databricks-h3" id="1173-notebook-utilities-dbutilsnotebook">1.17.3 Notebook Utilities - dbutils.notebook<a class="headerlink" href="#1173-notebook-utilities-dbutilsnotebook" title="Permanent link">&para;</a></h3>
+<p>Used to run one notebook from another.</p>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">notebook</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+  <span class="s2">&quot;/Shared/ingestion/load_orders&quot;</span><span class="p">,</span>
+  <span class="n">timeout_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+  <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="s2">&quot;run_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Exit from notebook:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">notebook</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;success&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Use carefully. For production orchestration, Lakeflow Jobs is usually better than chaining many notebooks manually.</p>
+<h3 class="databricks-h3" id="1174-jobs-utilities-dbutilsjobs">1.17.4 Jobs Utilities - dbutils.jobs<a class="headerlink" href="#1174-jobs-utilities-dbutilsjobs" title="Permanent link">&para;</a></h3>
+<p>Used to access job task context and task values.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">taskValues</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;row_count&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div>
+<p>Read value in downstream task:</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">taskValues</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="n">taskKey</span><span class="o">=</span><span class="s2">&quot;load_orders&quot;</span><span class="p">,</span>
+  <span class="n">key</span><span class="o">=</span><span class="s2">&quot;row_count&quot;</span><span class="p">,</span>
+  <span class="n">default</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Use for passing small values between job tasks, such as:</p>
+<ul>
+<li>Row count</li>
+<li>Status flag</li>
+<li>Watermark</li>
+<li>Output path</li>
+</ul>
+<h3 class="databricks-h3" id="1175-library-utilities-dbutilslibrary">1.17.5 Library Utilities - dbutils.library<a class="headerlink" href="#1175-library-utilities-dbutilslibrary" title="Permanent link">&para;</a></h3>
+<p>Used to manage notebook-scoped libraries in some runtime contexts.</p>
+<p>In modern production projects, prefer:</p>
+<ul>
+<li>Cluster libraries</li>
+<li>Job environment dependencies</li>
+<li>Workspace files</li>
+<li>Repos/Git-based deployment</li>
+</ul>
+<h3 class="databricks-h3" id="1176-help-commands">1.17.6 Help Commands<a class="headerlink" href="#1176-help-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">secrets</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+</code></pre></div>
+<h2 class="databricks-h2" id="118-widgets-in-databricks">1.18 Widgets in Databricks<a class="headerlink" href="#118-widgets-in-databricks" title="Permanent link">&para;</a></h2>
+<p>Widgets are notebook input parameters.</p>
+<p>They are useful for:</p>
+<ul>
+<li>Running the same notebook for different environments</li>
+<li>Passing job parameters</li>
+<li>Filtering notebooks and dashboards</li>
+<li>Reusing notebooks across dev/test/prod</li>
+</ul>
+<h3 class="databricks-h3" id="1181-widget-types">1.18.1 Widget Types<a class="headerlink" href="#1181-widget-types" title="Permanent link">&para;</a></h3>
+<p>Databricks supports:</p>
+<ul>
+<li><code>text</code></li>
+<li><code>dropdown</code></li>
+<li><code>combobox</code></li>
+<li><code>multiselect</code></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;run_date&quot;</span><span class="p">,</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">dropdown</span><span class="p">(</span><span class="s2">&quot;env&quot;</span><span class="p">,</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;prod&quot;</span><span class="p">])</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">combobox</span><span class="p">(</span><span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">,</span> <span class="s2">&quot;customers&quot;</span><span class="p">,</span> <span class="s2">&quot;products&quot;</span><span class="p">])</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s2">&quot;layers&quot;</span><span class="p">,</span> <span class="s2">&quot;bronze&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;bronze&quot;</span><span class="p">,</span> <span class="s2">&quot;silver&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">])</span>
+</code></pre></div>
+<p>Read widget values:</p>
+<div class="highlight"><pre><span></span><code><span class="n">run_date</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;run_date&quot;</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;env&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Remove widgets:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;run_date&quot;</span><span class="p">)</span>
+<span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">removeAll</span><span class="p">()</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1182-widgets-in-sql">1.18.2 Widgets in SQL<a class="headerlink" href="#1182-widgets-in-sql" title="Permanent link">&para;</a></h3>
+<p>Widgets can be used in SQL notebooks as parameters.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">run_date</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1183-widget-best-practices">1.18.3 Widget Best Practices<a class="headerlink" href="#1183-widget-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use widgets for small parameters only.</li>
+<li>Validate widget values before using them.</li>
+<li>Avoid using widgets for secrets.</li>
+<li>For jobs, pass parameters from Lakeflow Jobs instead of manually editing notebooks.</li>
+</ul>
+<h2 class="databricks-h2" id="119-dbr-databricks-runtime">1.19 DBR - Databricks Runtime<a class="headerlink" href="#119-dbr-databricks-runtime" title="Permanent link">&para;</a></h2>
+<p>DBR stands for Databricks Runtime.</p>
+<p>It is the runtime environment used by Databricks clusters and jobs. It includes:</p>
+<ul>
+<li>Apache Spark</li>
+<li>Delta Lake</li>
+<li>Python, Scala, SQL, and R support</li>
+<li>Databricks optimizations</li>
+<li>Preinstalled libraries depending on runtime type</li>
+</ul>
+<h3 class="databricks-h3" id="1191-runtime-types">1.19.1 Runtime Types<a class="headerlink" href="#1191-runtime-types" title="Permanent link">&para;</a></h3>
+<p>Common runtime choices:</p>
+<ul>
+<li>Standard Databricks Runtime: general data engineering workloads</li>
+<li>Databricks Runtime LTS: long-term support version, preferred for production stability</li>
+<li>Databricks Runtime ML: machine learning libraries included</li>
+<li>Photon-enabled runtime: optimized execution for SQL/DataFrame workloads</li>
+</ul>
+<h3 class="databricks-h3" id="1192-dbr-best-practices">1.19.2 DBR Best Practices<a class="headerlink" href="#1192-dbr-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use LTS versions for production.</li>
+<li>Keep dev/test/prod runtime versions aligned.</li>
+<li>Test pipelines before upgrading runtime.</li>
+<li>Avoid using very old runtimes because features and security patches may be missing.</li>
+<li>Document runtime version used by each production job.</li>
+</ul>
+<h2 class="databricks-h2" id="120-photon-acceleration">1.20 Photon Acceleration<a class="headerlink" href="#120-photon-acceleration" title="Permanent link">&para;</a></h2>
+<p>Photon is Databricks' vectorized query execution engine.</p>
+<p>It improves performance for many SQL and DataFrame workloads, especially:</p>
+<ul>
+<li>Joins</li>
+<li>Aggregations</li>
+<li>Filters</li>
+<li>Delta table scans</li>
+<li>BI queries</li>
+<li>ETL transformations</li>
+</ul>
+<p>Enable Photon when creating compute if the workload is SQL-heavy or DataFrame-heavy.</p>
+<p>Benefits:</p>
+<ul>
+<li>Faster query execution</li>
+<li>Better CPU efficiency</li>
+<li>Improved price/performance for supported workloads</li>
+</ul>
+<p>Photon is not a replacement for good data modeling. You still need:</p>
+<ul>
+<li>Proper file sizes</li>
+<li>Good table layout</li>
+<li>Correct joins</li>
+<li>Avoid unnecessary shuffles</li>
+<li>Use Delta optimization features</li>
+</ul>
+<h2 class="databricks-h2" id="121-lakeflow-jobs">1.21 Lakeflow Jobs<a class="headerlink" href="#121-lakeflow-jobs" title="Permanent link">&para;</a></h2>
+<p>Lakeflow Jobs is Databricks workflow orchestration.</p>
+<p>It is used to schedule, run, monitor, and manage production data workflows.</p>
+<h3 class="databricks-h3" id="1211-what-is-a-job">1.21.1 What Is a Job?<a class="headerlink" href="#1211-what-is-a-job" title="Permanent link">&para;</a></h3>
+<p>A job is a workflow made of one or more tasks.</p>
+<p>Examples:</p>
+<ul>
+<li>Run a notebook every day</li>
+<li>Ingest files from ADLS</li>
+<li>Run bronze to silver transformation</li>
+<li>Run DLT/Lakeflow pipeline</li>
+<li>Refresh materialized views</li>
+<li>Run data quality checks</li>
+<li>Send notification on failure</li>
+</ul>
+<h3 class="databricks-h3" id="1212-building-blocks-of-lakeflow-jobs">1.21.2 Building Blocks of Lakeflow Jobs<a class="headerlink" href="#1212-building-blocks-of-lakeflow-jobs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Building Block</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job</td>
+<td>Main workflow container</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Unit of work inside a job</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td>Defines when job should run</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>Cluster/serverless compute used by tasks</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>Runtime values passed to tasks</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>Task order and DAG structure</td>
+</tr>
+<tr>
+<td>Conditions</td>
+<td>If/else branching logic</td>
+</tr>
+<tr>
+<td>For each</td>
+<td>Looping over a list of inputs</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>Email/webhook alerts</td>
+</tr>
+<tr>
+<td>Retries</td>
+<td>Automatic rerun on failure</td>
+</tr>
+<tr>
+<td>Timeout</td>
+<td>Maximum allowed runtime</td>
+</tr>
+<tr>
+<td>Git source</td>
+<td>Version-controlled job code</td>
+</tr>
+</tbody>
+</table>
+<h3 class="databricks-h3" id="1213-task-types">1.21.3 Task Types<a class="headerlink" href="#1213-task-types" title="Permanent link">&para;</a></h3>
+<p>Common task types for data engineering:</p>
+<ul>
+<li>Notebook task</li>
+<li>Python script task</li>
+<li>Python wheel task</li>
+<li>SQL task</li>
+<li>dbt task</li>
+<li>Pipeline task</li>
+<li>JAR task</li>
+<li>Run job task</li>
+<li>Condition task</li>
+<li>For each task</li>
+</ul>
+<h3 class="databricks-h3" id="1214-job-dag">1.21.4 Job DAG<a class="headerlink" href="#1214-job-dag" title="Permanent link">&para;</a></h3>
+<p>Jobs are represented as a DAG, Directed Acyclic Graph.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>load_raw_files
+      |
+validate_raw_data
+      |
+bronze_to_silver
+      |
+quality_check
+      |
+silver_to_gold
+      |
+refresh_dashboard_table
+</code></pre></div>
+<p>If a task depends on another task, it starts only after the upstream task succeeds, unless custom conditions are configured.</p>
+<h3 class="databricks-h3" id="1215-job-parameters">1.21.5 Job Parameters<a class="headerlink" href="#1215-job-parameters" title="Permanent link">&para;</a></h3>
+<p>Parameters make jobs reusable.</p>
+<p>Example parameters:</p>
+<div class="highlight"><pre><span></span><code>env = dev
+run_date = 2026-01-01
+source_system = salesforce
+load_type = incremental
+</code></pre></div>
+<p>Notebook reads parameters through widgets:</p>
+<div class="highlight"><pre><span></span><code><span class="n">env</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;env&quot;</span><span class="p">)</span>
+<span class="n">run_date</span> <span class="o">=</span> <span class="n">dbutils</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;run_date&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1216-job-compute">1.21.6 Job Compute<a class="headerlink" href="#1216-job-compute" title="Permanent link">&para;</a></h3>
+<p>Jobs can run on:</p>
+<ul>
+<li>Serverless compute</li>
+<li>Job clusters</li>
+<li>Existing all-purpose clusters</li>
+</ul>
+<p>Best practice:</p>
+<ul>
+<li>Use job clusters for production jobs.</li>
+<li>Avoid using shared interactive clusters for scheduled production pipelines.</li>
+<li>Use serverless where supported and suitable.</li>
+<li>Configure autoscaling based on workload.</li>
+</ul>
+<h3 class="databricks-h3" id="1217-monitoring-and-failure-handling">1.21.7 Monitoring and Failure Handling<a class="headerlink" href="#1217-monitoring-and-failure-handling" title="Permanent link">&para;</a></h3>
+<p>Jobs provide:</p>
+<ul>
+<li>Run history</li>
+<li>Task-level logs</li>
+<li>Error messages</li>
+<li>Duration tracking</li>
+<li>Retry configuration</li>
+<li>Email/webhook notifications</li>
+<li>SLA/timeout settings</li>
+</ul>
+<p>For production:</p>
+<ul>
+<li>Add retries for transient failures.</li>
+<li>Add notifications for failures.</li>
+<li>Track row counts and data quality metrics.</li>
+<li>Use service principals for ownership where possible.</li>
+</ul>
+<h2 class="databricks-h2" id="122-jobs-schedule-and-triggers">1.22 Jobs Schedule and Triggers<a class="headerlink" href="#122-jobs-schedule-and-triggers" title="Permanent link">&para;</a></h2>
+<p>Lakeflow Jobs can run manually or automatically.</p>
+<h3 class="databricks-h3" id="1221-trigger-types">1.22.1 Trigger Types<a class="headerlink" href="#1221-trigger-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Trigger Type</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual</td>
+<td>User clicks Run now or API triggers it</td>
+<td>Ad hoc backfill</td>
+</tr>
+<tr>
+<td>Scheduled</td>
+<td>Runs at fixed time</td>
+<td>Daily 2 AM load</td>
+</tr>
+<tr>
+<td>File arrival</td>
+<td>Runs when new files arrive</td>
+<td>New CSV landed in ADLS</td>
+</tr>
+<tr>
+<td>Table update</td>
+<td>Runs when source table changes</td>
+<td>Downstream refresh after bronze update</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>Starts another run after previous run completes</td>
+<td>Always-on processing</td>
+</tr>
+<tr>
+<td>External</td>
+<td>Triggered by ADF, Airflow, API, or CI/CD</td>
+<td>Enterprise orchestration</td>
+</tr>
+</tbody>
+</table>
+<h3 class="databricks-h3" id="1222-schedule-examples">1.22.2 Schedule Examples<a class="headerlink" href="#1222-schedule-examples" title="Permanent link">&para;</a></h3>
+<p>Common schedules:</p>
+<ul>
+<li>Every hour</li>
+<li>Every day at 2 AM</li>
+<li>Every weekday</li>
+<li>Month-end processing</li>
+</ul>
+<p>For production:</p>
+<ul>
+<li>Choose timezone carefully.</li>
+<li>Avoid overlapping runs unless required.</li>
+<li>Configure max concurrent runs.</li>
+<li>Add retry and timeout.</li>
+<li>Monitor job duration trend.</li>
+</ul>
+<h3 class="databricks-h3" id="1223-backfill-pattern">1.22.3 Backfill Pattern<a class="headerlink" href="#1223-backfill-pattern" title="Permanent link">&para;</a></h3>
+<p>Backfill means reprocessing old dates or historical data.</p>
+<p>Recommended pattern:</p>
+<ul>
+<li>Use <code>run_date</code> parameter.</li>
+<li>Make pipeline idempotent.</li>
+<li>Process one date or date range.</li>
+<li>Avoid hardcoding dates inside notebooks.</li>
+</ul>
+<h2 class="databricks-h2" id="123-placeholder-table-or-empty-delta-table">1.23 Placeholder Table or Empty Delta Table<a class="headerlink" href="#123-placeholder-table-or-empty-delta-table" title="Permanent link">&para;</a></h2>
+<p>A placeholder table is an empty table created with schema but no data.</p>
+<p>Use cases:</p>
+<ul>
+<li>Downstream jobs need table structure before data arrives.</li>
+<li>CI/CD deployment creates tables before first load.</li>
+<li>DLT or job pipeline expects a target table.</li>
+<li>BI tool needs metadata early.</li>
+</ul>
+<p>Create empty Delta table:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">orders_empty</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">order_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">order_date</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">amount</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">ingestion_time</span><span class="w"> </span><span class="k">TIMESTAMP</span>
+<span class="p">)</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">DELTA</span><span class="p">;</span>
+</code></pre></div>
+<p>Create empty table from existing schema:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders_empty</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">clean_orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+<p>In PySpark:</p>
+<div class="highlight"><pre><span></span><code><span class="n">empty_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([],</span> <span class="n">schema</span><span class="p">)</span>
+<span class="n">empty_df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;overwrite&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="s2">&quot;dev.bronze.orders_empty&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 class="databricks-h2" id="124-dlt-lakeflow-declarative-pipelines">1.24 DLT / Lakeflow Declarative Pipelines<a class="headerlink" href="#124-dlt-lakeflow-declarative-pipelines" title="Permanent link">&para;</a></h2>
+<p>DLT originally means Delta Live Tables. Databricks now commonly documents this capability under Lakeflow Spark Declarative Pipelines.</p>
+<p>For practical data engineering learning, understand it as:</p>
+<blockquote>
+<p>A managed pipeline framework where you define what tables should exist and how they should be transformed, and Databricks manages execution, dependencies, quality checks, and incremental processing.</p>
+</blockquote>
+<h3 class="databricks-h3" id="1241-why-use-dlt-declarative-pipelines">1.24.1 Why Use DLT / Declarative Pipelines?<a class="headerlink" href="#1241-why-use-dlt-declarative-pipelines" title="Permanent link">&para;</a></h3>
+<p>Use it for:</p>
+<ul>
+<li>Reliable ETL pipelines</li>
+<li>Bronze, silver, gold transformations</li>
+<li>Streaming ingestion</li>
+<li>Incremental processing</li>
+<li>Data quality expectations</li>
+<li>Pipeline monitoring</li>
+<li>Automated dependency management</li>
+<li>Cleaner production pipeline structure</li>
+</ul>
+<h3 class="databricks-h3" id="1242-normal-jobs-vs-dlt-pipelines">1.24.2 Normal Jobs vs DLT Pipelines<a class="headerlink" href="#1242-normal-jobs-vs-dlt-pipelines" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Lakeflow Jobs</th>
+<th>DLT / Declarative Pipelines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main purpose</td>
+<td>Orchestration</td>
+<td>Declarative data pipeline</td>
+</tr>
+<tr>
+<td>You define</td>
+<td>Task order</td>
+<td>Tables and transformations</td>
+</tr>
+<tr>
+<td>Dependency handling</td>
+<td>Manually through DAG</td>
+<td>Inferred from table dependencies</td>
+</tr>
+<tr>
+<td>Data quality</td>
+<td>Manually coded</td>
+<td>Expectations built in</td>
+</tr>
+<tr>
+<td>Streaming support</td>
+<td>Through tasks/code</td>
+<td>Native pipeline pattern</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>End-to-end workflow</td>
+<td>Managed ETL table flow</td>
+</tr>
+</tbody>
+</table>
+<p>In real projects, both are often used together:</p>
+<ul>
+<li>DLT pipeline creates bronze/silver/gold tables.</li>
+<li>Lakeflow Job schedules or triggers the pipeline and runs extra tasks.</li>
+</ul>
+<h3 class="databricks-h3" id="1243-pipeline-core-concepts">1.24.3 Pipeline Core Concepts<a class="headerlink" href="#1243-pipeline-core-concepts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pipeline</td>
+<td>Container for declarative ETL logic</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Input data such as files, Kafka, tables, or cloud storage</td>
+</tr>
+<tr>
+<td>Dataset</td>
+<td>Table or view created by pipeline</td>
+</tr>
+<tr>
+<td>Streaming table</td>
+<td>Incrementally processes new data</td>
+</tr>
+<tr>
+<td>Materialized view</td>
+<td>Stores transformed result</td>
+</tr>
+<tr>
+<td>Expectation</td>
+<td>Data quality rule</td>
+</tr>
+<tr>
+<td>Target catalog/schema</td>
+<td>Where output tables are created</td>
+</tr>
+<tr>
+<td>Triggered mode</td>
+<td>Runs when started/scheduled</td>
+</tr>
+<tr>
+<td>Continuous mode</td>
+<td>Keeps running for streaming use cases</td>
+</tr>
+</tbody>
+</table>
+<h3 class="databricks-h3" id="1244-simple-python-pipeline-example">1.24.4 Simple Python Pipeline Example<a class="headerlink" href="#1244-simple-python-pipeline-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">dlt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">current_timestamp</span>
+
+<span class="nd">@dlt</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+  <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bronze_orders&quot;</span>
+<span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">bronze_orders</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">spark</span><span class="o">.</span><span class="n">readStream</span>
+        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;cloudFiles&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;cloudFiles.format&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/Volumes/dev/bronze/raw_orders/&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;ingestion_time&quot;</span><span class="p">,</span> <span class="n">current_timestamp</span><span class="p">())</span>
+    <span class="p">)</span>
+
+<span class="nd">@dlt</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+  <span class="n">name</span><span class="o">=</span><span class="s2">&quot;silver_orders&quot;</span>
+<span class="p">)</span>
+<span class="nd">@dlt</span><span class="o">.</span><span class="n">expect_or_drop</span><span class="p">(</span><span class="s2">&quot;valid_order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id IS NOT NULL&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">silver_orders</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">dlt</span><span class="o">.</span><span class="n">read_stream</span><span class="p">(</span><span class="s2">&quot;bronze_orders&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s2">&quot;order_id&quot;</span><span class="p">])</span>
+    <span class="p">)</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1245-sql-pipeline-example">1.24.5 SQL Pipeline Example<a class="headerlink" href="#1245-sql-pipeline-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">REFRESH</span><span class="w"> </span><span class="n">STREAMING</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">bronze_orders</span>
+<span class="k">AS</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">cloud_files</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;/Volumes/dev/bronze/raw_orders/&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;json&#39;</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">REFRESH</span><span class="w"> </span><span class="n">MATERIALIZED</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">silver_orders</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LIVE</span><span class="p">.</span><span class="n">bronze_orders</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1246-expectations-data-quality-rules">1.24.6 Expectations - Data Quality Rules<a class="headerlink" href="#1246-expectations-data-quality-rules" title="Permanent link">&para;</a></h3>
+<p>Expectations define data quality checks.</p>
+<p>Common actions:</p>
+<ul>
+<li>Keep record and record violation</li>
+<li>Drop bad record</li>
+<li>Fail pipeline on bad record</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@dlt</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span><span class="s2">&quot;valid_amount&quot;</span><span class="p">,</span> <span class="s2">&quot;amount &gt;= 0&quot;</span><span class="p">)</span>
+<span class="nd">@dlt</span><span class="o">.</span><span class="n">expect_or_drop</span><span class="p">(</span><span class="s2">&quot;valid_order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id IS NOT NULL&quot;</span><span class="p">)</span>
+<span class="nd">@dlt</span><span class="o">.</span><span class="n">table</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">silver_orders</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">dlt</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;bronze_orders&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Use expectations for:</p>
+<ul>
+<li>Not null checks</li>
+<li>Positive amount checks</li>
+<li>Valid date checks</li>
+<li>Accepted status values</li>
+<li>Duplicate prevention logic</li>
+</ul>
+<h3 class="databricks-h3" id="1247-triggered-vs-continuous-pipeline-mode">1.24.7 Triggered vs Continuous Pipeline Mode<a class="headerlink" href="#1247-triggered-vs-continuous-pipeline-mode" title="Permanent link">&para;</a></h3>
+<p>Triggered pipeline:</p>
+<ul>
+<li>Runs when manually triggered or scheduled.</li>
+<li>Processes available data and stops.</li>
+<li>Good for batch or micro-batch workloads.</li>
+</ul>
+<p>Continuous pipeline:</p>
+<ul>
+<li>Keeps running.</li>
+<li>Processes data as it arrives.</li>
+<li>Good for low-latency streaming.</li>
+</ul>
+<h3 class="databricks-h3" id="1248-dlt-pipeline-setup-steps">1.24.8 DLT Pipeline Setup Steps<a class="headerlink" href="#1248-dlt-pipeline-setup-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prepare source data location, such as ADLS path or Unity Catalog volume.</li>
+<li>Create notebook or SQL file containing pipeline definitions.</li>
+<li>Go to Databricks <code>Workflows</code> or <code>Pipelines</code>.</li>
+<li>Create pipeline.</li>
+<li>Select source notebook/files.</li>
+<li>Select target catalog and schema.</li>
+<li>Choose serverless or configured compute.</li>
+<li>Choose triggered or continuous mode.</li>
+<li>Configure development or production mode.</li>
+<li>Add pipeline parameters if needed.</li>
+<li>Start pipeline.</li>
+<li>Monitor graph, event log, expectations, and output tables.</li>
+</ol>
+<h3 class="databricks-h3" id="1249-development-vs-production-mode">1.24.9 Development vs Production Mode<a class="headerlink" href="#1249-development-vs-production-mode" title="Permanent link">&para;</a></h3>
+<p>Development mode:</p>
+<ul>
+<li>Faster iteration</li>
+<li>Easier debugging</li>
+<li>Used while building pipeline</li>
+</ul>
+<p>Production mode:</p>
+<ul>
+<li>More reliable execution</li>
+<li>Better for scheduled workloads</li>
+<li>Used after testing is complete</li>
+</ul>
+<h3 class="databricks-h3" id="12410-dlt-best-practices">1.24.10 DLT Best Practices<a class="headerlink" href="#12410-dlt-best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use bronze for raw append-only ingestion.</li>
+<li>Use silver for cleaned and deduplicated records.</li>
+<li>Use gold for business-level aggregates.</li>
+<li>Add expectations at bronze/silver boundaries.</li>
+<li>Keep transformations modular.</li>
+<li>Avoid very complex business logic in one table definition.</li>
+<li>Use Auto Loader for file ingestion.</li>
+<li>Use Unity Catalog target tables.</li>
+<li>Use job or pipeline parameters for environment-specific values.</li>
+<li>Monitor failed expectations and pipeline event logs.</li>
+</ul>
+<h2 class="databricks-h2" id="125-additional-data-engineering-concepts-to-know">1.25 Additional Data Engineering Concepts to Know<a class="headerlink" href="#125-additional-data-engineering-concepts-to-know" title="Permanent link">&para;</a></h2>
+<p>These are useful but still directly related to data engineering.</p>
+<h3 class="databricks-h3" id="1251-auto-loader">1.25.1 Auto Loader<a class="headerlink" href="#1251-auto-loader" title="Permanent link">&para;</a></h3>
+<p>Auto Loader incrementally processes new files from cloud storage.</p>
+<p>Use for:</p>
+<ul>
+<li>Bronze ingestion</li>
+<li>Incremental file processing</li>
+<li>Schema inference and schema evolution</li>
+<li>Large landing zones in ADLS/S3/GCS</li>
+</ul>
+<h3 class="databricks-h3" id="1252-merge-for-upsert">1.25.2 MERGE for Upsert<a class="headerlink" href="#1252-merge-for-upsert" title="Permanent link">&para;</a></h3>
+<p><code>MERGE</code> is used for upsert logic.</p>
+<div class="highlight"><pre><span></span><code><span class="n">MERGE</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">customers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">target</span>
+<span class="k">USING</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">bronze</span><span class="p">.</span><span class="n">customers_updates</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">source</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">target</span><span class="p">.</span><span class="n">customer_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">source</span><span class="p">.</span><span class="n">customer_id</span>
+<span class="k">WHEN</span><span class="w"> </span><span class="n">MATCHED</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="o">*</span>
+<span class="k">WHEN</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">MATCHED</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="o">*</span><span class="p">;</span>
+</code></pre></div>
+<p>Use for:</p>
+<ul>
+<li>CDC processing</li>
+<li>Dimension table updates</li>
+<li>Incremental loads</li>
+</ul>
+<h3 class="databricks-h3" id="1253-time-travel">1.25.3 Time Travel<a class="headerlink" href="#1253-time-travel" title="Permanent link">&para;</a></h3>
+<p>Query older table version:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="k">VERSION</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<p>Query by timestamp:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="s1">&#39;2026-01-01T00:00:00&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1254-vacuum">1.25.4 VACUUM<a class="headerlink" href="#1254-vacuum" title="Permanent link">&para;</a></h3>
+<p><code>VACUUM</code> removes old files no longer needed by current table versions.</p>
+<div class="highlight"><pre><span></span><code><span class="k">VACUUM</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="n">RETAIN</span><span class="w"> </span><span class="mi">168</span><span class="w"> </span><span class="n">HOURS</span><span class="p">;</span>
+</code></pre></div>
+<p>Be careful: after old files are vacuumed, time travel to those older versions may not work.</p>
+<h3 class="databricks-h3" id="1255-constraints">1.25.5 Constraints<a class="headerlink" href="#1255-constraints" title="Permanent link">&para;</a></h3>
+<p>Constraints help maintain data quality.</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dev</span><span class="p">.</span><span class="n">silver</span><span class="p">.</span><span class="n">orders</span>
+<span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">valid_amount</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<h3 class="databricks-h3" id="1256-change-data-feed">1.25.6 Change Data Feed<a class="headerlink" href="#1256-change-data-feed" title="Permanent link">&para;</a></h3>
+<p>Change Data Feed captures row-level changes between table versions.</p>
+<p>Use for:</p>
+<ul>
+<li>Incremental downstream processing</li>
+<li>CDC-style pipelines</li>
+<li>Auditing changes</li>
+</ul>
+<h2 class="databricks-h2" id="126-unity-catalog">1.26 Unity Catalog<a class="headerlink" href="#126-unity-catalog" title="Permanent link">&para;</a></h2>
 <p>Unity Catalog is Databricks' unified governance solution for data and AI assets.</p>
-<h3 class="databricks-h3" id="1141-unity-catalog-manages">1.14.1 Unity Catalog Manages<a class="headerlink" href="#1141-unity-catalog-manages" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1261-unity-catalog-manages">1.26.1 Unity Catalog Manages<a class="headerlink" href="#1261-unity-catalog-manages" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Tables</li>
 <li>Views</li>
 <li>Files</li>
+<li>Volumes</li>
+<li>External locations</li>
+<li>Storage credentials</li>
 <li>ML models</li>
 <li>Permissions</li>
 <li>Lineage tracking</li>
 </ul>
-<h3 class="databricks-h3" id="1142-benefits-of-unity-catalog">1.14.2 Benefits of Unity Catalog<a class="headerlink" href="#1142-benefits-of-unity-catalog" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1262-benefits-of-unity-catalog">1.26.2 Benefits of Unity Catalog<a class="headerlink" href="#1262-benefits-of-unity-catalog" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Centralized access control</li>
 <li>Fine-grained permissions at row and column level</li>
 <li>Data lineage tracking</li>
 <li>Cross-workspace governance</li>
+<li>Consistent permissions across workspaces</li>
+<li>Safer access to cloud storage through external locations</li>
 </ul>
 <p>It ensures secure and compliant data usage across the organization.</p>
-<h2 class="databricks-h2" id="115-acid-principles">1.15 ACID Principles<a class="headerlink" href="#115-acid-principles" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="127-acid-principles">1.27 ACID Principles<a class="headerlink" href="#127-acid-principles" title="Permanent link">&para;</a></h2>
 <p>Databricks, through Delta Lake, supports ACID properties.</p>
-<h3 class="databricks-h3" id="1151-atomicity">1.15.1 Atomicity<a class="headerlink" href="#1151-atomicity" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1271-atomicity">1.27.1 Atomicity<a class="headerlink" href="#1271-atomicity" title="Permanent link">&para;</a></h3>
 <p>A transaction either fully completes or fully fails.</p>
-<h3 class="databricks-h3" id="1152-consistency">1.15.2 Consistency<a class="headerlink" href="#1152-consistency" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1272-consistency">1.27.2 Consistency<a class="headerlink" href="#1272-consistency" title="Permanent link">&para;</a></h3>
 <p>Data remains valid before and after a transaction.</p>
-<h3 class="databricks-h3" id="1153-isolation">1.15.3 Isolation<a class="headerlink" href="#1153-isolation" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1273-isolation">1.27.3 Isolation<a class="headerlink" href="#1273-isolation" title="Permanent link">&para;</a></h3>
 <p>Concurrent transactions do not interfere with each other.</p>
-<h3 class="databricks-h3" id="1154-durability">1.15.4 Durability<a class="headerlink" href="#1154-durability" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1274-durability">1.27.4 Durability<a class="headerlink" href="#1274-durability" title="Permanent link">&para;</a></h3>
 <p>Once committed, data remains stored even if failures occur.</p>
 <p>ACID ensures reliability in large-scale data systems.</p>
-<h3 class="databricks-h3" id="1155-acid-properties-in-delta-lake">1.15.5 ACID Properties in Delta Lake<a class="headerlink" href="#1155-acid-properties-in-delta-lake" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1275-acid-properties-in-delta-lake">1.27.5 ACID Properties in Delta Lake<a class="headerlink" href="#1275-acid-properties-in-delta-lake" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3057,10 +5940,10 @@
 </tr>
 </tbody>
 </table>
-<h2 class="databricks-h2" id="116-oltp-vs-olap">1.16 OLTP vs OLAP<a class="headerlink" href="#116-oltp-vs-olap" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="128-oltp-vs-olap">1.28 OLTP vs OLAP<a class="headerlink" href="#128-oltp-vs-olap" title="Permanent link">&para;</a></h2>
 <p>OLTP is for running daily business transactions, while OLAP is for analyzing data and generating insights.</p>
 <p>Since you are moving toward data engineering and analytics, understanding this clearly is very important.</p>
-<h3 class="databricks-h3" id="1161-what-is-oltp">1.16.1 What Is OLTP?<a class="headerlink" href="#1161-what-is-oltp" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1281-what-is-oltp">1.28.1 What Is OLTP?<a class="headerlink" href="#1281-what-is-oltp" title="Permanent link">&para;</a></h3>
 <p>OLTP stands for Online Transaction Processing.</p>
 <ul>
 <li>Used for day-to-day operations</li>
@@ -3079,7 +5962,7 @@
 <li>Deletes records</li>
 <li>Ensures data consistency</li>
 </ul>
-<h4 class="databricks-h4" id="11611-oltp-database-structure">1.16.1.1 OLTP Database Structure<a class="headerlink" href="#11611-oltp-database-structure" title="Permanent link">&para;</a></h4>
+<h4 class="databricks-h4" id="12811-oltp-database-structure">1.28.1.1 OLTP Database Structure<a class="headerlink" href="#12811-oltp-database-structure" title="Permanent link">&para;</a></h4>
 <p><img alt="OLTP database structure" src="../image-3.png" /></p>
 <ul>
 <li>Highly normalized tables</li>
@@ -3092,7 +5975,7 @@
 <span class="k">WHERE</span><span class="w"> </span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span>
 </code></pre></div>
 <p>This is a small, fast transaction.</p>
-<h3 class="databricks-h3" id="1162-what-is-olap">1.16.2 What Is OLAP?<a class="headerlink" href="#1162-what-is-olap" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1282-what-is-olap">1.28.2 What Is OLAP?<a class="headerlink" href="#1282-what-is-olap" title="Permanent link">&para;</a></h3>
 <p>OLAP stands for Online Analytical Processing.</p>
 <ul>
 <li>Used for analysis and reporting</li>
@@ -3111,7 +5994,7 @@
 <li>Snowflake</li>
 <li>Databricks</li>
 </ul>
-<h4 class="databricks-h4" id="11621-olap-structure">1.16.2.1 OLAP Structure<a class="headerlink" href="#11621-olap-structure" title="Permanent link">&para;</a></h4>
+<h4 class="databricks-h4" id="12821-olap-structure">1.28.2.1 OLAP Structure<a class="headerlink" href="#12821-olap-structure" title="Permanent link">&para;</a></h4>
 <p><img alt="OLAP structure" src="../image-4.png" />
 <img alt="OLAP schema example" src="../image-5.png" /></p>
 <ul>
@@ -3126,7 +6009,7 @@
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">region</span><span class="p">;</span>
 </code></pre></div>
 <p>This scans millions of rows.</p>
-<h3 class="databricks-h3" id="1163-oltp-vs-olap-comparison-table">1.16.3 OLTP vs OLAP Comparison Table<a class="headerlink" href="#1163-oltp-vs-olap-comparison-table" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1283-oltp-vs-olap-comparison-table">1.28.3 OLTP vs OLAP Comparison Table<a class="headerlink" href="#1283-oltp-vs-olap-comparison-table" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3173,7 +6056,7 @@
 </tr>
 </tbody>
 </table>
-<h3 class="databricks-h3" id="1164-simple-real-life-example">1.16.4 Simple Real-Life Example<a class="headerlink" href="#1164-simple-real-life-example" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1284-simple-real-life-example">1.28.4 Simple Real-Life Example<a class="headerlink" href="#1284-simple-real-life-example" title="Permanent link">&para;</a></h3>
 <p>Think of a supermarket:</p>
 <ul>
 <li>Billing counter -&gt; OLTP</li>
@@ -3185,25 +6068,37 @@
 <li>Want data engineer or BI roles</li>
 </ul>
 <p>You will mainly work with OLAP systems, but you must understand OLTP to design pipelines.</p>
-<h3 class="databricks-h3" id="1165-why-it-matters-for-data-engineers">1.16.5 Why It Matters for Data Engineers<a class="headerlink" href="#1165-why-it-matters-for-data-engineers" title="Permanent link">&para;</a></h3>
+<h3 class="databricks-h3" id="1285-why-it-matters-for-data-engineers">1.28.5 Why It Matters for Data Engineers<a class="headerlink" href="#1285-why-it-matters-for-data-engineers" title="Permanent link">&para;</a></h3>
 <ul>
 <li>OLTP -&gt; source systems</li>
 <li>ETL/ELT -&gt; moves data</li>
 <li>OLAP -&gt; data warehouse or analytics system</li>
 </ul>
 <p>Understanding both is critical for designing data pipelines.</p>
-<h2 class="databricks-h2" id="117-databricks-hierarchy">1.17 Databricks Hierarchy<a class="headerlink" href="#117-databricks-hierarchy" title="Permanent link">&para;</a></h2>
-<p>Workspace -&gt; Catalog -&gt; Schema -&gt; Tables</p>
-<h2 class="databricks-h2" id="118-summary">1.18 Summary<a class="headerlink" href="#118-summary" title="Permanent link">&para;</a></h2>
+<h2 class="databricks-h2" id="129-databricks-hierarchy">1.29 Databricks Hierarchy<a class="headerlink" href="#129-databricks-hierarchy" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Databricks Account
+  -&gt; Workspace
+      -&gt; Unity Catalog Metastore
+          -&gt; Catalog
+              -&gt; Schema
+                  -&gt; Table / View / Volume / Function / Model
+</code></pre></div>
+<p>For day-to-day data engineering, you mostly work at catalog, schema, table, view, job, and pipeline levels.</p>
+<h2 class="databricks-h2" id="130-summary">1.30 Summary<a class="headerlink" href="#130-summary" title="Permanent link">&para;</a></h2>
 <p>Databricks is a modern data platform that:</p>
 <ul>
 <li>Implements Lakehouse architecture</li>
 <li>Uses Delta Lake for reliability</li>
 <li>Supports Medallion architecture for structured data processing</li>
 <li>Provides centralized governance via Unity Catalog</li>
+<li>Supports managed and external Delta tables</li>
+<li>Optimizes tables using data skipping, OPTIMIZE, Z-ordering, and liquid clustering</li>
+<li>Uses Databricks Runtime and Photon for scalable processing</li>
+<li>Orchestrates production workloads using Lakeflow Jobs</li>
+<li>Builds managed ETL pipelines using DLT / Lakeflow Declarative Pipelines</li>
 <li>Enables scalable data engineering, analytics, and AI workloads</li>
 </ul>
-<p>It simplifies big data processing while maintaining enterprise-grade governance and reliability.</p>
+<p>For data engineering, focus mainly on workspace setup, Unity Catalog hierarchy, Delta table design, ingestion, transformation, orchestration, data quality, and performance optimization.</p>
 
 
 

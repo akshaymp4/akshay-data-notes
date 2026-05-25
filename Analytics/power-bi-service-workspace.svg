@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Power BI Service workspace mock screenshot</title>
+  <desc id="desc">A simplified Power BI Service workspace showing reports, semantic models, refresh schedule, and sharing status.</desc>
+  <rect width="900" height="520" rx="18" fill="#eef2ff"/>
+  <rect x="24" y="24" width="852" height="472" rx="16" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="24" y="24" width="852" height="58" rx="16" fill="#1d4ed8"/>
+  <rect x="24" y="62" width="852" height="20" fill="#1d4ed8"/>
+  <text x="52" y="61" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Power BI Service</text>
+  <rect x="48" y="110" width="172" height="340" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="72" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#334155">Navigation</text>
+  <text x="72" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Home</text>
+  <text x="72" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Workspaces</text>
+  <rect x="64" y="246" width="132" height="32" rx="6" fill="#dbeafe"/>
+  <text x="78" y="267" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">Sales Analytics</text>
+  <text x="72" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Apps</text>
+  <text x="72" y="348" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">Shared with me</text>
+  <rect x="246" y="110" width="584" height="340" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="274" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800" fill="#1f2937">Sales Analytics Workspace</text>
+  <rect x="274" y="178" width="528" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="300" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Name</text>
+  <text x="514" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Type</text>
+  <text x="650" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Status</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#475569">
+    <text x="300" y="252">Executive Sales Dashboard</text>
+    <text x="514" y="252">Report</text>
+    <text x="650" y="252">Shared</text>
+    <text x="300" y="300">Sales Semantic Model</text>
+    <text x="514" y="300">Dataset</text>
+    <text x="650" y="300">Refresh 8:00 AM</text>
+    <text x="300" y="348">Regional Scorecard</text>
+    <text x="514" y="348">Dashboard</text>
+    <text x="650" y="348">Published</text>
+  </g>
+  <g stroke="#e2e8f0">
+    <line x1="274" y1="270" x2="802" y2="270"/>
+    <line x1="274" y1="318" x2="802" y2="318"/>
+    <line x1="274" y1="366" x2="802" y2="366"/>
+  </g>
+  <rect x="274" y="392" width="154" height="34" rx="7" fill="#dbeafe"/>
+  <text x="302" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">Publish App</text>
+  <rect x="448" y="392" width="154" height="34" rx="7" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="474" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#92400e">Schedule Refresh</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Power BI Desktop overview mock screenshot</title>
+  <desc id="desc">A simplified Power BI Desktop interface showing ribbon, report canvas, visualizations, filters, and fields panes.</desc>
+  <rect width="900" height="520" rx="18" fill="#fff7ed"/>
+  <rect x="22" y="22" width="856" height="476" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="22" y="22" width="856" height="52" rx="14" fill="#f2c811"/>
+  <rect x="22" y="58" width="856" height="16" fill="#f2c811"/>
+  <text x="46" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#292524">Power BI Desktop</text>
+  <rect x="45" y="92" width="88" height="24" rx="5" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="62" y="109" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7c2d12">Home</text>
+  <rect x="146" y="92" width="88" height="24" rx="5" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="163" y="109" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#57534e">Insert</text>
+  <rect x="247" y="92" width="88" height="24" rx="5" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="259" y="109" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#57534e">Modeling</text>
+  <rect x="40" y="140" width="54" height="314" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="67" cy="174" r="10" fill="#f59e0b"/>
+  <rect x="57" y="214" width="20" height="20" rx="4" fill="#cbd5e1"/>
+  <path d="M57 268h20v20H57z" fill="#cbd5e1"/>
+  <path d="M57 328h20v20H57z" fill="#cbd5e1"/>
+  <rect x="118" y="140" width="520" height="314" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="146" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Sales Summary</text>
+  <rect x="146" y="198" width="126" height="74" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="164" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#64748b">Total Sales</text>
+  <text x="164" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#0f766e">$1.42M</text>
+  <rect x="292" y="198" width="126" height="74" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="310" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#64748b">Profit</text>
+  <text x="310" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#b45309">$318K</text>
+  <rect x="438" y="198" width="170" height="184" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="458" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Sales by Region</text>
+  <rect x="466" y="336" width="26" height="28" fill="#14b8a6"/>
+  <rect x="504" y="304" width="26" height="60" fill="#f59e0b"/>
+  <rect x="542" y="264" width="26" height="100" fill="#64748b"/>
+  <rect x="580" y="286" width="26" height="78" fill="#0ea5e9"/>
+  <rect x="146" y="296" width="272" height="86" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <polyline points="164,350 210,332 256,340 302,312 348,322 394,292" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <text x="164" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Monthly Trend</text>
+  <rect x="660" y="140" width="92" height="314" rx="10" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="680" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#92400e">Filters</text>
+  <rect x="678" y="190" width="56" height="18" rx="4" fill="#ffffff" stroke="#fcd34d"/>
+  <rect x="678" y="220" width="56" height="18" rx="4" fill="#ffffff" stroke="#fcd34d"/>
+  <rect x="678" y="250" width="56" height="18" rx="4" fill="#ffffff" stroke="#fcd34d"/>
+  <rect x="770" y="140" width="84" height="314" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="790" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">Fields</text>
+  <text x="790" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Sales</text>
+  <text x="790" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Date</text>
+  <text x="790" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Region</text>
+</svg>

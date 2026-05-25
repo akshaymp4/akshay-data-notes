@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Power BI Model View star schema mock screenshot</title>
+  <desc id="desc">A simplified model view showing a Sales fact table connected to Date, Product, Customer, and Region dimension tables.</desc>
+  <rect width="900" height="520" rx="18" fill="#f8fafc"/>
+  <rect x="28" y="28" width="844" height="464" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="54" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2937">Model View: Star Schema</text>
+  <rect x="354" y="166" width="190" height="190" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="354" y="166" width="190" height="42" rx="10" fill="#f59e0b"/>
+  <text x="392" y="193" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">FactSales</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#57534e">
+    <text x="374" y="236">OrderID</text>
+    <text x="374" y="262">DateKey</text>
+    <text x="374" y="288">ProductKey</text>
+    <text x="374" y="314">CustomerKey</text>
+    <text x="374" y="340">SalesAmount</text>
+  </g>
+  <g fill="#ffffff" stroke="#0f766e" stroke-width="2">
+    <rect x="90" y="116" width="160" height="128" rx="10"/>
+    <rect x="650" y="116" width="160" height="128" rx="10"/>
+    <rect x="90" y="306" width="160" height="128" rx="10"/>
+    <rect x="650" y="306" width="160" height="128" rx="10"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="126" y="150" font-size="16" font-weight="700" fill="#0f766e">DimDate</text>
+    <text x="112" y="182" font-size="12" fill="#475569">DateKey</text>
+    <text x="112" y="207" font-size="12" fill="#475569">Month</text>
+    <text x="112" y="232" font-size="12" fill="#475569">Year</text>
+    <text x="686" y="150" font-size="16" font-weight="700" fill="#0f766e">DimProduct</text>
+    <text x="672" y="182" font-size="12" fill="#475569">ProductKey</text>
+    <text x="672" y="207" font-size="12" fill="#475569">ProductName</text>
+    <text x="672" y="232" font-size="12" fill="#475569">Category</text>
+    <text x="120" y="340" font-size="16" font-weight="700" fill="#0f766e">DimCustomer</text>
+    <text x="112" y="372" font-size="12" fill="#475569">CustomerKey</text>
+    <text x="112" y="397" font-size="12" fill="#475569">CustomerName</text>
+    <text x="112" y="422" font-size="12" fill="#475569">Segment</text>
+    <text x="690" y="340" font-size="16" font-weight="700" fill="#0f766e">DimRegion</text>
+    <text x="672" y="372" font-size="12" fill="#475569">RegionKey</text>
+    <text x="672" y="397" font-size="12" fill="#475569">RegionName</text>
+    <text x="672" y="422" font-size="12" fill="#475569">Country</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none">
+    <path d="M250 180 C300 190 320 220 354 246"/>
+    <path d="M650 180 C600 190 580 220 544 272"/>
+    <path d="M250 370 C300 352 322 328 354 314"/>
+    <path d="M650 370 C598 350 578 330 544 314"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">
+    <text x="260" y="180" fill="#0f766e">1</text><text x="334" y="240" fill="#b45309">*</text>
+    <text x="630" y="180" fill="#0f766e">1</text><text x="552" y="270" fill="#b45309">*</text>
+    <text x="260" y="378" fill="#0f766e">1</text><text x="334" y="322" fill="#b45309">*</text>
+    <text x="630" y="378" fill="#0f766e">1</text><text x="552" y="324" fill="#b45309">*</text>
+  </g>
+</svg>

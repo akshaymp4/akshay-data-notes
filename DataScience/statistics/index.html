@@ -657,10 +657,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mean" class="md-nav__link">
+  <a href="#arithmetic-mean" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mean
+        Arithmetic Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harmonic-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harmonic Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-mean-vs-harmonic-mean-vs-geometric-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Mean vs Harmonic Mean vs Geometric Mean
       
     </span>
   </a>
@@ -683,6 +716,17 @@
     <span class="md-ellipsis">
       
         Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moving Average
       
     </span>
   </a>
@@ -2634,10 +2678,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mean" class="md-nav__link">
+  <a href="#arithmetic-mean" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mean
+        Arithmetic Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harmonic-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harmonic Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-mean-vs-harmonic-mean-vs-geometric-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Mean vs Harmonic Mean vs Geometric Mean
       
     </span>
   </a>
@@ -2660,6 +2737,17 @@
     <span class="md-ellipsis">
       
         Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moving Average
       
     </span>
   </a>
@@ -4081,26 +4169,111 @@
 <p>Common measures:</p>
 <ul>
 <li><strong>Mean</strong>: arithmetic average</li>
+<li><strong>Harmonic mean</strong>: useful for averaging rates and ratios</li>
+<li><strong>Geometric mean</strong>: useful for averaging growth rates and multiplicative changes</li>
 <li><strong>Median</strong>: middle value</li>
 <li><strong>Mode</strong>: most frequent value</li>
 </ul>
-<h4 id="mean">Mean<a class="headerlink" href="#mean" title="Permanent link">&para;</a></h4>
+<h4 id="arithmetic-mean">Arithmetic Mean<a class="headerlink" href="#arithmetic-mean" title="Permanent link">&para;</a></h4>
 <p><strong>Definition:</strong></p>
-<p>Mean is the average of all values.</p>
+<p>Arithmetic mean is the usual average of all values.</p>
 <p><strong>Formula:</strong></p>
-<div class="highlight"><pre><span></span><code>Mean = Sum of all values / Number of values
+<div class="highlight"><pre><span></span><code>Arithmetic Mean = Sum of all values / Number of values
 x_bar = (x1 + x2 + ... + xn) / n
 </code></pre></div>
 <p><strong>Simple explanation:</strong></p>
 <p>Add everything and divide by how many values you have.</p>
 <p><strong>Example:</strong></p>
 <p>Marks = 60, 70, 80</p>
-<p>Mean = <code>(60 + 70 + 80) / 3 = 70</code></p>
+<p>Arithmetic Mean = <code>(60 + 70 + 80) / 3 = 70</code></p>
 <p><strong>Real-world use:</strong></p>
 <ul>
 <li>average monthly sales</li>
 <li>average student marks</li>
 <li>average temperature</li>
+</ul>
+<h4 id="harmonic-mean">Harmonic Mean<a class="headerlink" href="#harmonic-mean" title="Permanent link">&para;</a></h4>
+<p><strong>Definition:</strong></p>
+<p>Harmonic mean is a type of average mainly used when the values are <strong>rates</strong>, <strong>ratios</strong>, or values measured per unit.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Harmonic Mean = n / [(1 / x1) + (1 / x2) + ... + (1 / xn)]
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>First take the reciprocal of each value, average those reciprocals, and then take the reciprocal again.</p>
+<p><strong>Example:</strong></p>
+<p>Speeds = 40 km/h and 60 km/h</p>
+<div class="highlight"><pre><span></span><code>Harmonic Mean = 2 / [(1 / 40) + (1 / 60)]
+              = 48 km/h
+</code></pre></div>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>average speed over equal distances</li>
+<li>average price-to-earnings ratios</li>
+<li>average rates such as tasks per hour or units per minute</li>
+</ul>
+<h4 id="geometric-mean">Geometric Mean<a class="headerlink" href="#geometric-mean" title="Permanent link">&para;</a></h4>
+<p><strong>Definition:</strong></p>
+<p>Geometric mean is a type of average used when values are multiplied together or represent growth over time.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight"><pre><span></span><code>Geometric Mean = nth root of (x1 * x2 * ... * xn)
+</code></pre></div>
+<p>For two values:</p>
+<div class="highlight"><pre><span></span><code>Geometric Mean = sqrt(x1 * x2)
+</code></pre></div>
+<p><strong>Simple explanation:</strong></p>
+<p>Multiply all values together and take the root based on how many values are present.</p>
+<p><strong>Example:</strong></p>
+<p>Growth rates = 10%, 20%, and 30%</p>
+<p>Convert them into growth factors:</p>
+<div class="highlight"><pre><span></span><code>1.10, 1.20, 1.30
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Geometric Mean = cube root of (1.10 * 1.20 * 1.30)
+               = 1.197
+</code></pre></div>
+<p>Average growth rate is approximately <code>19.7%</code>.</p>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>compound annual growth rate</li>
+<li>investment returns</li>
+<li>population growth</li>
+<li>percentage growth over multiple periods</li>
+</ul>
+<h4 id="arithmetic-mean-vs-harmonic-mean-vs-geometric-mean">Arithmetic Mean vs Harmonic Mean vs Geometric Mean<a class="headerlink" href="#arithmetic-mean-vs-harmonic-mean-vs-geometric-mean" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Mean type</th>
+<th>Best used for</th>
+<th>Formula idea</th>
+<th>Example use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arithmetic mean</td>
+<td>Normal values that are added together</td>
+<td>Add values and divide by count</td>
+<td>average marks, average sales</td>
+</tr>
+<tr>
+<td>Harmonic mean</td>
+<td>Rates and ratios</td>
+<td>Average the reciprocals</td>
+<td>average speed over equal distances</td>
+</tr>
+<tr>
+<td>Geometric mean</td>
+<td>Growth and multiplicative change</td>
+<td>Multiply values and take nth root</td>
+<td>average investment growth</td>
+</tr>
+</tbody>
+</table>
+<p>Important note:</p>
+<ul>
+<li>Arithmetic mean is most common</li>
+<li>Harmonic mean gives more weight to smaller values</li>
+<li>Geometric mean is better when values compound over time</li>
 </ul>
 <h4 id="median">Median<a class="headerlink" href="#median" title="Permanent link">&para;</a></h4>
 <p><strong>Definition:</strong></p>
@@ -4144,6 +4317,30 @@ Median = [value at position n / 2 + value at position (n / 2) + 1] / 2
 <ul>
 <li>most common shirt size sold</li>
 <li>most used payment method</li>
+</ul>
+<h4 id="moving-average">Moving Average<a class="headerlink" href="#moving-average" title="Permanent link">&para;</a></h4>
+<p><strong>Definition:</strong></p>
+<p>Moving average is an average calculated over a fixed number of recent values.</p>
+<p>It is mainly used with time-based data to smooth short-term ups and downs.</p>
+<p><strong>Formula idea:</strong></p>
+<div class="highlight"><pre><span></span><code>Moving Average = Average of last k values
+</code></pre></div>
+<p>Here, <code>k</code> is the window size.</p>
+<p><strong>Example:</strong></p>
+<p>Daily sales:</p>
+<div class="highlight"><pre><span></span><code>10, 12, 15, 14, 18
+</code></pre></div>
+<p>3-day moving averages:</p>
+<div class="highlight"><pre><span></span><code>(10 + 12 + 15) / 3 = 12.33
+(12 + 15 + 14) / 3 = 13.67
+(15 + 14 + 18) / 3 = 15.67
+</code></pre></div>
+<p><strong>Real-world use:</strong></p>
+<ul>
+<li>smooth daily sales trends</li>
+<li>track stock prices</li>
+<li>understand website traffic patterns</li>
+<li>reduce noise in time series data</li>
 </ul>
 <h3 class="aws-h3" id="152-measures-of-variation-or-dispersion">1.5.2 Measures of Variation or Dispersion<a class="headerlink" href="#152-measures-of-variation-or-dispersion" title="Permanent link">&para;</a></h3>
 <p>Measures of variation, also called measures of dispersion, describe how much the data values are spread out.</p>
