@@ -207,19 +207,21 @@ Measures of central tendency describe the **center** or typical value of a datas
 Common measures:
 
 - **Mean**: arithmetic average
+- **Harmonic mean**: useful for averaging rates and ratios
+- **Geometric mean**: useful for averaging growth rates and multiplicative changes
 - **Median**: middle value
 - **Mode**: most frequent value
 
-#### Mean
+#### Arithmetic Mean
 
 **Definition:**
 
-Mean is the average of all values.
+Arithmetic mean is the usual average of all values.
 
 **Formula:**
 
 ```text
-Mean = Sum of all values / Number of values
+Arithmetic Mean = Sum of all values / Number of values
 x_bar = (x1 + x2 + ... + xn) / n
 ```
 
@@ -231,13 +233,104 @@ Add everything and divide by how many values you have.
 
 Marks = 60, 70, 80
 
-Mean = `(60 + 70 + 80) / 3 = 70`
+Arithmetic Mean = `(60 + 70 + 80) / 3 = 70`
 
 **Real-world use:**
 
 - average monthly sales
 - average student marks
 - average temperature
+
+#### Harmonic Mean
+
+**Definition:**
+
+Harmonic mean is a type of average mainly used when the values are **rates**, **ratios**, or values measured per unit.
+
+**Formula:**
+
+```text
+Harmonic Mean = n / [(1 / x1) + (1 / x2) + ... + (1 / xn)]
+```
+
+**Simple explanation:**
+
+First take the reciprocal of each value, average those reciprocals, and then take the reciprocal again.
+
+**Example:**
+
+Speeds = 40 km/h and 60 km/h
+
+```text
+Harmonic Mean = 2 / [(1 / 40) + (1 / 60)]
+              = 48 km/h
+```
+
+**Real-world use:**
+
+- average speed over equal distances
+- average price-to-earnings ratios
+- average rates such as tasks per hour or units per minute
+
+#### Geometric Mean
+
+**Definition:**
+
+Geometric mean is a type of average used when values are multiplied together or represent growth over time.
+
+**Formula:**
+
+```text
+Geometric Mean = nth root of (x1 * x2 * ... * xn)
+```
+
+For two values:
+
+```text
+Geometric Mean = sqrt(x1 * x2)
+```
+
+**Simple explanation:**
+
+Multiply all values together and take the root based on how many values are present.
+
+**Example:**
+
+Growth rates = 10%, 20%, and 30%
+
+Convert them into growth factors:
+
+```text
+1.10, 1.20, 1.30
+```
+
+```text
+Geometric Mean = cube root of (1.10 * 1.20 * 1.30)
+               = 1.197
+```
+
+Average growth rate is approximately `19.7%`.
+
+**Real-world use:**
+
+- compound annual growth rate
+- investment returns
+- population growth
+- percentage growth over multiple periods
+
+#### Arithmetic Mean vs Harmonic Mean vs Geometric Mean
+
+| Mean type | Best used for | Formula idea | Example use |
+|---|---|---|---|
+| Arithmetic mean | Normal values that are added together | Add values and divide by count | average marks, average sales |
+| Harmonic mean | Rates and ratios | Average the reciprocals | average speed over equal distances |
+| Geometric mean | Growth and multiplicative change | Multiply values and take nth root | average investment growth |
+
+Important note:
+
+- Arithmetic mean is most common
+- Harmonic mean gives more weight to smaller values
+- Geometric mean is better when values compound over time
 
 #### Median
 
@@ -304,6 +397,45 @@ Mode = `3`
 
 - most common shirt size sold
 - most used payment method
+
+#### Moving Average
+
+**Definition:**
+
+Moving average is an average calculated over a fixed number of recent values.
+
+It is mainly used with time-based data to smooth short-term ups and downs.
+
+**Formula idea:**
+
+```text
+Moving Average = Average of last k values
+```
+
+Here, `k` is the window size.
+
+**Example:**
+
+Daily sales:
+
+```text
+10, 12, 15, 14, 18
+```
+
+3-day moving averages:
+
+```text
+(10 + 12 + 15) / 3 = 12.33
+(12 + 15 + 14) / 3 = 13.67
+(15 + 14 + 18) / 3 = 15.67
+```
+
+**Real-world use:**
+
+- smooth daily sales trends
+- track stock prices
+- understand website traffic patterns
+- reduce noise in time series data
 
 ### 1.5.2 Measures of Variation or Dispersion { .aws-h3 }
 

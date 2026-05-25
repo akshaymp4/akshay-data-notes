@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Power Query Editor mock screenshot</title>
+  <desc id="desc">A simplified Power Query Editor showing query list, transformation ribbon, data preview table, and applied steps.</desc>
+  <rect width="900" height="520" rx="18" fill="#ecfeff"/>
+  <rect x="22" y="22" width="856" height="476" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+  <rect x="22" y="22" width="856" height="52" rx="14" fill="#0f766e"/>
+  <rect x="22" y="58" width="856" height="16" fill="#0f766e"/>
+  <text x="46" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Power Query Editor</text>
+  <rect x="44" y="92" width="812" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="62" y="104" width="86" height="20" rx="4" fill="#ccfbf1"/>
+  <text x="75" y="119" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#115e59">Close &amp; Apply</text>
+  <rect x="164" y="104" width="78" height="20" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="179" y="119" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Remove Rows</text>
+  <rect x="258" y="104" width="78" height="20" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="276" y="119" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#334155">Split Column</text>
+  <rect x="44" y="154" width="148" height="300" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="64" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#334155">Queries</text>
+  <rect x="62" y="202" width="110" height="28" rx="5" fill="#ccfbf1"/>
+  <text x="76" y="221" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#115e59">Sales</text>
+  <text x="76" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Products</text>
+  <text x="76" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Customers</text>
+  <text x="76" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">Region</text>
+  <rect x="212" y="154" width="454" height="300" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="236" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#334155">Data Preview</text>
+  <rect x="236" y="204" width="404" height="34" fill="#fef3c7"/>
+  <text x="252" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#78350f">OrderDate</text>
+  <text x="360" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#78350f">Region</text>
+  <text x="468" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#78350f">Sales</text>
+  <text x="566" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#78350f">Profit</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">
+    <text x="252" y="266">2026-01-10</text><text x="360" y="266">West</text><text x="468" y="266">4200</text><text x="566" y="266">960</text>
+    <text x="252" y="306">2026-01-11</text><text x="360" y="306">South</text><text x="468" y="306">3800</text><text x="566" y="306">740</text>
+    <text x="252" y="346">2026-01-12</text><text x="360" y="346">North</text><text x="468" y="346">5100</text><text x="566" y="346">1180</text>
+    <text x="252" y="386">2026-01-13</text><text x="360" y="386">East</text><text x="468" y="386">2950</text><text x="566" y="386">610</text>
+  </g>
+  <line x1="236" y1="278" x2="640" y2="278" stroke="#e2e8f0"/>
+  <line x1="236" y1="318" x2="640" y2="318" stroke="#e2e8f0"/>
+  <line x1="236" y1="358" x2="640" y2="358" stroke="#e2e8f0"/>
+  <rect x="686" y="154" width="170" height="300" rx="10" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="710" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#92400e">Applied Steps</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#78350f">
+    <text x="710" y="220">1. Source</text>
+    <text x="710" y="250">2. Promoted Headers</text>
+    <text x="710" y="280">3. Changed Type</text>
+    <text x="710" y="310">4. Removed Nulls</text>
+    <text x="710" y="340">5. Renamed Columns</text>
+  </g>
+</svg>

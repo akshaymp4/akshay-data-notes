@@ -64,6 +64,8 @@ Useful note:
 - Power BI is updated frequently
 - you can check the current installed version through `Help > About`
 
+![Sample Power BI Desktop report canvas with ribbon, filters, visuals, and fields pane](power-bi-desktop-overview.svg){ .powerbi-visual }
+
 ### 1.4 Pages vs Sheets { .powerbi-h3 }
 
 In Excel, you work with sheets.
@@ -191,6 +193,8 @@ It is mainly used to:
 - manipulate tables before loading to the model
 
 You do not need to write M manually at the beginning, but it becomes useful as you move to advanced work.
+
+![Sample Power Query Editor view showing query list, data preview, and applied steps](power-query-editor.svg){ .powerbi-visual }
 
 ### 4.3 Append vs Merge { .powerbi-h3 }
 
@@ -329,6 +333,8 @@ Example:
 
 This can be useful, but in Power BI, star schema is often preferred for simplicity.
 
+![Sample Power BI Model View showing a star schema with fact and dimension tables](power-bi-model-view.svg){ .powerbi-visual }
+
 ## 6. Views in Power BI Desktop { .powerbi-h2 }
 
 ### 6.1 Report View { .powerbi-h3 }
@@ -375,6 +381,8 @@ Frequently used visuals:
 - KPI
 - Gauge
 - Decomposition Tree
+
+![Sample Power BI report page with slicers, KPI cards, charts, and a matrix visual](power-bi-report-view.svg){ .powerbi-visual }
 
 ### 7.2 Choose the Right Chart { .powerbi-h3 }
 
@@ -679,6 +687,8 @@ Power BI Service is the cloud platform used for:
 - workspace-based access
 
 You usually build reports in Power BI Desktop and publish them to Power BI Service.
+
+![Sample Power BI Service workspace showing reports, semantic model, refresh, and sharing](power-bi-service-workspace.svg){ .powerbi-visual }
 
 ### 11.2 Why It Matters { .powerbi-h3 }
 
